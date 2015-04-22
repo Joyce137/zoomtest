@@ -1,7 +1,0 @@
-@author Joyce
-Project: ZoomTest
-Package: com.zoom.cons
-	公共yaml類型的文件，包括urls.yaml等
-	公共Java類和方法
-	
-	

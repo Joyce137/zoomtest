@@ -1,8 +1,0 @@
-@author Joyce
-Project: ZoomTest
-Package: com.zoom.pages
-	pageObject
-	讀取各頁面對應的jaml文件
-	每個頁面對應一個Java類，包含該page的組成元素和動作，元素及動作整合
-	
-	
