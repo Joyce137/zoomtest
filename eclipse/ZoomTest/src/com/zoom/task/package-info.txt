@@ -1,6 +1,6 @@
 @author Joyce
 Project: ZoomTest
 Package: com.zoom.task
-	测试步骤中可复用的行为
+	编写每个页面中需要的动作
 	
 	
