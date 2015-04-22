@@ -1,0 +1,9 @@
+baidu_input:
+  type: id
+  value: kw
+baidu_button:
+  type: id
+  value: su
+checkbox:
+  type: xpath
+  value: "//div[@id='%productId%']//div"

@@ -1,0 +1,33 @@
+input:
+  type: id
+  value: user
+link:
+  type: classname
+  value: baidu
+select:
+  type: name
+  value: select
+radiobox:
+  type: name
+  value: identity
+checkbox:
+  type: xpath
+  value: "//div[@id='%productId%']//div"
+button:
+  type: classname
+  value: button
+alert:
+  type: classname
+  value: alert
+upload:
+  type: id
+  value: load
+multiwindow:
+  type: classname
+  value: open
+action:
+  type: classname
+  value: over
+wait:
+  type: classname
+  value: wait
