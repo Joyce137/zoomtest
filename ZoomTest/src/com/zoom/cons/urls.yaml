@@ -1,0 +1,12 @@
+dev:
+  url: https://dev.zoom.us
+www:
+  url: https://www.zoom.us
+signup:
+  url: https://dev.zoom.us/signup
+signin:
+  url: https://dev.zoom.us/signin
+join:
+  url: https://dev.zoom.us/join
+profile:
+  url: https://dev.zoom.us/profile
