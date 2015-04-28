@@ -1,0 +1,44 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{CJK}
+\usepackage{fancyhdr}
+
+\begin{document}
+\begin{CJK}{GBK}{song}
+
+\pagestyle{fancy}
+\fancyhf{} %清除原有设置
+\fancyhead[LO]{专题：不断变化的Web应用程序}
+\fancyhead[RE]{使用客户端重构的个性化Web可访问性}
+\fancyfoot[LO,RE]{\thepage}
+\fancyfoot[LE]{2013年七月/八月}
+\fancyfoot[RO]{IEEE INTERNET COMPUTING}
+\fancyfoot[CO]{www.computer.org/internet/}
+
+%专题栏&标题
+\title{\raggedright \normalsize 专题：不断变化的Web应用程序\\
+\centering \LARGE 使用客户端重构的个性化Web可访问性}
+
+%作者
+\author
+{\IEEEauthorblockN{Alejandra Garrido,Sergio Firmenich,Gustavo Rossi,and Julián Grigera \IEEEauthorblockN{阿根廷 拉普拉塔国立大学}}
+\IEEEauthorblockN{Nuria Medina-Medina \IEEEauthorblockA{西班牙 格拉纳达大学}}
+\IEEEauthorblockN{Ivana Harari \IEEEauthorblockA{阿根廷 拉普拉塔国立大学}}
+}
+
+\maketitle
+
+\begin{abstract}
+According to W3C accessibility standards, most Web applications are neither
+accessible nor usable for people with disabilities. Developers often solve this
+problem by building separate accessible applications, but these are seldom
+usable and typically offer less functionality than the original. Another common
+solution is to maintain a single application, but create an accessible view by
+applying on-the-fl transformations to each requested page — a solution that
+rarely suits all audiences. A third solution is described here: let users improve
+Web accessibility in their client browsers through interface refactorings, which
+offer many customized, accessible views of a single application.
+\end{abstract}
+\IEEEpeerreviewmaketitle
+
+\end{CJK}
+\end{document}

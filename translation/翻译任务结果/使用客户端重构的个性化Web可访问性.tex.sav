@@ -1,0 +1,16 @@
+\documentclass[conference]{IEEEtran}
+
+%专题栏
+%\hyphenation{专题：不断变化的Web应用程序}
+
+\begin{document}
+
+%标题
+\title{使用客户端重构的个性化Web可访问性实现}
+
+%作者
+\author
+{\IEEEauthorblockN{Alejandra Garrido,Sergio Firmenich,Gustavo Rossi,and Julián Grigera}
+\IEEEauthorblockA{阿根廷拉普拉塔国立大学}}
+
+\end{document}
