@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.25)  29 APR 2015 09:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.25)  30 APR 2015 15:54
 entering extended mode
 **C:/Users/Clery/Documents/GoodBye/translation/翻译任务结果/使用客户�
 ��重构的个性化Web可访问性.tex
@@ -136,14 +136,6 @@ LaTeX Info: Redefining \selectfont on input line 756.
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-(D:\CTEX\UserData\tex\latex\abstract\abstract.sty
-Package: abstract 2009/06/08 v1.2a configurable abstracts
-\abstitleskip=\skip53
-\absleftindent=\skip54
-\absrightindent=\skip55
-\absparindent=\skip56
-\absparsep=\skip57
-)
 (C:\Users\Clery\Documents\GoodBye\translation\翻译任务结果\使用客户�
 �重构的个性化Web可访问性.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -245,16 +237,14 @@ less on input line 13.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 14.
 
-** ATTENTION: \IEEEcompsoctitleabstractindextext is deprecated (line 29). Use \
-IEEEtitleabstractindextext instead.
-LaTeX Font Info:    Try loading font information for C19+song on input line 33.
+LaTeX Font Info:    Try loading font information for C19+song on input line 28.
 
 (D:\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd
 File: c19song.fd 2009/09/23 4.8.2
 )
-** ATTENTION: \IEEEdisplaynotcompsoctitleabstractindextext is deprecated (line 
-34). Use \IEEEdisplaynontitleabstractindextext instead.
-[1{D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
 ]
@@ -275,21 +265,21 @@ Before submitting the final camera ready copy, remember to:
 (C:\Users\Clery\Documents\GoodBye\translation\翻译任务结果\使用客户�
 �重构的个性化Web可访问性.aux) ) 
 Here is how much of TeX's memory you used:
- 2477 strings out of 495354
- 36127 string characters out of 3183859
- 100044 words of memory out of 3000000
- 5651 multiletter control sequences out of 15000+200000
- 53228 words of font info for 133 fonts, out of 3000000 for 9000
+ 2685 strings out of 495354
+ 40807 string characters out of 3183859
+ 115392 words of memory out of 3000000
+ 5861 multiletter control sequences out of 15000+200000
+ 57416 words of font info for 147 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 26i,7n,43p,1251b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,7n,43p,1273b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/CTEX/CTeX/fonts/truetype/chinese/s
 imsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/t
 ruetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/
 CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chines
 e/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/font
 s/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><
-D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf>{D:/CTEX/MiKTeX/fonts/enc/dvips/
-fontname/8r.enc}<D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/f
+D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chi
+nese/simsun.ttf>{D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/CTeX/f
 onts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.tt
 f><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/
 chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTe
@@ -303,12 +293,13 @@ EX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/
 simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/
 truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:
 /CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chine
-se/simsun.ttf><D:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/CTEX/MiKTeX/
-fonts/type1/urw/times/utmr8a.pfb>
+se/simsun.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/CTEX/MiKTeX/f
+onts/type1/urw/times/utmb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.p
+fb><D:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 Output written on 使用客户端重构的个性化Web可访问性.pdf (2 pages
-, 129997 bytes).
+, 179270 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

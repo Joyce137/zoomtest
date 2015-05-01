@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.25)  28 APR 2015 16:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.25)  30 APR 2015 10:06
 entering extended mode
 **C:/Users/Clery/Documents/GoodBye/translation/IEEEtran5/bare_jrnl_compsoc.tex
 (C:/Users/Clery/Documents/GoodBye/translation/IEEEtran5/bare_jrnl_compsoc.tex
@@ -89,57 +89,57 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24> not available
 \@IEEEtranrubishbin=\box26
 ) (C:\Users\Clery\Documents\GoodBye\translation\IEEEtran5\bare_jrnl_compsoc.aux
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 426.
-LaTeX Font Info:    ... okay on input line 426.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 543.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 177.
 
  (D:\CTEX\MiKTeX\tex\latex\psnfss\ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <14> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 543.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 177.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 543.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 543.
+(Font)              <9> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 543.
+(Font)              <6> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 543.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 543.
+(Font)              <5> on input line 177.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14> on input line 543.
+(Font)              <14> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.79996> on input line 543.
+(Font)              <9.79996> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 543.
-LaTeX Font Info:    Try loading font information for U+pzd on input line 543.
+(Font)              <7> on input line 177.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 177.
 
 (D:\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 570.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 204.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 570.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 204.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 608.
+(Font)              <12> on input line 242.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 608.
+(Font)              <8> on input line 242.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 618.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 252.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 624.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 258.
  [1{D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
