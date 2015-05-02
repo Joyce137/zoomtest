@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{revtex4}
+\def\today{\number\day\space\ifcase\month\or
+January\or February\or March\or April\or May\or June\or July\or
+August\or September\or October\or November\or December\fi
+\space\number\year}
+\usepackage{CJK}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\title{\raggedright The Casimir Effect of Reissner-Nordstr\&quot;{o}m Black Hole\thanks{[1]}}
+
+{\renewcommand{\thefootnote}{\fnsymbol{footnote}} \footnotetext[1]
+{Project supported by the National Basic Research Program of China
+and the National Natural Science Foundation of China }}
+
+\author{Xiao Kui(Ð¤¿ü)\thanks{}\\
+Department of Physics, Institute of Theoretical Physics, Beijing
+100875, China} {\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[2]{E-mail: kx@bnu.edu.cn}}
+
+\date{Recevied 10 December 2005, revised manuscript received \today}
+
+
+
+\begin{abstract}
+this is the abstract
+\end{abstract}
+\maketitle
+\end{CJK*}
+
+\textbf{{Key Words}}: this is the key words \textbf{PACC numbers}:
+123456
+
+\section{Introduction}
+This is the section 1
+
+
+\end{document}

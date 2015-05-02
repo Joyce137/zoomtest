@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{CJK}
+
+\usepackage{fancyhdr}
+
+
+\title{\textbf{Title}}
+
+\pagestyle{fancy}
+\fancyhf{} %清除原有设置
+\fancyhead[LO]{专题：不断变化的Web应用程序}
+\fancyhead[RE]{使用客户端重构的个性化Web可访问性}
+\fancyfoot[LO,CE]{From: K. Grant}
+\fancyfoot[CO,RE]{To: Dean A. Smith}
+
+\begin{document}
+
+
+\begin{CJK*}{GBK}{song}
+
+
+\pagestyle{fancy} \lhead{中文页眉} \rhead{作者}
+
+
+\maketitle
+
+
+\hrule %-------------------------------------------------------------------
+\begin{abstract}
+This is abstract...
+\begin{quote}
+\emph{Key words:}  keyword1, keyword2, ...
+\end{quote}
+
+
+\end{abstract}
+\hrule %-------------------------------------------------------------------
+
+
+\section{Introduction}
+
+
+\newpage
+\section{System model}
+
+
+\newpage
+\section{Algorithm}
+
+
+\newpage
+\section{Conclusions}
+
+
+\newpage
+\begin{thebibliography}{9}
+
+
+\end{thebibliography}
+
+
+\clearpage %很重要，没有这句话也没就不会正常显示
+\end{CJK*}
+\end{document}

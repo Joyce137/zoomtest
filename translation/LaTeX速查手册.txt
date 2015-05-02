@@ -1,0 +1,424 @@
+﻿+---------------------------------+ 
+|TeX各版本概述及基本约定，特殊字符| 
++---------------------------------+ 
+ 
+tex提供300多条基本排版命令 
+由D.E.Knuth1978年开发 
+plain tex：在tex基础上新定义600多条复合命令 
+AMS-TEX：美国数学会开发（amsmath宏包）排版的数学公式 
+LATEX：L.Lamport（1985）编写，适合排版普通文章和书籍 
+LATEX2e：可加载amsmath宏包，目前最流行的TEX宏包 
+版本：LATEX2.09-->LATEX2e-->LATEX3（开发中） 
+中文排版： 
+CCT：科学院张林波 
+TY（天元）：华师大肖刚、陈志杰教授开发 
+CJK：德国W.Lemberg开发，处理中日韩三国文字。 
+发行版CTEX：集成了CCT，TY，CJK的MikTEX系统。 
+ChinaTEX:内容涵盖MiKTeX系统及中文支持、常用外围软件、TeX\LaTeX文档和模板选萃等 
+ 
+TeX中的长度 
+mm毫米 
+cm厘米 
+in英寸＝2.54cm＝72.27pt 
+pt点 
+em大写字母M的宽度 
+ex小写字母x的高度 
+ 
+弹性长度：根据需要自动伸缩 
+正常值plus伸展值minus收缩值 
+实际长度可超过正常值和伸展值之和，但不能小于正常值和收缩值之差 
+ 
+\documentclass[11pt]{article}%11pt字体，普通文章 
+%导言区，全局命令 
+\usepackage{CJK}%使用CJK宏包 
+\begin{document}%主环境 
+\begin{CJK}{GBK}{song}%汉字必须放入CJK环境 
+%其它字体:song,kai,fs,hei,li,you 
+%CJK的两种环境CJK和CJK* 
+%GBK是采用的字符集：GB，GBK，Bg5，Gbt 
+Hi,This is my first \LaTeX file 
+祝贺你，MikTex和CJK安装成功了 
+\end{CJK} 
+\ent{document} 
+ 
+CJK和CJK*环境之间的切换 
+\CJKspace和\CJKnospace 
+ 
+ 
+\CJKtilde 重新定义～的长度 
+ 
+ 
+基本约定 
+分组｛......｝ 
+注释符：% 
+西文标点后要加空格 
+各种环境的开始和结束命令最好独占一行 
+换行:连续两个回车，一个仅为空格 
+ 
+ 
+输入特殊字符 
+前加\的有：#$%{}~_^& 
+\=\textbackslash 
+｜,<,>＝$|$,$<$,$>$,$*$(中间星） 
+*＝*上面星 
+特殊符号\s \p \dag \ddag \copyrigh版权号，\pounds 磅 
+ 
+\TeX \LaTeX \LaTeXe \AmS-\LaTeX(最后这个要amsmath宏包） 
+ 
+单引号：`'(1键前面的） 
+双引号：``" 
+ 
++------------------------------+ 
+|段落、行距、水平间距、缩进命令| 
++------------------------------+ 
+ 
+ 
+强制分行：\\或\\*[和下行间距离]、\newline 
+建议分行：\linebreak[0-4，数越大建议力度越大] 
+\linebreak增加字间距，强制换行 
+\nolinebreak［n］建议不分行 
+\mbox｛内容｝内容保持在同一行 
+ 
+分段：\par，或两个回车 
+分页：自动分页 
+强制分页：\newpage 
+建议分页：\pagebreak［n］，\nopagebreak［n］ 
+ 
+增加当前页高度有时可以避免难看的分页 
+\enlargethispage｛尺寸｝可增加的最大高度 
+\enlargethispage*｛尺寸｝指定增加高度 
+ 
+水平间距： 
+\quad 插入空白相当于当前字体大小 
+\qquad＝\quad×2 
+\ ，＝\quad×3/18 
+~=???好象比\ 小 
+\hspace{宽度大小}，\hspace*{宽度大小} 
+\hfill弹性长度：hspace{\hfill}插入空白，撑满整行 
+\hphantom{文本内容},占据文本内容的宽度 
+\vphantom[文本内容},\phantom{文本内容} 
+ 
+导引线：\dotfill，\hrulefill 
+ 
+垂直间距： 
+\vspace{高度}和\vspace*{高度} 
+\vfill：相当于\vspace{\fill} 
+\smallskip:-->\vspace{\smallskipamount} 
+\medskip:-->\vspace{\medskipamount} 
+\bigskip:-->\vspace{\bigskipamount} 
+ 
+段落首行缩进： 
+\setlength{\parindent}{2em},2个M 
+\setlength{\parindent}{0pt},首行不缩进 
+\CJKindent:两个汉字 
+\indent与\noindent 
+每节的第一段首行不会自动缩进 
+\hspane{\parindent} 
+在导言区加入：\usepackage{indentfirst} 
+ 
+段落间距：\lineskip+\parskip 
+可用\setlength修改以上值 
+ 
+行距： 
+\baselineskip：相邻两行基线间距离 
+\baselinestretch：伸展因子 
+修改改变行距：\renewcommand{\baselinestretch}[1.2] 
+放在\begin{document}之后，字体尺寸改变时才生效 
+ 
+  
+ 
+ 
++----------------------------------+ 
+|西文字体属性、及中文字体属性、命令| 
++----------------------------------+ 
+字体有5种属性 
+族： 
+\rmfamily：罗马字体 
+\sffamily：无衬线字体 
+\ttfamily：打字机字体 
+形状：（shape）直立斜 
+\upshape：直立 
+\itshape：意大利斜体 
+\slshape：斜体 
+\scshape：小体大写 
+系列：（series）宽度黑度 
+\mdseries：中等权重（黑） 
+\bfseries：粗体 
+ 
+\normalfont：默认字体，中等权重直立罗马字体 
+西文尺寸：10pt，11pt，12pt 
+\em强调，一般为斜体 
+以上命令称为声明（无参数） 
+ 
+每一声明对应字体命令 
+命令只对其参数中的文本起作用 
+族： 
+\testrm{},\testsf{},\testtt{} 
+形状 
+\textup{},\textit{},\textsl{},\textsc{} 
+系列 
+\textmd{}，\textbf{} 
+默认值：\textnormal{} 
+强调：\emph{} 
+ 
+定义了基本尺寸后，可使用下面的声明来改变字体 
+\tiny  5pt 
+\scriptsize 7pt 
+\footnotesize 8pt 
+\small  9pt 
+\normalsize 10pt 
+\large  12pt 
+\Large  14.4pt 
+\LARGE  17.28pt 
+\huge  20.74pt 
+\Huge  24.88pt 
+以上尺寸是基本尺寸为10pt时的大小 
+ 
+所有西文字体命令对中文同样起作用 
+italic和slanted斜体对中文一样 
+ 
+中文书籍基本字号为5号约等于11pt 
+ 
+使用GBK编码时，可同时输入简繁体。 
+ 
+自定义字体大小 
+\fontsize{字体尺寸}{行距}后面须加上\selectfont才生效 
+可得到任意大小汉字，西文最大不能超\Huge 
+行距通常为字体大小的1.2-1.5倍 
+例：\fontsize{12pt}{\baselineskip}\selectfont 
+\usepackage{type1cm}任意大小西文 
+ 
+行距：\linespread{1.3}产生1.5倍行距，1.6产生双倍行距，效果夸张，不适合出版 
+用下面方法：\setlength{\baselineskip}{1.5\baselineskip}{......} 
+ 
+  
+ 
+正文中更换字体：\CJKfamily{字体族} 
+ 
+为方便，作以下自定义 
+\newcommand*{\SONG}{\CJKfamily{song}} 
+\newcommand*{\HEI}{\CJKfamily{hei}} 
+\newcommand*{\KAI}{\CJKfamily{kai}} 
+\newcommand*{\FS}{\CJKfamily{fs}} 
+\newcommand*{\LI}{\CJKfamily{li}} 
+\newcommand*{\YOU}{\CJKfamily{YOU}} 
+ 
+引用更改为宋体：\SONG 正文 
+ 
+  
+ 
+文本居中 
+文本默认为左对齐 
+左对齐 \raggedright
+单行文本居中命令 
+\centerline{....} 
+多行使用\begin{center}环境 
+居中声明：\centering（不建议使用） 
+ 
++------------+ 
+|参考文献环境| 
++------------+ 
+\begin{thebibliography}{编号样本} 
+\bibitem[记号]{引用标志} 文献条目 
+ . 
+ . 
+ . 
+\bibitem[记号]{引用标志} 文献条目 
+\end{thebibliography} 
+ 
+\bibitem[省略为方括号数字]{不可省由字母，数字和，号外符号组成，各个文献互不相 
+同} 文献条目 
+编号样本，指定记号的宽度，一般为数字 
+ 
+引用文献时用\cite{引用标志1，引用标志2} 
+ 
+调节各文献间距离 
+\setlength{\itemsep}{高度} 
+ 
+标题缺省为左对齐Reference 
+（\Large\bfseries） 
+由\refname值确定 
+书籍参考文献标题由\bibname值确定 
+ 
+文献条目包含：作者，标题，出版社，年代，版本，页码 
+一行放不下，后面自动缩进，距离为“编号样本”宽度 
+ 
++----------+ 
+| 脚    注 | 
++----------+ 
+\footnote{脚注内容} 
+article文档，整篇同一编号 
+book和report文档，每章统一编号 
+ 
++----------------+ 
+| 文档类别、章节 | 
++----------------+ 
+ 
+\documentclass[可选项]{article,book,report,letter,只能选一种} 
+article 短篇文章 
+report 长篇报告，可分章 
+book （书）可含chapter，奇偶页采用不同处理 
+可选项对整篇文档起作用，使用多个选项互不排斥，用逗号分隔 
+基本字体：10pt，11pt，12pt 
+纸张大小：letterpaper，a4paper，a5paper... 
+排版方向：portrait（竖向），landscape（横向） 
+标题页：titlepage，notitlepage 
+final和draft 
+ 
+指定纸张大小（只有latex2e中使用） 
+letterpaper（11*8.5in） 
+legalpaper（14*8.5in） 
+executivepaper（10.5*7.25in） 
+a4paper（29.7*21cm） 
+a5paper（21*14.8cm） 
+b5paper（25*17.6cm） 
+默认值是letterpaper，美国信纸尺寸，纵向 
+landscape 横向 
+ 
+ 
+章节命令： 
+\part,\chapter,\section,\subsection,\subsubsection,\paragraph,\subparagraph 
+\命令[短标题]{标题},用于显示在目录和页眉 
+\命令*{标题} 
+层次号：book中\part为-1（article中为0），\chapter为0，.... 
+book类 
+\part，\chapter独立编号，只出现在奇数页，\part独占一页 
+\section，\subsection 关联编号 
+article类 
+\part，\section独立编号 
+\subsection，\subsubsection 关联编号 
+星号章节不参加自动编号 
+\part和\chapter标题占两行 
+ 
+标题中文化 
+\renewcommand{\partname}{} 
+\renewcommand{\thepart}{第\，\Roman{part}}\,篇} 
+ 
+修改编号最深层次 
+\setcounter{secnumberdepth}{数} 
+secnumberdepth，book类-2～5，缺省为2，-2时取消编号 
+article类-1～5，缺省为3 
+ 
+自动编号章节对应计数器 
+part，chapter，section，bsection,subsubsection,paragraph,subparagraph 
+修改计数器值： 
+\setcounter{计数器名}{数} 
+ 
+ TeX的版式首先是文件版式, 也就是我们接触的第一个最最最 
+简单的TeX文档中的第一句: 
+       \documentstyle[选项1,选项2,...]{格式} 
+其中的[]及选项是可选的, 而{格式}是必需的. LaTeX有以下几种 
+格式: article(文章), report(报告), book(书), letter(信件). 
+CCT对前面三种进行了汉化, 分别是carticle, creport和cbook. 
+常用的选项有 
+  10pt/11pt/12pt: 定义基准字号, 缺省10pt. 
+  twoside: 两面印刷格式, 因奇偶页装订位置不同而异, 缺省为 
+           单页. 
+  twocolumn: 双栏排版, 缺省为单栏. 
+  titlepage: 仅在article格式使用, 它是\maketile产生一个单 
+             独的文章题目页, 同时abstract也产生单独页 
+  leqno: 使公式标号出现在左边, 缺省在右 
+  fleqn: 公式左对齐, 缺省中间对齐 
+  thesis: 专用于毕业论文排版 
+  IEEE: 专向IEEE类杂志投稿的格式 
+  IFTHEN: 排版计算机程序 
+  
+\columnsep 指定两栏间距 
+\columnseprule 两栏间竖线宽度，默认为0。 
+\mathindent 选择fleqn时 左边界的缩进量 
+ 
+以上参数修改用\setlength{\mathindent}{2.5cm} 
+ 
+ 
+    LaTeX的一个页面有页眉(head, 通常是杂志名, 卷号, 当前 
+章节名等), 主体(body, 正文, 包括脚注及图表), 页脚(通常是 
+页码, 如果页码放在页眉处, 则页脚可能是空的). 我们用下面的 
+指令控制页版面: 
+        \pagestyle{参数} 
+参数可以是 
+  plain: 页码在页脚居中, 页眉空白, 为article, report的缺省 
+  empty: 页眉页脚都空白 
+  heading: 页脚为空, 页眉为正文的章节信息及页码 
+  myheadings: 自定义页眉, 内容由 
+     \markboth{left_head}{right_head}   (双面twoside排版) 
+   或\markright{right_head}             (单面排版) 
+    \pagestyle是对全文有效的, 而如果要定义某页的页面格式, 
+则可用\thispagestyle, 用法同上, 下一页自动恢复原设置. 
+  
+    这里提到页码, 我们经常会修改页码的表现格式, 可能用阿 
+拉伯数字或罗马数字等, 则修改\pagenumbering{参数}, 这里参 
+数可以是arabic(阿拉伯数字), roman(小写罗马数字: i, ii, iii,) 
+Roman(大写罗马数字: I, II, III,), alph(小写英文: a, b, c,), 
+Alph(大写英文: A, B, C). 如果需要更改某页的页码, 则用修改 
+计数器命令: \setcounter{page}{数字}, 这里page是页码计数器. 
+ 
++----------------+ 
+|*修改版面的命令*| 
++----------------+ 
+ 
+  
+TeX中还经常会在\documentstyle和\begin{document}之间 
+常用到很多修改版面尺寸的命令. 如未指明, 这些命令的格式都 
+是用\para_name=newvalue的格式. 
+  \texwidth, \texheight 主要正文body的宽度和高度, 不包括页眉页脚 
+  \oddsidemargin, \evensidemargin 奇数/偶数页, 纸张左边缘 
+    到页body左边缘的距离减去一英寸 
+  \topmargin 纸张上边缘到页眉或body(无页眉时)的距离减去一 
+    英寸 
+  \marginparwidth 页边注(marginnote)的宽度 
+  \marginparsep 正文边缘到页边注边缘的距离 
+  \headheight 页眉高度 
+  \headsep 页眉底部到页主体顶部的距离 
+  \footheight 页脚高度 
+  \footskip 页正文最后一行底到页脚底的距离 
+(建议, 总把 
+\oddsizemargin（奇数页的左边界） 
+\evensidemargin（偶数页的左边界） 
+\topmargin（从上页边到页眉的距离） 
+设为0cm; 
+如果没用页眉, 将 
+\headheight（页眉高度）, 
+headsep（页眉基线到正文顶部的距离） 
+设为0cm; 
+如果没用页脚, 将 
+\footheight（已过时latex2e中已被去掉）, 
+\footskip（正文底部到页脚底部的距离）设为0cm, 
+这样便于在输出时直接利用驱动程序的功能控制版心的位置.) 
+ 
+\columnsep 双栏article中, 左右栏间空白的距离 
+\columnseprule 双栏article中, 左右栏间分隔线的宽度, 缺省 为零, 即没有线 
+以下参数的修改可以在\begin{document}的前面和后面: 
+  \parskip 段落之间除了空出正常行距外额外空出的距离 
+  \parindent 段首空白的长度 
+  \footnotesep 两个注脚之间的距离 
+  \baselineskip 正文中前一行底和第二行底的距离, 会因字号的 
+    改变自动改变. 
+    另外, 定义行距还有一个特殊的参数, 那是\baselinestretch, 
+它是用在\begin{document}前的全局变量, 修改格式如 
+\renewcommand\baselinestretch{倍数}    缺省时为1.0, 因此 
+LaTeX中最小行距是\baselineskip乘上\baselinestretch得到的. 
+ 
++----------------+ 
+| 文档标题、摘要 | 
++----------------+ 
+ 
+\title{标题可有\\换行} 
+\author{作者名可用and分开} 
+\date{日期可选，无命令自动当天日期，空白选项不显示} 
+\thanks{}可出现\maketitle以上任何位置，或几个\thanks 
+\maketitle 
+LaTex用特定字体、号居中输出 
+ 
+自定义标题环境 
+\begin{titlepage} 
+\end{titlepage} 
+生成标题独占一页，并重置页码计数器 
+ 
+摘要环境 
+\begi{abstract} 
+... 
+\end{abstract} 
+ 
+book类没有摘要 
+摘要标题中文化 
+\renewcommand{abstractname}{摘\qquad 要} 
