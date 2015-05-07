@@ -1,37 +1,64 @@
-\documentclass[11pt,a4paper]{revtex4}
-\def\today{\number\day\space\ifcase\month\or
-January\or February\or March\or April\or May\or June\or July\or
-August\or September\or October\or November\or December\fi
-\space\number\year}
+\documentclass{article}
 \usepackage{CJK}
+
+\usepackage{fancyhdr}
+\usepackage{caption2}
+
+\title{\textbf{Title}}
+
+\pagestyle{fancy}
+\fancyhf{} %清除原有设置
+\fancyhead[LO]{专题：不断变化的Web应用程序}
+\fancyhead[RE]{使用客户端重构的个性化Web可访问性}
+\fancyfoot[LO,CE]{From: K. Grant}
+\fancyfoot[CO,RE]{To: Dean A. Smith}
+
 \begin{document}
+
+
 \begin{CJK*}{GBK}{song}
-\title{\raggedright The Casimir Effect of Reissner-Nordstr\&quot;{o}m Black Hole\thanks{[1]}}
-
-{\renewcommand{\thefootnote}{\fnsymbol{footnote}} \footnotetext[1]
-{Project supported by the National Basic Research Program of China
-and the National Natural Science Foundation of China }}
-
-\author{Xiao Kui(肖奎)\thanks{}\\
-Department of Physics, Institute of Theoretical Physics, Beijing
-100875, China} {\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\footnotetext[2]{E-mail: kx@bnu.edu.cn}}
-
-\date{Recevied 10 December 2005, revised manuscript received \today}
 
 
+\pagestyle{fancy} \lhead{中文页眉} \rhead{作者}
 
-\begin{abstract}
-this is the abstract
-\end{abstract}
+
 \maketitle
-\end{CJK*}
 
-\textbf{{Key Words}}: this is the key words \textbf{PACC numbers}:
-123456
+
+\hrule %-------------------------------------------------------------------
+\begin{abstract}
+This is abstract...
+\begin{quote}
+\emph{Key words:}  keyword1, keyword2, ...
+\end{quote}
+
+
+\end{abstract}
+\hrule %-------------------------------------------------------------------
+
 
 \section{Introduction}
-This is the section 1
 
 
+\newpage
+\section{System model}
+
+
+\newpage
+\section{Algorithm}
+
+
+\newpage
+\section{Conclusions}
+
+
+\newpage
+\begin{thebibliography}{9}
+
+
+\end{thebibliography}
+
+
+\clearpage %很重要，没有这句话也没就不会正常显示
+\end{CJK*}
 \end{document}

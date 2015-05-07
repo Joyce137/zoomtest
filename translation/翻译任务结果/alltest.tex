@@ -1,0 +1,98 @@
+% sample is here : 1-in-2.tex
+%
+\documentclass[twocolumn]{article}
+%
+\usepackage{1-in-2}
+\textwidth=420pt \textheight=600pt \columnsep=20pt
+\newcommand{\bs}{{\tt\symbol{'134}}}
+\newcommand{\fat}[1]{\mbox{\boldmath{$#1$}}}
+%
+\title{{\sc One-Column Abstract and Footnote \\
+               in the Two-Column Documents}\thanks{This is
+           a \protect\LaTeX\  footnote for the title of this article.}}
+%
+\author{{\sc an Author}\thanks{Institution of the first author,
+ Department of that institution. Full address for ordinary mailing
+ system. An {\bf\ e-mail} address at the end if any.}
+    \and {\sc another Author}\thanks{Work place of the second author.}}
+%
+%  \institution{University Somewhere} % if you need it
+%
+\abstract{% No blank line
+This is the main abstract.
+Four functions related to `{\tt onecolumn}' output are added
+in `{\tt twocolumn}' article.
+1) footnotes created by {\bs}{\tt thanks} are set in one-column format.
+2) abstract and keywords are put right below the author list in
+one-column format.
+3) the bottom of two columns at the last page is aligned so that
+some text such as abstract can be put below in one-column format.
+4) footnote of the textwidth can be set at any page.}
+%
+\keywords{two-column, one-column, maketitle, footnote}
+%
+\endabstract{% Yes blank line
+This is the part of abstract at the end.
+Four functions related to `{\tt onecolumn}' output are added
+in `{\tt twocolumn}' article.
+
+1) footnotes created by {\bs}{\tt thanks} are set in one-column format.
+2) abstract and keywords are put right below the author list in
+one-column format.
+3) the bottom of two columns at the last page is aligned so that
+some text such as abstract can be put below in one-column format.
+4) footnote of the textwidth can be set at any page.}
+%
+\begin{document}
+
+\maketitle
+
+\section{PROBLEM}
+
+As is often observed in the proceedings of engineering societies,
+the manuscript is written in two-column format. But at the end
+of the main body of the article, the abstract may be included in
+one-column format.
+Or, the abstract may be located at the beginning of the article,
+but is not in the left-column where
+the ordinary \verb+\begin{abstract}+ places the abstract.
+Key words are also listed right below the main title.
+
+
+Furthermore the footnotes about the title and authors are sometimes
+set in one-column form within the two-column document.
+It is easy to handle these kinds of outputs if one uses `multicol.sty'.
+However, this style file inhibits us from using `floats'
+within the column.
+
+\section{MODIFICATION}
+
+The one-column layout of abstract around the main title can be
+specified by changing the definition of \verb+\@maketitle+.
+Read the corresponding parts in the preamble of this document.
+
+
+
+If one needs the abstract right below the title, it can be defined
+by a command
+\begin{quote}\verb+\abstract{....}+\end{quote}
+where no blank line is permitted. If a couple of paragraphs are
+needed within the abstract, change the way of definition of
+\verb+\abstract+ to \verb+\long\def\abstract#1{...+.
+One must be careful in using \verb+\verb+ within
+\verb+\abstract+.
+\begin{figure}[h]
+\setlength{\unitlength}{1mm}
+\begin{center}\begin{picture}(50,20)(0,0)
+\framebox(50,20){{\sc Figure}}\end{picture}\end{center}
+\caption{One-Column Figure}
+\end{figure}
+
+Key words can be defined similarly by a command (
+\fbox{{\bs}{\tt rightfootnotepage}} may be put around here,
+only when necessary.)
+\begin{quote} \verb+\keywords{...}+ \end{quote}
+which will appear in italic. Both \verb+\abstract+ and \verb+\keywords+
+are not necessarily defined,
+
+\end{document}

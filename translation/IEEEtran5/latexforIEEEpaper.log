@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.25)  30 APR 2015 09:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  7 MAY 2015 16:46
 entering extended mode
-**C:/Users/Clery/Documents/GoodBye/translation/IEEEtran5/latexforIEEEpaper.tex
-(C:/Users/Clery/Documents/GoodBye/translation/IEEEtran5/latexforIEEEpaper.tex
+**G:/goodbye/translation/IEEEtran5/latexforIEEEpaper.tex
+(G:/goodbye/translation/IEEEtran5/latexforIEEEpaper.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\Users\Clery\Documents\GoodBye\translation\IEEEtran5\IEEEtran.cls
+(G:\goodbye\translation\IEEEtran5\IEEEtran.cls
 Document Class: IEEEtran 2012/11/21 V1.8c by Harald Hanche-Olsen and Anders Chr
 istensen
 -- Based on V1.7a by Michael Shell
@@ -17,7 +17,7 @@ istensen
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 373.
 
-(D:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+(F:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -90,8 +90,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) (C:\Users\Clery\Documents\GoodBye\translation\IEEEtran5\latexforIEEEpaper.aux
-)
+) (G:\goodbye\translation\IEEEtran5\latexforIEEEpaper.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -144,23 +143,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+[1{F:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
 ]
-(C:\Users\Clery\Documents\GoodBye\translation\IEEEtran5\latexforIEEEpaper.aux) 
-) 
+(G:\goodbye\translation\IEEEtran5\latexforIEEEpaper.aux) ) 
 Here is how much of TeX's memory you used:
  899 strings out of 495354
- 16177 string characters out of 3183859
- 69107 words of memory out of 3000000
+ 15979 string characters out of 3183860
+ 69251 words of memory out of 3000000
  4141 multiletter control sequences out of 15000+200000
  31871 words of font info for 61 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 26i,6n,19p,1258b,190s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/ur
-w/times/utmb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/CTEX/M
-iKTeX/fonts/type1/urw/times/utmr8a.pfb>
+ 26i,6n,19p,1236b,190s stack positions out of 5000i,500n,10000p,200000b,50000s
+{F:/CTEX/MiKTeX/fonts
+/enc/dvips/fontname/8r.enc}<F:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><F:
+/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><F:/CTEX/MiKTeX/fonts/type1/urw/
+times/utmr8a.pfb>
 Output written on latexforIEEEpaper.pdf (1 page, 39468 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
