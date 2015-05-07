@@ -62,7 +62,7 @@ Ivana Harari   阿根廷 拉普拉塔国立大学
 %\renewcommand{\captionlabelfont}{}
 \includegraphics[width=\textwidth]{figure1.png}
 \caption{\bf\large 
-Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分类全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
+Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分配全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
 }\label{fig:1}
 \end{figure*}
 
@@ -80,9 +80,17 @@ Here, we describe CSWR and a case study we ran with visually impaired users (tho
 
 \section{Refactoring Example 重构示例}
 Figure 1a shows the inbox in Gmail, Google’s email reader. Gmail includes checkboxes on the left that let users select several emails, which is handy for applying an action to all of them.However, for visually impaired people using a screen reader, it’s uncomfortable to have to go back to the checkbox at the line’s beginning to select emails after reading the line, and then go back to the top to apply an operation after selecting the emails; they report this as a “bad accessibility smell” (an accessibility problem that motivates a refactoring).\\
-图1a显示的是Gmail（Google的邮箱阅读器）的收信箱。Gmail包括左侧的复选框，可以让用户选择多个邮件，这很方便对所有邮件进行操作。然而，对于
+图1a显示的是Gmail（Google的邮箱阅读器）的收信箱。Gmail包括左侧的复选框，可以让用户选择多个邮件，这很方便对所有邮件进行操作。然而，对于使用屏幕阅读器的视障人士，不幸的是观众读完阅读栏之后不得不返回到阅读栏的顶部复选框去选择邮件，并且选择完邮件之后又不得不返回到顶部去应用此操作；他们报告这种现象为“坏可闻”（诱发重构的一个可访问性问题）。\\
 A refactoring that solves this bad smell is Distribute Global Menu, which distributes a menu of actions affecting a list of elements to each element individually. This eases the local application of an operation because it requires only a single click immediately after the element is read. Figure 1b shows the result of applying this refactoring to the Gmail inbox.The set of actions was removed from the top and attached to each email in the form of icons(each with an alternative text).\\
+诱发这种坏味道的一个重构是分配全局菜单，它分配一个单独影响每个元素的元素列表菜单。这使一个操作的本地应用程序变得更轻松，因为当一个元素被阅读后需要仅仅一个简单的立即点击。图1b显示对Gmai收信箱应用这个重构的结果。这一系列动作是从顶部移走并且链接每个图标形式的邮件（每个对应一个可替代文本）。\\
 However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.\\
+然而，一些报告类似坏味道的用户能够更舒服地使用上下文菜单，所以这一系列动作不能被每个邮件读到。对于他们，上下文全局菜单重构更合适。而且有经验的用户更喜欢保持全局菜单，所以他们能一次操作多封邮件；对于他们，用推迟选择重构将移动复选框到最后一列。\\
 
+\section{Client-Side Web Refactoring 客户端的Web重构}
+As this example shows, a Web refactoring changes a Web application’s navigation structure or look and feel, preserving its content and operations while removing bad usability or accessibility smells. In previous work, we used Web refactorings to enhance navigation and presentation during the development life cycle. 2,5 We can generate a complete new version of an application with a specific aim — such as a mobile version — by systematically applying and composing refactorings. Here, we propose a similar approach to improve accessibility, where refactoring is applied after deployment and during actual use of the Web application, altering the interface in the browser itself.\\
+正如这个例子所述，Web重构改变Web应用程序的导航结构或外观
+    Our CSWR approach has two key benefits:\\
+? Simpler maintenance — developers maintain a single core application, applying Web usability refactorings that address a general audience, while different refactored versions can be created by and for different users.\\
+? Architecture independence — developing a CSWR requires little (if any) knowledge of the target application’s underlying architecture.\\
 \end{CJK*}
 \end{document}

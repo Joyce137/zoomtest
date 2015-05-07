@@ -2,13 +2,15 @@
 %毕业设计翻译任务
 %Author: Joyce-曹瑞娟
 
-\documentclass[twocolumn]{article}
+\documentclass[twocolumn,graphicx]{article}
 %添加中文支持
 \usepackage{CJK}
 %添加页眉页脚支持
 \usepackage{fancyhdr}
+%添加字体样式支持
+%\usepackage{caption2}
 %添加图片支持
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{figures/}}
 
@@ -51,7 +53,18 @@ Ivana Harari   阿根廷 拉普拉塔国立大学
         According to W3C accessibility standards, most Web applications are neither accessible nor usable for people with disabilities. Developers often solve this problem by building separate accessible applications, but these are seldom usable and typically offer less functionality than the original. Another common solution is to maintain a single application, but create an accessible view by applying on-the-fl transformations to each requested page — a solution that rarely suits all audiences. A third solution is described here: let users improve Web accessibility in their client browsers through interface refactorings, which offer many customized, accessible views of a single application.通过W3C可访问性标准，大部分Web应用程序对于残疾人群都是不可访问且不可用的。开发者经常通过创建独立的可访问性应用程序来解决这个问题，但是那很少可用，并且通常提供的功能比原来少。另一个常用的解决方法是保持单一的应用程序，但是通过对每个请求的页面采用FL变换来创建一个可访问的视图，是一个难以适用于所有用户的解决方案。这里描述的是第三种解决方案：让用户通过界面重构提高他们客户端浏览器的Web可访问性，它提供了许多单个应用程序定制的可访问视图。\\
     \end{abstract}
     \end{@twocolumnfalse}
-]  
+]
+  
+%添加图片
+\begin{figure*}[top]
+\centering
+%\renewcommand{\captionfont}{\Large \bfseries \sffamily} 
+%\renewcommand{\captionlabelfont}{}
+\includegraphics[width=\textwidth]{figure1.png}
+\caption{\bf\large 
+Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分配全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
+}\label{fig:1}
+\end{figure*}
 
 %正文
 \section{Introduction}
@@ -63,18 +76,15 @@ We propose empowering users (or close representatives) with the ability to selec
 我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
 Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
 在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。
-\section{Refactoring Example 重构示例}
-%添加图片
-\begin{figure}[htbp!]
-\centering
-\includegraphics{figure1.png}
-\caption{mynote}\label{mylabel}
-\end{figure}
-Figure 1a shows the inbox in Gmail, Google’s email reader. Gmail includes checkboxes on the left that let users select several emails, which is handy for applying an action to all of them.However, for visually impaired people using a screen reader, it’s uncomfortable to have to go back to the checkbox at the line’s beginning to select emails after reading the line, and then go back to the top to apply an operation after selecting the emails; they report this as a “bad accessibility smell” (an accessibility problem that motivates a refactoring).\\
-图1a显示的是Gmail（Google的邮箱阅读器）的收信箱。Gmail包括左侧的复选框，可以让用户选择多个邮件，这很方便对所有邮件进行操作。然而，对于
-A refactoring that solves this bad smell is Distribute Global Menu, which distributes a menu of actions affecting a list of elements to each element individually. This eases the local application of an operation because it requires only a single click immediately after the element is read. Figure 1b shows the result of applying this refactoring to the Gmail inbox.The set of actions was removed from the top and attached to each email in the form of icons(each with an alternative text).
-However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.
 
+
+\section{Refactoring Example 重构示例}
+Figure 1a shows the inbox in Gmail, Google’s email reader. Gmail includes checkboxes on the left that let users select several emails, which is handy for applying an action to all of them.However, for visually impaired people using a screen reader, it’s uncomfortable to have to go back to the checkbox at the line’s beginning to select emails after reading the line, and then go back to the top to apply an operation after selecting the emails; they report this as a “bad accessibility smell” (an accessibility problem that motivates a refactoring).\\
+图1a显示的是Gmail（Google的邮箱阅读器）的收信箱。Gmail包括左侧的复选框，可以让用户选择多个邮件，这很方便对所有邮件进行操作。然而，对于使用屏幕阅读器的视障人士，不幸的是观众读完阅读栏之后不得不返回到阅读栏的顶部复选框去选择邮件，并且选择完邮件之后又不得不返回到顶部去应用此操作；他们报告这种现象为“坏可闻”（诱发重构的一个可访问性问题）。\\
+A refactoring that solves this bad smell is Distribute Global Menu, which distributes a menu of actions affecting a list of elements to each element individually. This eases the local application of an operation because it requires only a single click immediately after the element is read. Figure 1b shows the result of applying this refactoring to the Gmail inbox.The set of actions was removed from the top and attached to each email in the form of icons(each with an alternative text).\\
+诱发这种坏味道的一个重构是分配全局菜单，它分配一个单独影响每个元素的元素列表菜单。这使一个操作的本地应用程序变得更轻松，因为当一个元素被阅读后需要仅仅一个简单的立即点击。图1b显示对Gmai收信箱应用这个重构的结果。这一系列动作是从顶部移走并且链接每个图标形式的邮件（每个对应一个可替代文本）。\\
+However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.\\
+然而，一些报告类似坏味道的用户能够更舒服地使用上下文菜单，所以这一系列动作不能被每个邮件读到。对于他们，上下文全局菜单重构更合适。而且有经验的用户更喜欢保持全局菜单，所以他们能一次操作多封邮件；对于他们，用推迟选择重构将移动复选框到最后一列。\\
 
 \end{CJK*}
 \end{document}
