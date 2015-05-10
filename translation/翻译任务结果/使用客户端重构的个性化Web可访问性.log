@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  10 MAY 2015 11:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  10 MAY 2015 19:48
 entering extended mode
 **G:/goodbye/translation/翻译任务结果/使用客户端重构的个性化We
 b可访问性.tex
@@ -325,20 +325,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--98
 File: figures/figure2.png Graphic file (type png)
 
 <use figures/figure2.png>
-Package pdftex.def Info: figures/figure2.png used on input line 105.
+Package pdftex.def Info: figures/figure2.png used on input line 102.
 (pdftex.def)             Requested size: 472.03123pt x 522.21591pt.
 
-Underfull \hbox (badness 1629) in paragraph at lines 111--134
+Underfull \hbox (badness 1629) in paragraph at lines 108--130
 []\OT1/cmr/m/n/10 The en-gine be-hind C-SWRs us-es a client-side
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 111--134
+Underfull \hbox (badness 1097) in paragraph at lines 108--130
 \OT1/cmr/m/n/10 Ab-strac-tRe-fac-tor-ing (pro-vid-ed in our frame-work)
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 111--134
+Underfull \hbox (badness 2573) in paragraph at lines 108--130
 \C19/song/m/n/10/60 S\OT1/cmr/m/n/10 6\C19/song/m/n/10/25 "\OT1/cmr/m/n/10 CSMR
 s\C19/song/m/n/10/57 � \C19/song/m/n/10/43 L \C19/song/m/n/10/55 � \C19/song/m/
 n/10/59 y \C19/song/m/n/10/48 a\OT1/cmr/m/n/10 AbstractRefactoring\C19/song/m/n
@@ -346,7 +346,7 @@ n/10/59 y \C19/song/m/n/10/48 a\OT1/cmr/m/n/10 AbstractRefactoring\C19/song/m/n
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 111--134
+Underfull \hbox (badness 1331) in paragraph at lines 108--130
 \C19/song/m/n/10/58 � \C19/song/m/n/10/50 � \C19/song/m/n/10/40  \C19/song/m/n
 /10/47 � \C19/song/m/n/10/45 e \C19/song/m/n/10/57 J \C19/song/m/n/10/42 � \C19
 /song/m/n/10/26 � \C19/song/m/n/10/37 � \C19/song/m/n/10/53 � \C19/song/m/n/10/
@@ -356,18 +356,18 @@ g/m/n/10/64 � � \C19/song/m/n/10/40 � \C19/song/m/n/10/61 � \C19/song/m/n/10/41
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 111--134
+Underfull \hbox (badness 1917) in paragraph at lines 108--130
 \OT1/cmr/m/n/10 reuses com-po-nents of-fered by our frame-work\C19/song/m/n/10/
 25 .\OT1/cmr/m/n/10 s
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 111--134
+Underfull \hbox (badness 1314) in paragraph at lines 108--130
 \OT1/cmr/m/n/10 se-quence, first by plac-ing struc-tural refac-tor-ings
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--134
+Underfull \hbox (badness 10000) in paragraph at lines 108--130
 
  []
 
@@ -382,48 +382,68 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-[6
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+[]\OT1/cmr/bx/n/14.4 Case S-tudy:Accessible
+ []
 
-]
-(G:\goodbye\translation\翻译任务结果\使用客户端重构的个性化Web
-可访问性.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+\OT1/cmr/bx/n/14.4 Gmail\C19/song/bx/n/14.4/55 �[][] \C19/song/bx/n/14.4/48 ~[]
+[] \C19/song/bx/n/14.4/60 �[][] \C19/song/bx/n/14.4/46 �[][]\OT1/cmr/bx/n/14.4 
+:\C19/song/bx/n/14.4/47 �[][] \C19/song/bx/n/14.4/41 �[][] \C19/song/bx/n/14.4/
+58 �[][]
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 132--182
+\OT1/cmr/m/n/10 refac-tored G-mail ver-sion is more ac-ces-si-ble and
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 132--182
+\OT1/cmr/m/n/10 we ex-plained each refac-tor-ing. Once the user-s
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 132--182
+\OT1/cmr/m/n/10 were fin-ished with the tasks in the com-plete-ly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--182
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<figures/figure3.png, id=61, 526.96875pt x 226.59656pt>
+File: figures/figure3.png Graphic file (type png)
+
+<use figures/figure3.png>
+Package pdftex.def Info: figures/figure3.png used on input line 187.
+(pdftex.def)             Requested size: 472.03123pt x 202.98416pt.
+
+! Undefined control sequence.
+l.191 {\bf \largeResults
+                        ���}\\
+? 
+! Emergency stop.
+l.191 {\bf \largeResults
+                        ���}\\
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 3601 strings out of 495354
- 49202 string characters out of 3183860
- 149200 words of memory out of 3000000
- 6722 multiletter control sequences out of 15000+200000
- 43253 words of font info for 147 fonts, out of 3000000 for 9000
+ 3692 strings out of 495354
+ 50953 string characters out of 3183860
+ 150948 words of memory out of 3000000
+ 6814 multiletter control sequences out of 15000+200000
+ 44445 words of font info for 151 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  27i,10n,43p,1235b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
-<F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTe
-X/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun
-.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truety
-pe/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/
-CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/sim
-sun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/tru
-etype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CT
-EX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/
-simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/
-truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:
-/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chine
-se/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fon
-ts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf>
-<F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/ch
-inese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/
-fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.t
-tf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype
-/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CT
-eX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsu
-n.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truet
-ype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><F:/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/CTEX/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on 使用客户端重构的个性化Web可访问性.pdf (6 pages
-, 735424 bytes).
-PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

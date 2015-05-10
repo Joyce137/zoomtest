@@ -62,7 +62,7 @@ Ivana Harari   阿根廷 拉普拉塔国立大学
 %\renewcommand{\captionlabelfont}{}
 \includegraphics[width=\textwidth]{figure1.png}
 \caption{\bf\large
-Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分配全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
+Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分布式全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
 }\label{fig:1}
 \end{figure*}
 
@@ -82,7 +82,7 @@ Here, we describe CSWR and a case study we ran with visually impaired users (tho
 Figure 1a shows the inbox in Gmail, Google’s email reader. Gmail includes checkboxes on the left that let users select several emails, which is handy for applying an action to all of them.However, for visually impaired people using a screen reader, it’s uncomfortable to have to go back to the checkbox at the line’s beginning to select emails after reading the line, and then go back to the top to apply an operation after selecting the emails; they report this as a “bad accessibility smell” (an accessibility problem that motivates a refactoring).\\
 图1a显示的是Gmail（Google的邮箱阅读器）的收信箱。Gmail包括左侧的复选框，可以让用户选择多个邮件，这很方便对所有邮件进行操作。然而，对于使用屏幕阅读器的视障人士，不幸的是观众读完阅读栏之后不得不返回到阅读栏的顶部复选框去选择邮件，并且选择完邮件之后又不得不返回到顶部去应用此操作；他们报告这种现象为“坏可闻”（诱发重构的一个可访问性问题）。\\
 A refactoring that solves this bad smell is Distribute Global Menu, which distributes a menu of actions affecting a list of elements to each element individually. This eases the local application of an operation because it requires only a single click immediately after the element is read. Figure 1b shows the result of applying this refactoring to the Gmail inbox.The set of actions was removed from the top and attached to each email in the form of icons(each with an alternative text).\\
-诱发这种坏味道的一个重构是分配全局菜单，它分配一个单独影响每个元素的元素列表菜单。这使一个操作的本地应用程序变得更轻松，因为当一个元素被阅读后需要仅仅一个简单的立即点击。图1b显示对Gmai收信箱应用这个重构的结果。这一系列动作是从顶部移走并且链接每个图标形式的邮件（每个对应一个可替代文本）。\\
+诱发这种坏味道的一个重构是分布式全局菜单，它分配一个单独影响每个元素的元素列表菜单。这使一个操作的本地应用程序变得更轻松，因为当一个元素被阅读后需要仅仅一个简单的立即点击。图1b显示对Gmai收信箱应用这个重构的结果。这一系列动作是从顶部移走并且链接每个图标形式的邮件（每个对应一个可替代文本）。\\
 However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.\\
 然而，一些报告类似坏味道的用户能够更舒服地使用上下文菜单，所以这一系列动作不能被每个邮件读到。对于他们，上下文全局菜单重构更合适。而且有经验的用户更喜欢保持全局菜单，所以他们能一次操作多封邮件；对于他们，用推迟选择重构将移动复选框到最后一列。\\
 
@@ -97,11 +97,8 @@ As this example shows, a Web refactoring changes a Web application’s navigation
 ? 结构独立 — 开发一个CSWR需要很少（如果有的话）掌握目标应用程序的底层结构。\\
 
 %插入图2
-%添加图1
 \begin{figure*}[top]
 \centering
-%\renewcommand{\captionfont}{\Large \bfseries \sffamily}
-%\renewcommand{\captionlabelfont}{}
 \includegraphics[width=\textwidth]{figure2.png}
 \caption{\bf\large
 Client-Side Web Refactoring. a) Split Page refactoring levels: the generic implementation at the bottom, two instances (for Gmail and Hotmail) in the middle, and the result on each DOM at the top. b) Split Page instantiation: the intermediary drags Gmail’s Labels to create a new Foders section.客户端网络重构。a) 分页重构层次：底部是类的实现，中间是两个实例（对Gmail和Hotmail），顶部是每个DOM结果。b)分页实例：中介拖动Gmail标签来创建一个新的目录部分。
@@ -126,5 +123,83 @@ JavaScript(JS)程序员通过写一个参数化脚本创建新的重构，该脚本重用被我们框架的重构
 ? 一个为特定网站的中介实例化重构。（JS程序员也能扮演这个角色。）重构可通过写代码（如图2a）或用我们的重构工具（如图2b）实现实例化。这个图形化工具让目标页上的中介点击来选择作为每个重构参数值的组件。例如，图2b显示SplitPage的一个实例，这里邮件标签组被拖到进入新一页的目录部分。\\
 ? End users install instantiated refactorings by choosing them from an accessible menu in their Web browsers; from then on, they can access the refactored website configured to their needs. Unlike traditional refactoring, we added this new step (separating it from instantiation) so that handicapped users unable to code a script or use a graphical refactoring tool can still be part of the process by choosing their own refactorings.\\
 ? 最终用户通过从他们Web浏览器中的可访问菜单选择来安装实例化重构；从此，他们可以访问按他们需要配置的重构网站。不同于传统的重构，我们添加新步骤（从实例中分离）使不能写脚本或用图形化重构工具的残疾用户也能通过选择他们自己的重构来成为过程的一部分。\\
+CSWR’s power comes not only from letting end users choose specific refactorings, but also from letting intermediaries compose refactorings in different ways. CSWR composition is done at instantiation time, and requires special handling because refactorings can interfere with each other. Similar to code refactorings, an applied refactoring might invalidate the next refactoring’s preconditions. In this case, the preconditions of CSWRs are the existence of the DOM elements specified as parameters (xPath expressions). Thus, an applied refactoring might invalidate subsequent refactorings if it changes the xPaths that identify their target elements. For example, if Split Page and Distribute Global Menu are both instantiated on the original DOM’s elements, and Split Page is applied first,the Distributed Global Menu won’t find its target elements in their original xPath location.\\
+CSWR的动力不仅仅来自于让最终用户选择特定重构，也来自于让中介用不同的方式组合重构。CSWR在实例化时候完成组合，并且需要特殊处理，因为重构能互相干扰。类似于代码重构，一个应用重构或许在下一个重构的前提下无效。在这种情况下，CSWR的前提是被指定为参数（xPath表达式）的DOM元素实体。所以，如果应用重构改变识别目标元素的xPath,它或许会使后续重构无效。例如，如果拆分页面和分布式全局菜单都在原来的DOM元素上实例化，并且拆分页面先被应用，分布式全局菜单不会在原来的xPath定位式中找到目标元素。\\
+Our refactoring tool helps intermediary users correctly compose CSWRs so that they can create and distribute a complete, accessible version of an application as a composition of CSWR instances. When an intermediary user selects several refactorings to compose, the tool creates and suggests a possible sequence, first by placing structural refactorings (such as Split Page),then refactorings that adapt specific DOM elements (such as Distribute Global Menu), and finally by placing DOM-independent refactorings (such as Replace Image with their Alt Text).CSWRs are thus instantiated in order, and users can specify certain noninterfering CSWRs to be independent. With this information, the tool creates the menu of optional CSWRs, so that when end users install a composed set of CSWRs, they can still choose to activate or deactivate independent CSWRs individually.\\
+我们的重构工具帮助中介用户正确地构成CSWR以至于他们能创建和分配一个应用程序完整的、可访问的版本作为CSWR实例组合。当一个中介用户选择若干重构去组合的时候，工具创建并推荐一个可能的序列，首先实行结构重构（如拆分页面），然后重构以适应特定的DOM元素（如分布式全局菜单），最后实行DOM独立重构（如用他们的Alt文本替换图像）。CSWR因此被按顺序实例化，用户能指定特定互不干扰的CSWR进行独立化。有了这些信息，该工具创建可选的CSWR菜单，这样当最终用户安装一套CSWR组合是，他们仍然可以单独地选择启动或顶用独立的CSWR。\\
+
+\section{Case Study:Accessible Gmail实例研究:可访问性Gmail}
+We carried out a case study on the HTML version of Gmail with visually impaired users to validate our claim that refactorings offer a better experience when they’re customized for and by end users to suit their own expertise, screen-reader of choice, personal preferences, and so on. We played the roles of JS programmers and intermediaries.\\
+我们开展了对视障用户的Gmail的HTML版本为例来验证我们的要求，重构提供了一个更好的体验，当他们与最终用户定制设和自己的专长、屏幕阅读器的选择、个人喜好等等。我们扮演JS程序员和中介机构的角色。\\
+{\bf\large Preliminary Study初步研究}\\
+We first conducted a study with seven potential Gmail users to test our preliminary hypothesis:our refactored Gmail version is more accessible and usable than the original. Of the seven users, six were blind, and one had a severe sight deficiency. The test users had various computer and Internet skill levels; most used email clients and Web browsers, although only one had previously used webmail tools.\\
+我们首先开展一项有七个潜在Gmail用户参与的研究来测试我们的初步假设：我们重构的Gmail版本比原来的更方便和实用。在七个用户中，六个是失明的，一个有严重的视力缺陷。测试用户有各种电脑和Internet技能水平；最常用的邮件客户端和Web 浏览器，尽管只有一个以前使用过邮件工具。\\
+We gave users the following tasks:\\
+我们给用户以下任务：\\
+1. Read and reply to an email.\\
+1. 阅读和回复一封邮件。\\
+2. Compose an email and send it to several people.\\
+2. 撰写一封邮件并将它发给几个人。\\
+3. Search and delete a specific sent message.\\
+3. 搜索并删除一封特定的发送信息。\\
+Users had to complete the tasks first in the original Gmail, so we could check for ignored bad smells, and then in a refactored version,to detect unsolved bad smells and determine how this first refactoring attempt improved or spoiled the user experience.\\
+用户必须首先在原来的Gmail上完成任务，所以我们能检查忽略的坏气味，然后在一个重构版本中，检测解决的坏气味并决定第一次重构尝试如何改进或破坏用户体验。\\
+The selected refactorings were Split Page (to partition the email list, tags list, and the main Google menu), Distribute Global Menu (for email operations), Reorganize into a List (for sets of unnumbered actions), Remove Redundant Operation (to remove the global menu of email operations at the top and leave the one at the bottom of the email list), and Postpone Selection (to move the checkbox column to the end of each email’s row).\\
+选定的重构是拆分页面（为分区的邮件列表，标签列表和主要的Google菜单）,分布式全局菜单（为邮件操作），整理成列表（为无编号的操作组），去除多余的操作（删除顶部邮件操作的全局菜单及保留在邮件列表底部）和推迟选择（移动复选框列到每个邮件行尾）。\\
+During the study, we used observation and questionnaires to gather various feedback. These led to several findings:\\
+在研究期间，我们用观察和问卷调查收集各种反馈。这产生了一些发现：\\
+? Different skill levels in screen reader use led to different complications; for example,refactorings aimed at simplifying the structure were useful mostly for novice users, but were burdensome for experienced ones.\\
+? 在屏幕阅读器使用方面不同的技能水平会导致不同的混乱；例如，旨在简化结构的重构对于新手用户非常有用，但是对于有经验的用户却是繁重的。\\
+? Users suggested new refactorings, including the use of context menus as an alternative to distributed menus.\\
+? 用户建议新的重构，要包含使用上下文菜单来代替分布式菜单。\\
+? Users new to webmail clients couldn’t complete the tasks in the original Gmail, but could complete them with external aid in the refactored version (which proves our hypothesis with new users).\\
+? 使用网页邮箱客户端的新用户不能在原来的Gmail完成任务，但是能在重构版本中外部援助情况下完成（这证明了我们在新用户方面的假设）。\\
+? Users had positive feedback on the content’s organization and functionality. Using a ratings scale of very good, good, average, and poor, the feedback included five good qualifications and one average for organization/functionality, but ease of use scored only two goods and four averages, which helped us gather other bad smells and improve the tools for intermediaries and final users.\\
+? 用户在内容的组织和功能方面有积极的反馈。用非常好、好、一般、差的评级量表，在组织/功能方面得到五个‘好’和一个‘一般’的反馈，但是在易用性方面得分仅有两个‘好’和四个‘一般’，这帮助我们收集其他坏味道，并且提高为中介和最终用户的工具。\\
+{\bf\large Actual Experiment实际实验}\\
+Following our preliminary study, we conducted an experiment with new users. Of the 10 blind users in this study, three were experienced in operating Gmail, and the other seven were experienced in Web browsing, but not with Gmail.This time, our hypothesis was that a personalized version of Gmail is better than our completely refactored version. We conducted the test with one user at a time, going through simplified tasks that covered the same basic ground as in our previous study:\\
+根据我们的初步研究，我们进行了一个新用户的实验。本研究中的10个盲人用户，其中3个在操作Gmail上有经验，其他7个在Web浏览器上有经验，但对于Gmail没有经验。这次，我们的假设是一个个性化的Gmail版本比我们完全重构的版本好。我们一次一个用户地进行测试，覆盖以前研究中的同样基础测试组的简化任务：\\
+1. Delete all emails from a specific sender.\\
+1. 删除特定发送者的所有邮件。\\
+2. Find a specific deleted email in the Trash and put it back in the Inbox.\\
+2. 在垃圾箱中找到一个特定的已删除邮件，并把它放回收信箱。\\
+3. Answer the email recovered in task 2.\\
+3. 回复任务2中恢复的邮件。\\
+Before the actual experiment, we asked users to answer a specific email (as in task 3) on the original Gmail. This had a twofold purpose:it gave us a sense of their expertise with the tools (browser and screen reader) and reduced the bias that might occur for users without previous Gmail experience.\\
+在实际实验之前，我们让用户在原来的Gmail中回复一个特定的邮件（如在任务3 中）。这有双重目的：它让我们了解他们使用工具（浏览器和屏幕阅读器）的技能，并且减少没有Gmail经验的用户可能产生的偏差。\\
+For the main part of the experiment, we devised an optimal set of four refactorings based on the experience from the previous study and applied them to Gmail:\\
+对于实验的主要部分，我们设计了一个基于以前研究经验的四种重构的最优组合，并将其应用在Gmail上：\\
+? Split Page, to reduce each page’s contents and thus ease content access;\\
+? 分页，来减少每个页面的内容，从而缓解内容访问;\\
+? Distribute Menu, to simplify the tasks applied to each item on a list (such as emails);\\
+? 分布式菜单，来简化应用在列表（如邮件）中每个列表项的任务;\\
+? Contextualize Menu, to present actions over an item as a contextual menu; and\\
+? 上下文适应菜单，将一个列表项的当前行为作为一个上下文菜单；并且\\
+? Postpone Selection, to let users read the email subjects and check them immediately afterward to apply an action to several selected emails.\\
+? 推迟选择，让用户阅读邮件主题并立即检查它们之后对一些选定的邮件申请动作。\\
+Before we asked the subjects to complete the tasks, we explained each refactoring. Once the users were finished with the tasks in the completely refactored version, we had them arrange their own set of refactorings using the menu options in their browsers. They then performed the affected tasks — those related to the selected refactorings — again for further comparison.\\
+在我们要求测试者完成任务之前，我们解释了每个重构。一旦用户在完全重构版本完成任务，我们让它们安装它们自己的重构组合，其应用在它们浏览器上的菜单选项。然后他们再次执行受影响的任务 - 那些与选择的重构相关的任务 - 再做进一步比较。\\
+
+%插入表格（即图3）
+%插入图2
+\begin{figure*}[top]
+\centering
+\includegraphics[width=\textwidth]{figure3.png}
+\label{fig:3}
+\end{figure*}
+
+{\bf \large Results结果}\\
+The main measurement we gathered was task completion time, comparing the times from the completely refactored site with those repeated in the personalized version (see Table 1). Out of 10 users, five preferred Contextualize Menu to Distribute Menu, two discarded Split Page, and the rest preferred the refactored site as it was.\\
+我们收集的主要测试法是任务完成时间，比较完全重构版本的时间与那些在个性化版本重复花的时间（如表1）。在这10个用户中，5个比分布式菜单更喜欢上下文适应菜单，2个丢弃拆分页面，而剩余的更喜欢它本身的重构网站。\\
+The overall completion times decreased by an average of 33.44 percent, with 32.03 percent for the subjects who chose Contextualize Menu and 36.94 percent for the group with no Split Page refactoring.\\
+整体完成时间平均减少33.44\%，选择上下文适应菜单科目的减少32.03\%，没有拆分页面重构的组减少36.94\%。\\
+From this second study, we gathered new feedback, which led to the following findings:\\
+从这第二次研究，我们收集新回馈，其产生以下的发现：\\
+? Novice users found it easier to navigate using Split Page, but this wasn’t the case for experienced users because the split structure requires additional navigation steps for some tasks (such as when folders were moved to a folder index in a separate page).\\
+? 新手用户发现使用拆分页面导航更容易，但是这不适用于有经验的用户，因为拆分结构下一些任务需要额外的导航步骤（例如当目录被移动到一个单独的页面目录索引时）。\\
+? Some novice users suggested splitting the pages in a new way, so that some of the features were always present; others wanted to easily hide the main menu when desired.\\
+? 一些新手用户建议用一种新的方式拆分页面，这样一些功能总是存在的；其他人想根据所需更容易地隐藏主菜单。\\
+? Users’ habits directly interfere with the results.For example, experienced users didn’t appreciate the benefits of Distribute Menu until after they tried it and used it for a while, because they were used to dealing with the global menu.\\
+? 用户的习惯直接干扰结果。例如，有经验的用户直到他们尝试并使用它一段时间以后才能领会分布式菜单的益处，因为他们习惯处理全局菜单。\\
 \end{CJK*}
 \end{document}
