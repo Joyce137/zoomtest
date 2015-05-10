@@ -1,98 +1,56 @@
-% sample is here : 1-in-2.tex
-%
-\documentclass[twocolumn]{article}
-%
-\usepackage{1-in-2}
-\textwidth=420pt \textheight=600pt \columnsep=20pt
-\newcommand{\bs}{{\tt\symbol{'134}}}
-\newcommand{\fat}[1]{\mbox{\boldmath{$#1$}}}
-%
-\title{{\sc One-Column Abstract and Footnote \\
-               in the Two-Column Documents}\thanks{This is
-           a \protect\LaTeX\  footnote for the title of this article.}}
-%
-\author{{\sc an Author}\thanks{Institution of the first author,
- Department of that institution. Full address for ordinary mailing
- system. An {\bf\ e-mail} address at the end if any.}
-    \and {\sc another Author}\thanks{Work place of the second author.}}
-%
-%  \institution{University Somewhere} % if you need it
-%
-\abstract{% No blank line
-This is the main abstract.
-Four functions related to `{\tt onecolumn}' output are added
-in `{\tt twocolumn}' article.
-1) footnotes created by {\bs}{\tt thanks} are set in one-column format.
-2) abstract and keywords are put right below the author list in
-one-column format.
-3) the bottom of two columns at the last page is aligned so that
-some text such as abstract can be put below in one-column format.
-4) footnote of the textwidth can be set at any page.}
-%
-\keywords{two-column, one-column, maketitle, footnote}
-%
-\endabstract{% Yes blank line
-This is the part of abstract at the end.
-Four functions related to `{\tt onecolumn}' output are added
-in `{\tt twocolumn}' article.
-
-1) footnotes created by {\bs}{\tt thanks} are set in one-column format.
-2) abstract and keywords are put right below the author list in
-one-column format.
-3) the bottom of two columns at the last page is aligned so that
-some text such as abstract can be put below in one-column format.
-4) footnote of the textwidth can be set at any page.}
-%
+\documentclass{article}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\bfseries The performance of new graduates}
+\lfoot{From: K. Grant}
+\cfoot{To: Dean A. Smith}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%……
 \begin{document}
-
-\maketitle
-
-\section{PROBLEM}
-
-As is often observed in the proceedings of engineering societies,
-the manuscript is written in two-column format. But at the end
-of the main body of the article, the abstract may be included in
-one-column format.
-Or, the abstract may be located at the beginning of the article,
-but is not in the left-column where
-the ordinary \verb+\begin{abstract}+ places the abstract.
-Key words are also listed right below the main title.
-
-
-Furthermore the footnotes about the title and authors are sometimes
-set in one-column form within the two-column document.
-It is easy to handle these kinds of outputs if one uses `multicol.sty'.
-However, this style file inhibits us from using `floats'
-within the column.
-
-\section{MODIFICATION}
-
-The one-column layout of abstract around the main title can be
-specified by changing the definition of \verb+\@maketitle+.
-Read the corresponding parts in the preamble of this document.
-
-
-
-If one needs the abstract right below the title, it can be defined
-by a command
-\begin{quote}\verb+\abstract{....}+\end{quote}
-where no blank line is permitted. If a couple of paragraphs are
-needed within the abstract, change the way of definition of
-\verb+\abstract+ to \verb+\long\def\abstract#1{...+.
-One must be careful in using \verb+\verb+ within
-\verb+\abstract+.
-\begin{figure}[h]
-\setlength{\unitlength}{1mm}
-\begin{center}\begin{picture}(50,20)(0,0)
-\framebox(50,20){{\sc Figure}}\end{picture}\end{center}
-\caption{One-Column Figure}
-\end{figure}
-
-Key words can be defined similarly by a command (
-\fbox{{\bs}{\tt rightfootnotepage}} may be put around here,
-only when necessary.)
-\begin{quote} \verb+\keywords{...}+ \end{quote}
-which will appear in italic. Both \verb+\abstract+ and \verb+\keywords+
-are not necessarily defined,
-
+……
+test!
+sdfksfjtj
+Refactoring was originally conceived as a technique to improve software’s internal qualities —-such as understandability and maintainability — while preserving semantics.1 In prior work, we adapted the refactoring approach to improve a Web application’s external attributes, such as usability.2 These Web refactorings consist of small navigation or interface transformations that enhance perceivable aspects of Web applications, such as user interaction and content presentation, while preserving functionality. Refactorings can also solve accessibility and usability problems for disabled users.3 Still, it’s usually impractical to address interface improvements for all audiences because disabilities can vary dramatically in nature (visual, cognitive, or motor), severity (blindness, color blindness, or strabismus) and extent (total or partial). In such different contexts, “one for all” is barely feasible.\\
+ 重构的初衷是提高软件内部质量的一种技术——如可理解性和可维护性，同时保留语义1。在以前的工作中，我们采用了重构方法来提高Web应用程序的外部属性，如可用性2。这些Web 重构包括小的导航或界面转换来增强Web应用程序的感知性方面，比如用户互动和内容呈现方式，同时保留功能。重构也可以解决残障用户3 的可访问性和可用性问题。还有，它对于解决所有观众的界面改进问题通常是不切实际的，因为残障用户在性质（视力障碍、认知障碍或运动障碍）、严重性（失明、色盲或斜视）和程度（完全或部分）上显著不同。在如此不同的上下文中，”所有人“是不可行的。\\
+ When applying refactoring to improve internal qualities, developers decide which transformations to apply and where, because they’re the ones benefiting from the improvement. As Brian Foote and Joseph Yoder put it, “Who better to resolve the forces impinging upon each design issue as it arises, as the person who is going to have to live with these decisions?”4 Moreover, different developers might prefer alternative solutions for the same “bad smell” (that is, the design problem that motivated the refactoring1). Following on this general philosophy, we believe that end users should be able to tailor a website’s interface for their own benefit.\\
+当应用重构来提高内部质量时，开发者决定应用什么改变，以及在哪儿应用，因为他们受益于改进。正如Brian Foote和Joseph Yoder所说，“当问题出现时，谁能更好地解决冲击每个设计问题的压力？谁又是不得不依靠这些设计的人？4”此外，不同的开发者或许更喜欢可替代的解决方案，对于相同的“坏味道”（即诱发重构1的设计问题）。根据这个普遍的哲理，我们相信那些终端用户能够根据他们自己的利益定制网站的界面。\\
+We propose empowering users (or close representatives) with the ability to select, in their client browsers, their own interface refactorings for each site they access. We call our approach Client-Side Web Refactoring. CSWR allows for the automatic creation of different, personalized views of the same application to solve the particular bad smells that each user recognizes. (Developers should continue to focus on addressing general usability problems on the server-side, however,and reach the minimum level of accessibility,or “A”).\\
+我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
+Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
+在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。
+Refactoring was originally conceived as a technique to improve software’s internal qualities —-such as understandability and maintainability — while preserving semantics.1 In prior work, we adapted the refactoring approach to improve a Web application’s external attributes, such as usability.2 These Web refactorings consist of small navigation or interface transformations that enhance perceivable aspects of Web applications, such as user interaction and content presentation, while preserving functionality. Refactorings can also solve accessibility and usability problems for disabled users.3 Still, it’s usually impractical to address interface improvements for all audiences because disabilities can vary dramatically in nature (visual, cognitive, or motor), severity (blindness, color blindness, or strabismus) and extent (total or partial). In such different contexts, “one for all” is barely feasible.\\
+ 重构的初衷是提高软件内部质量的一种技术——如可理解性和可维护性，同时保留语义1。在以前的工作中，我们采用了重构方法来提高Web应用程序的外部属性，如可用性2。这些Web 重构包括小的导航或界面转换来增强Web应用程序的感知性方面，比如用户互动和内容呈现方式，同时保留功能。重构也可以解决残障用户3 的可访问性和可用性问题。还有，它对于解决所有观众的界面改进问题通常是不切实际的，因为残障用户在性质（视力障碍、认知障碍或运动障碍）、严重性（失明、色盲或斜视）和程度（完全或部分）上显著不同。在如此不同的上下文中，”所有人“是不可行的。\\
+ When applying refactoring to improve internal qualities, developers decide which transformations to apply and where, because they’re the ones benefiting from the improvement. As Brian Foote and Joseph Yoder put it, “Who better to resolve the forces impinging upon each design issue as it arises, as the person who is going to have to live with these decisions?”4 Moreover, different developers might prefer alternative solutions for the same “bad smell” (that is, the design problem that motivated the refactoring1). Following on this general philosophy, we believe that end users should be able to tailor a website’s interface for their own benefit.\\
+当应用重构来提高内部质量时，开发者决定应用什么改变，以及在哪儿应用，因为他们受益于改进。正如Brian Foote和Joseph Yoder所说，“当问题出现时，谁能更好地解决冲击每个设计问题的压力？谁又是不得不依靠这些设计的人？4”此外，不同的开发者或许更喜欢可替代的解决方案，对于相同的“坏味道”（即诱发重构1的设计问题）。根据这个普遍的哲理，我们相信那些终端用户能够根据他们自己的利益定制网站的界面。\\
+We propose empowering users (or close representatives) with the ability to select, in their client browsers, their own interface refactorings for each site they access. We call our approach Client-Side Web Refactoring. CSWR allows for the automatic creation of different, personalized views of the same application to solve the particular bad smells that each user recognizes. (Developers should continue to focus on addressing general usability problems on the server-side, however,and reach the minimum level of accessibility,or “A”).\\
+我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
+Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
+在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。
+Refactoring was originally conceived as a technique to improve software’s internal qualities —-such as understandability and maintainability — while preserving semantics.1 In prior work, we adapted the refactoring approach to improve a Web application’s external attributes, such as usability.2 These Web refactorings consist of small navigation or interface transformations that enhance perceivable aspects of Web applications, such as user interaction and content presentation, while preserving functionality. Refactorings can also solve accessibility and usability problems for disabled users.3 Still, it’s usually impractical to address interface improvements for all audiences because disabilities can vary dramatically in nature (visual, cognitive, or motor), severity (blindness, color blindness, or strabismus) and extent (total or partial). In such different contexts, “one for all” is barely feasible.\\
+ 重构的初衷是提高软件内部质量的一种技术——如可理解性和可维护性，同时保留语义1。在以前的工作中，我们采用了重构方法来提高Web应用程序的外部属性，如可用性2。这些Web 重构包括小的导航或界面转换来增强Web应用程序的感知性方面，比如用户互动和内容呈现方式，同时保留功能。重构也可以解决残障用户3 的可访问性和可用性问题。还有，它对于解决所有观众的界面改进问题通常是不切实际的，因为残障用户在性质（视力障碍、认知障碍或运动障碍）、严重性（失明、色盲或斜视）和程度（完全或部分）上显著不同。在如此不同的上下文中，”所有人“是不可行的。\\
+ When applying refactoring to improve internal qualities, developers decide which transformations to apply and where, because they’re the ones benefiting from the improvement. As Brian Foote and Joseph Yoder put it, “Who better to resolve the forces impinging upon each design issue as it arises, as the person who is going to have to live with these decisions?”4 Moreover, different developers might prefer alternative solutions for the same “bad smell” (that is, the design problem that motivated the refactoring1). Following on this general philosophy, we believe that end users should be able to tailor a website’s interface for their own benefit.\\
+当应用重构来提高内部质量时，开发者决定应用什么改变，以及在哪儿应用，因为他们受益于改进。正如Brian Foote和Joseph Yoder所说，“当问题出现时，谁能更好地解决冲击每个设计问题的压力？谁又是不得不依靠这些设计的人？4”此外，不同的开发者或许更喜欢可替代的解决方案，对于相同的“坏味道”（即诱发重构1的设计问题）。根据这个普遍的哲理，我们相信那些终端用户能够根据他们自己的利益定制网站的界面。\\
+We propose empowering users (or close representatives) with the ability to select, in their client browsers, their own interface refactorings for each site they access. We call our approach Client-Side Web Refactoring. CSWR allows for the automatic creation of different, personalized views of the same application to solve the particular bad smells that each user recognizes. (Developers should continue to focus on addressing general usability problems on the server-side, however,and reach the minimum level of accessibility,or “A”).\\
+我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
+Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
+在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。
+Refactoring was originally conceived as a technique to improve software’s internal qualities —-such as understandability and maintainability — while preserving semantics.1 In prior work, we adapted the refactoring approach to improve a Web application’s external attributes, such as usability.2 These Web refactorings consist of small navigation or interface transformations that enhance perceivable aspects of Web applications, such as user interaction and content presentation, while preserving functionality. Refactorings can also solve accessibility and usability problems for disabled users.3 Still, it’s usually impractical to address interface improvements for all audiences because disabilities can vary dramatically in nature (visual, cognitive, or motor), severity (blindness, color blindness, or strabismus) and extent (total or partial). In such different contexts, “one for all” is barely feasible.\\
+ 重构的初衷是提高软件内部质量的一种技术——如可理解性和可维护性，同时保留语义1。在以前的工作中，我们采用了重构方法来提高Web应用程序的外部属性，如可用性2。这些Web 重构包括小的导航或界面转换来增强Web应用程序的感知性方面，比如用户互动和内容呈现方式，同时保留功能。重构也可以解决残障用户3 的可访问性和可用性问题。还有，它对于解决所有观众的界面改进问题通常是不切实际的，因为残障用户在性质（视力障碍、认知障碍或运动障碍）、严重性（失明、色盲或斜视）和程度（完全或部分）上显著不同。在如此不同的上下文中，”所有人“是不可行的。\\
+ When applying refactoring to improve internal qualities, developers decide which transformations to apply and where, because they’re the ones benefiting from the improvement. As Brian Foote and Joseph Yoder put it, “Who better to resolve the forces impinging upon each design issue as it arises, as the person who is going to have to live with these decisions?”4 Moreover, different developers might prefer alternative solutions for the same “bad smell” (that is, the design problem that motivated the refactoring1). Following on this general philosophy, we believe that end users should be able to tailor a website’s interface for their own benefit.\\
+当应用重构来提高内部质量时，开发者决定应用什么改变，以及在哪儿应用，因为他们受益于改进。正如Brian Foote和Joseph Yoder所说，“当问题出现时，谁能更好地解决冲击每个设计问题的压力？谁又是不得不依靠这些设计的人？4”此外，不同的开发者或许更喜欢可替代的解决方案，对于相同的“坏味道”（即诱发重构1的设计问题）。根据这个普遍的哲理，我们相信那些终端用户能够根据他们自己的利益定制网站的界面。\\
+We propose empowering users (or close representatives) with the ability to select, in their client browsers, their own interface refactorings for each site they access. We call our approach Client-Side Web Refactoring. CSWR allows for the automatic creation of different, personalized views of the same application to solve the particular bad smells that each user recognizes. (Developers should continue to focus on addressing general usability problems on the server-side, however,and reach the minimum level of accessibility,or “A”).\\
+我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
+Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
+在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。Refactoring was originally conceived as a technique to improve software’s internal qualities —-such as understandability and maintainability — while preserving semantics.1 In prior work, we adapted the refactoring approach to improve a Web application’s external attributes, such as usability.2 These Web refactorings consist of small navigation or interface transformations that enhance perceivable aspects of Web applications, such as user interaction and content presentation, while preserving functionality. Refactorings can also solve accessibility and usability problems for disabled users.3 Still, it’s usually impractical to address interface improvements for all audiences because disabilities can vary dramatically in nature (visual, cognitive, or motor), severity (blindness, color blindness, or strabismus) and extent (total or partial). In such different contexts, “one for all” is barely feasible.\\
+ 重构的初衷是提高软件内部质量的一种技术——如可理解性和可维护性，同时保留语义1。在以前的工作中，我们采用了重构方法来提高Web应用程序的外部属性，如可用性2。这些Web 重构包括小的导航或界面转换来增强Web应用程序的感知性方面，比如用户互动和内容呈现方式，同时保留功能。重构也可以解决残障用户3 的可访问性和可用性问题。还有，它对于解决所有观众的界面改进问题通常是不切实际的，因为残障用户在性质（视力障碍、认知障碍或运动障碍）、严重性（失明、色盲或斜视）和程度（完全或部分）上显著不同。在如此不同的上下文中，”所有人“是不可行的。\\
+ When applying refactoring to improve internal qualities, developers decide which transformations to apply and where, because they’re the ones benefiting from the improvement. As Brian Foote and Joseph Yoder put it, “Who better to resolve the forces impinging upon each design issue as it arises, as the person who is going to have to live with these decisions?”4 Moreover, different developers might prefer alternative solutions for the same “bad smell” (that is, the design problem that motivated the refactoring1). Following on this general philosophy, we believe that end users should be able to tailor a website’s interface for their own benefit.\\
+当应用重构来提高内部质量时，开发者决定应用什么改变，以及在哪儿应用，因为他们受益于改进。正如Brian Foote和Joseph Yoder所说，“当问题出现时，谁能更好地解决冲击每个设计问题的压力？谁又是不得不依靠这些设计的人？4”此外，不同的开发者或许更喜欢可替代的解决方案，对于相同的“坏味道”（即诱发重构1的设计问题）。根据这个普遍的哲理，我们相信那些终端用户能够根据他们自己的利益定制网站的界面。\\
+We propose empowering users (or close representatives) with the ability to select, in their client browsers, their own interface refactorings for each site they access. We call our approach Client-Side Web Refactoring. CSWR allows for the automatic creation of different, personalized views of the same application to solve the particular bad smells that each user recognizes. (Developers should continue to focus on addressing general usability problems on the server-side, however,and reach the minimum level of accessibility,or “A”).\\
+我们建议授权用户（或者是类似代表）有选择的能力，在客户端浏览器，对自己可访问的每个站点进行页面重构。我们称我们的方法为“客户端Web重构”（简称CSWR）。CSWR允许自动创建同一个应用程序的不同的、个性化界面来解决每个用户认为的特定的坏味道。（开发者应该继续致力于解决服务器端的一般的可用性问题，而且达到可访问性的最低水平或“A”）。\\
+Here, we describe CSWR and a case study we ran with visually impaired users (though a similar solution could be applied for other disabilities).\\
+在这里，我们描述CSWR和一个视障人士参与的实例研究（尽管类似的解决方案可应用于其他残障人士）。
 \end{document}

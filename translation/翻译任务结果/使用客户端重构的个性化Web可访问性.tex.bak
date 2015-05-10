@@ -54,14 +54,14 @@ Ivana Harari   阿根廷 拉普拉塔国立大学
     \end{abstract}
     \end{@twocolumnfalse}
 ]
-  
-%添加图片
+
+%添加图1
 \begin{figure*}[top]
 \centering
-%\renewcommand{\captionfont}{\Large \bfseries \sffamily} 
+%\renewcommand{\captionfont}{\Large \bfseries \sffamily}
 %\renewcommand{\captionlabelfont}{}
 \includegraphics[width=\textwidth]{figure1.png}
-\caption{\bf\large 
+\caption{\bf\large
 Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分配全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
 }\label{fig:1}
 \end{figure*}
@@ -86,5 +86,45 @@ A refactoring that solves this bad smell is Distribute Global Menu, which distri
 However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.\\
 然而，一些报告类似坏味道的用户能够更舒服地使用上下文菜单，所以这一系列动作不能被每个邮件读到。对于他们，上下文全局菜单重构更合适。而且有经验的用户更喜欢保持全局菜单，所以他们能一次操作多封邮件；对于他们，用推迟选择重构将移动复选框到最后一列。\\
 
+\section{Client-Side Web Refactoring 客户端的Web重构}
+As this example shows, a Web refactoring changes a Web application’s navigation structure or look and feel, preserving its content and operations while removing bad usability or accessibility smells. In previous work, we used Web refactorings to enhance navigation and presentation during the development life cycle. 2,5 We can generate a complete new version of an application with a specific aim — such as a mobile version — by systematically applying and composing refactorings. Here, we propose a similar approach to improve accessibility, where refactoring is applied after deployment and during actual use of the Web application, altering the interface in the browser itself.\\
+正如这个例子所述，Web重构改变Web应用程序的导航结构或外观,去除可用性和可访问性的坏气味的同时保留它的内容和操作。在之前的工作中，我们用Web重构增强了开发生命周期2,5 中的导航和演示。我们能通过系统应用和组合重构，根据特定的目标生成一个应用程序的全新版本--例如一个手机版本。在这里，我们提出一个相似的方法提高可访问性，即Web 应用程序部署和实际应用期间使用重构，改变浏览器本身的界面。\\
+    Our CSWR approach has two key benefits:\\
+    我们CSWR方法有两个主要好处：\\
+? Simpler maintenance — developers maintain a single core application, applying Web usability refactorings that address a general audience, while different refactored versions can be created by and for different users.\\
+? 维护更简单 — 开发者维护一个单核心应用程序，其为解决普通观众问题应用Web可用性重构，当然不同的重构版本被创建且服务于不同的用户。\\
+? Architecture independence — developing a CSWR requires little (if any) knowledge of the target application’s underlying architecture.\\
+? 结构独立 — 开发一个CSWR需要很少（如果有的话）掌握目标应用程序的底层结构。\\
+
+%插入图2
+%添加图1
+\begin{figure*}[top]
+\centering
+%\renewcommand{\captionfont}{\Large \bfseries \sffamily}
+%\renewcommand{\captionlabelfont}{}
+\includegraphics[width=\textwidth]{figure2.png}
+\caption{\bf\large
+Client-Side Web Refactoring. a) Split Page refactoring levels: the generic implementation at the bottom, two instances (for Gmail and Hotmail) in the middle, and the result on each DOM at the top. b) Split Page instantiation: the intermediary drags Gmail’s Labels to create a new Foders section.客户端网络重构。a) 分页重构层次：底部是类的实现，中间是两个实例（对Gmail和Hotmail），顶部是每个DOM结果。b)分页实例：中介拖动Gmail标签来创建一个新的目录部分。
+}\label{fig:2}
+\end{figure*}
+
+The engine behind CSWRs uses a client-side adaptation framework that aims to adapt existing applications by changing their DOM structure. 6 CSWRs are implemented by specializing the class  AbstractRefactoring (provided in our framework) and redefining the method adaptDocument() with the refactoring’s mechanics.For example, consider the Split Page refactoring, which solves the problem of a saturated, complex webpage by dividing it into a set of simpler pages or sections. 2 In this case, the method adaptDocument() receives the DOM elements that represent disjoint page sections as parameters and creates a new page for each section, replacing the original page’s contents with an index to the new pages (see the bottom of Figure 2a).\\
+CSMRs背后的引擎使用一个客户端的适应框架，旨在通过改变其DOM结构来适应现用的应用程序6。CSMRs通过实现类AbstractRefactoring（由我们的框架提供）并且用重构机制重定义方法adaptDocument()来实施。例如，考虑拆分页面重构，它通过将其划分成一组简单的页或段解决一个饱和、复杂页面的问题。在这种情况下，方法saturated()接收代表不相关页面部分的DOM参数作为参数，并且创建为每个部分创建一个新的页面，使用新页面索引代替原页面的内容(参加图2a的底部)。\\
+To apply the Split Page refactoring to a specific page, you must first create an instance of  SplitPage (such as the two instances in the middle level of Figure 2a), passing as parameters\\
+应用拆分页面重构到一个特定页面，你必须首先创建一个SplitPage实例(如图2a 中部的两个实例)来传递参数\\
+? a URL identifying the target page or a URI pattern for a set of pages of the same site(such as all Gmail pages in Figure 2a’s code);\\
+? 一个识别目标页的URL或一组相同站点页面的URI模式（如图2a代码中的所有Gmail页面）
+and\\
+和\\
+? instances of the class Section , which contain DOM elements specified through xPath expressions. Because DOM elements might not always be identified through xPath queries based on attributes, absolute xPath expressions from the DOM root might be required.\\
+? 类部分的实例，其包括通过xPath表达式指定的DOM元素。因为DOM元素可能并不总是通过基于属性识别的xPath查询指定的，来自DOM根的绝对xPath表达式或许被需要。\\
+The three levels in Figure 2a correspond to the three steps involved in the refactoring process, which can involve three user roles (pictured in the middle column):\\
+图2a中的三个等级对应重构过程中的三个步骤，其包括三个用户角色（图中中间列）：\\
+? The JavaScript (JS) programmer creates new refactorings by writing a parameterized script that reuses components offered by our framework’s refactoring engine.\\
+JavaScript(JS)程序员通过写一个参数化脚本创建新的重构，该脚本重用被我们框架的重构引擎提供的组件。\\
+? An intermediary instantiates refactorings for a specific website. (The JS programmer can play this role as well). The refactorings are instantiated either by writing code (as in Figure 2a) or using our refactoring tool (as in Figure 2b). This graphical tool lets the intermediary point-and-click on the target page to select the components that act as values for each refactoring parameter. Figure 2b,for example, shows an instantiation of SplitPage, where the group of email labels is dragged to a Folders section that will go into a new page.\\
+? 一个为特定网站的中介实例化重构。（JS程序员也能扮演这个角色。）重构可通过写代码（如图2a）或用我们的重构工具（如图2b）实现实例化。这个图形化工具让目标页上的中介点击来选择作为每个重构参数值的组件。例如，图2b显示SplitPage的一个实例，这里邮件标签组被拖到进入新一页的目录部分。\\
+? End users install instantiated refactorings by choosing them from an accessible menu in their Web browsers; from then on, they can access the refactored website configured to their needs. Unlike traditional refactoring, we added this new step (separating it from instantiation) so that handicapped users unable to code a script or use a graphical refactoring tool can still be part of the process by choosing their own refactorings.\\
+? 最终用户通过从他们Web浏览器中的可访问菜单选择来安装实例化重构；从此，他们可以访问按他们需要配置的重构网站。不同于传统的重构，我们添加新步骤（从实例中分离）使不能写脚本或用图形化重构工具的残疾用户也能通过选择他们自己的重构来成为过程的一部分。\\
 \end{CJK*}
 \end{document}

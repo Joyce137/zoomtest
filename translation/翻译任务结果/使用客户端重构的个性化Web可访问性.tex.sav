@@ -54,14 +54,14 @@ Ivana Harari   阿根廷 拉普拉塔国立大学
     \end{abstract}
     \end{@twocolumnfalse}
 ]
-  
+
 %添加图片
 \begin{figure*}[top]
 \centering
-%\renewcommand{\captionfont}{\Large \bfseries \sffamily} 
+%\renewcommand{\captionfont}{\Large \bfseries \sffamily}
 %\renewcommand{\captionlabelfont}{}
 \includegraphics[width=\textwidth]{figure1.png}
-\caption{\bf\large 
+\caption{\bf\large
 Applying refactoring to Gmail. The Gmail interface (a) before and (b) after applying Distribute Global Menu to address accessibility issues with the checkbox and operations on top.(Gmail logo reprinted with permission.)对Gmail应用重构。Gmail界面前者(a)和后者(b)分别应用分配全局菜单来解决复选框和顶部操作上的可达性问题。（Gmail图标已得到转载许可）
 }\label{fig:1}
 \end{figure*}
@@ -86,7 +86,11 @@ A refactoring that solves this bad smell is Distribute Global Menu, which distri
 However, some users who report the same bad smell are more comfortable using contextual menus, so the set of actions isn’t read with every email. For them, the Contextualize Global Menu refactoring is more appropriate. Also,experienced users prefer to keep the global menu so they can operate on several emails at once; for them, using the Postpone Selection refactoring will move the checkboxes to the last column.\\
 然而，一些报告类似坏味道的用户能够更舒服地使用上下文菜单，所以这一系列动作不能被每个邮件读到。对于他们，上下文全局菜单重构更合适。而且有经验的用户更喜欢保持全局菜单，所以他们能一次操作多封邮件；对于他们，用推迟选择重构将移动复选框到最后一列。\\
 
-Client-Side Web Refactoring
-As this example shows, a Web refactoring changes a Web application’s navigation structure changes a Web application’s navigation structure 
+\section{Client-Side Web Refactoring 客户端的Web重构}
+As this example shows, a Web refactoring changes a Web application’s navigation structure or look and feel, preserving its content and operations while removing bad usability or accessibility smells. In previous work, we used Web refactorings to enhance navigation and presentation during the development life cycle. 2,5 We can generate a complete new version of an application with a specific aim — such as a mobile version — by systematically applying and composing refactorings. Here, we propose a similar approach to improve accessibility, where refactoring is applied after deployment and during actual use of the Web application, altering the interface in the browser itself.\\
+正如这个例子所述，Web重构改变Web应用程序的导航结构或外观,去除可用性和可访问性的坏气味的同时保留它的内容和操作。在之前的工作中，我们用Web重构增强了开发生命周期2,5 中的导航和演示。我们能
+    Our CSWR approach has two key benefits:\\
+? Simpler maintenance — developers maintain a single core application, applying Web usability refactorings that address a general audience, while different refactored versions can be created by and for different users.\\
+? Architecture independence — developing a CSWR requires little (if any) knowledge of the target application’s underlying architecture.\\
 \end{CJK*}
 \end{document}

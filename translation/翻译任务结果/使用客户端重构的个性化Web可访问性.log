@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  7 MAY 2015 19:22
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  10 MAY 2015 11:11
 entering extended mode
 **G:/goodbye/translation/翻译任务结果/使用客户端重构的个性化We
 b可访问性.tex
@@ -299,21 +299,102 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 82--86
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
 
  []
 
-[2 <G:/goodbye/translation/翻译任务结果/figures/figure1.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <G:/goodbye/translation/翻译任务结果/figures/figure1.png>]
+Underfull \hbox (badness 2837) in paragraph at lines 90--98
+\OT1/cmr/m/n/10 s-in-gle core ap-pli-ca-tion, ap-ply-ing We-b us-abil-i-ty
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 90--98
+\OT1/cmr/m/n/10 re-quires lit-tle (if any) knowl-edge of the tar-get
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--98
+
+ []
+
+<figures/figure2.png, id=48, 432.11438pt x 478.03593pt>
+File: figures/figure2.png Graphic file (type png)
+
+<use figures/figure2.png>
+Package pdftex.def Info: figures/figure2.png used on input line 105.
+(pdftex.def)             Requested size: 472.03123pt x 522.21591pt.
+
+Underfull \hbox (badness 1629) in paragraph at lines 111--134
+[]\OT1/cmr/m/n/10 The en-gine be-hind C-SWRs us-es a client-side
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 111--134
+\OT1/cmr/m/n/10 Ab-strac-tRe-fac-tor-ing (pro-vid-ed in our frame-work)
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 111--134
+\C19/song/m/n/10/60 S\OT1/cmr/m/n/10 6\C19/song/m/n/10/25 "\OT1/cmr/m/n/10 CSMR
+s\C19/song/m/n/10/57 � \C19/song/m/n/10/43 L \C19/song/m/n/10/55 � \C19/song/m/
+n/10/59 y \C19/song/m/n/10/48 a\OT1/cmr/m/n/10 AbstractRefactoring\C19/song/m/n
+/10/26 � \C19/song/m/n/10/62 d
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 111--134
+\C19/song/m/n/10/58 � \C19/song/m/n/10/50 � \C19/song/m/n/10/40  \C19/song/m/n
+/10/47 � \C19/song/m/n/10/45 e \C19/song/m/n/10/57 J \C19/song/m/n/10/42 � \C19
+/song/m/n/10/26 � \C19/song/m/n/10/37 � \C19/song/m/n/10/53 � \C19/song/m/n/10/
+62 ^ \C19/song/m/n/10/64 � \C19/song/m/n/10/43  \C19/song/m/n/10/44 � \C19/son
+g/m/n/10/64 � � \C19/song/m/n/10/40 � \C19/song/m/n/10/61 � \C19/song/m/n/10/41
+ �
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 111--134
+\OT1/cmr/m/n/10 reuses com-po-nents of-fered by our frame-work\C19/song/m/n/10/
+25 .\OT1/cmr/m/n/10 s
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 111--134
+\OT1/cmr/m/n/10 se-quence, first by plac-ing struc-tural refac-tor-ings
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--134
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4 <G:/goodbye/translation/翻译任务结果/figures/figure2.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6
+
+]
 (G:\goodbye\translation\翻译任务结果\使用客户端重构的个性化Web
 可访问性.aux) ) 
 Here is how much of TeX's memory you used:
- 3333 strings out of 495354
- 43688 string characters out of 3183860
- 120520 words of memory out of 3000000
- 6455 multiletter control sequences out of 15000+200000
- 36141 words of font info for 123 fonts, out of 3000000 for 9000
+ 3601 strings out of 495354
+ 49202 string characters out of 3183860
+ 149200 words of memory out of 3000000
+ 6722 multiletter control sequences out of 15000+200000
+ 43253 words of font info for 147 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,7n,43p,1235b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,10n,43p,1235b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
 <F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTe
 X/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun
 .ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truety
@@ -339,10 +420,10 @@ ype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX
 ublic/amsfonts/cm/cmbx12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/CTEX/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on 使用客户端重构的个性化Web可访问性.pdf (2 pages
-, 502557 bytes).
+Output written on 使用客户端重构的个性化Web可访问性.pdf (6 pages
+, 735424 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
