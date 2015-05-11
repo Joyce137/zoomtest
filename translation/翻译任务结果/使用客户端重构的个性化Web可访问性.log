@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  10 MAY 2015 19:48
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  11 MAY 2015 23:20
 entering extended mode
 **G:/goodbye/translation/ÁøªËØë‰ªªÂä°ÁªìÊûú/‰ΩøÁî®ÂÆ¢Êà∑Á´ØÈáçÊûÑÁöÑ‰∏™ÊÄßÂåñWe
 bÂèØËÆøÈóÆÊÄß.tex
@@ -87,6 +87,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks16
 \@floatcapt=\box28
 )
+(F:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
 (F:\CTEX\MiKTeX\tex\latex\geometry\geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -122,82 +126,82 @@ LaTeX Warning: Unused global option(s):
 
 (G:\goodbye\translation\ÁøªËØë‰ªªÂä°ÁªìÊûú\‰ΩøÁî®ÂÆ¢Êà∑Á´ØÈáçÊûÑÁöÑ‰∏™ÊÄßÂåñWeb
 ÂèØËÆøÈóÆÊÄß.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
  (F:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
@@ -257,29 +261,29 @@ File: extended.chr 2008/12/29 4.8.2
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 38.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 39.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 40.
 
-LaTeX Font Info:    Try loading font information for C19+song on input line 56.
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 41.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 42.
+
+LaTeX Font Info:    Try loading font information for C19+song on input line 58.
 
 (F:\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd
 File: c19song.fd 2009/09/23 4.8.2
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 56.
+(Font)              <6> on input line 58.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 
  []
 
@@ -287,7 +291,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 File: figures/figure1.png Graphic file (type png)
 
 <use figures/figure1.png>
-Package pdftex.def Info: figures/figure1.png used on input line 63.
+Package pdftex.def Info: figures/figure1.png used on input line 65.
 (pdftex.def)             Requested size: 472.03123pt x 190.03415pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -299,7 +303,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
+Underfull \hbox (badness 10000) in paragraph at lines 84--90
 
  []
 
@@ -307,17 +311,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--88
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <G:/goodbye/translation/ÁøªËØë‰ªªÂä°ÁªìÊûú/figures/figure1.png>]
-Underfull \hbox (badness 2837) in paragraph at lines 90--98
+Underfull \hbox (badness 2837) in paragraph at lines 92--100
 \OT1/cmr/m/n/10 s-in-gle core ap-pli-ca-tion, ap-ply-ing We-b us-abil-i-ty
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 90--98
+Underfull \hbox (badness 1796) in paragraph at lines 92--100
 \OT1/cmr/m/n/10 re-quires lit-tle (if any) knowl-edge of the tar-get
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--98
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
 
  []
 
@@ -325,20 +329,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--98
 File: figures/figure2.png Graphic file (type png)
 
 <use figures/figure2.png>
-Package pdftex.def Info: figures/figure2.png used on input line 102.
+Package pdftex.def Info: figures/figure2.png used on input line 104.
 (pdftex.def)             Requested size: 472.03123pt x 522.21591pt.
 
-Underfull \hbox (badness 1629) in paragraph at lines 108--130
+Underfull \hbox (badness 1629) in paragraph at lines 110--132
 []\OT1/cmr/m/n/10 The en-gine be-hind C-SWRs us-es a client-side
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 108--130
+Underfull \hbox (badness 1097) in paragraph at lines 110--132
 \OT1/cmr/m/n/10 Ab-strac-tRe-fac-tor-ing (pro-vid-ed in our frame-work)
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 108--130
+Underfull \hbox (badness 2573) in paragraph at lines 110--132
 \C19/song/m/n/10/60 S\OT1/cmr/m/n/10 6\C19/song/m/n/10/25 "\OT1/cmr/m/n/10 CSMR
 s\C19/song/m/n/10/57 œ \C19/song/m/n/10/43 L \C19/song/m/n/10/55 ¢ \C19/song/m/
 n/10/59 y \C19/song/m/n/10/48 a\OT1/cmr/m/n/10 AbstractRefactoring\C19/song/m/n
@@ -346,7 +350,7 @@ n/10/59 y \C19/song/m/n/10/48 a\OT1/cmr/m/n/10 AbstractRefactoring\C19/song/m/n
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 108--130
+Underfull \hbox (badness 1331) in paragraph at lines 110--132
 \C19/song/m/n/10/58 ∑ \C19/song/m/n/10/50 Ç \C19/song/m/n/10/40  \C19/song/m/n
 /10/47 µ \C19/song/m/n/10/45 e \C19/song/m/n/10/57 J \C19/song/m/n/10/42 ¯ \C19
 /song/m/n/10/26 § \C19/song/m/n/10/37 ø \C19/song/m/n/10/53 Ö \C19/song/m/n/10/
@@ -356,18 +360,18 @@ g/m/n/10/64 õ ≠ \C19/song/m/n/10/40 Ω \C19/song/m/n/10/61 ¬ \C19/song/m/n/10/41
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 108--130
+Underfull \hbox (badness 1917) in paragraph at lines 110--132
 \OT1/cmr/m/n/10 reuses com-po-nents of-fered by our frame-work\C19/song/m/n/10/
 25 .\OT1/cmr/m/n/10 s
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 108--130
+Underfull \hbox (badness 1314) in paragraph at lines 110--132
 \OT1/cmr/m/n/10 se-quence, first by plac-ing struc-tural refac-tor-ings
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--130
+Underfull \hbox (badness 10000) in paragraph at lines 110--132
 
  []
 
@@ -382,12 +386,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
 []\OT1/cmr/bx/n/14.4 Case S-tudy:Accessible
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
 \OT1/cmr/bx/n/14.4 Gmail\C19/song/bx/n/14.4/55 ¢[][] \C19/song/bx/n/14.4/48 ~[]
 [] \C19/song/bx/n/14.4/60 Ô[][] \C19/song/bx/n/14.4/46 ƒ[][]\OT1/cmr/bx/n/14.4 
 :\C19/song/bx/n/14.4/47 å[][] \C19/song/bx/n/14.4/41 ñ[][] \C19/song/bx/n/14.4/
@@ -395,22 +399,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--131
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 132--182
+Underfull \hbox (badness 1320) in paragraph at lines 134--184
 \OT1/cmr/m/n/10 refac-tored G-mail ver-sion is more ac-ces-si-ble and
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 132--182
+Underfull \hbox (badness 1168) in paragraph at lines 134--184
 \OT1/cmr/m/n/10 we ex-plained each refac-tor-ing. Once the user-s
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 132--182
+Underfull \hbox (badness 1694) in paragraph at lines 134--184
 \OT1/cmr/m/n/10 were fin-ished with the tasks in the com-plete-ly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--182
+Underfull \hbox (badness 10000) in paragraph at lines 134--184
 
  []
 
@@ -425,25 +429,480 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/figure3.png Graphic file (type png)
 
 <use figures/figure3.png>
-Package pdftex.def Info: figures/figure3.png used on input line 187.
+Package pdftex.def Info: figures/figure3.png used on input line 188.
 (pdftex.def)             Requested size: 472.03123pt x 202.98416pt.
 
-! Undefined control sequence.
-l.191 {\bf \largeResults
-                        Ω·π˚}\\
-? 
-! Emergency stop.
-l.191 {\bf \largeResults
-                        Ω·π˚}\\
-End of file on the terminal!
+Underfull \hbox (badness 3078) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 The main mea-sure-men-t we gath-ered was task
+ []
 
- 
+
+Underfull \hbox (badness 1215) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 com-ple-tion time, com-par-ing the times from the
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 they pre-fer load-ed pages and short-er nav-i-ga-tion
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 path-s \C19/song/m/n/10/25 )\OT1/cmr/m/n/10 a so-lu-tion that f
+rus-trates in-ex-pe-ri-enced
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 user-s be-cause it de-mand-s go-ing through lot-s of
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 user-s cre-ate con-cep-tu-al mod-el-s and then de-fine
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 same ab-strac-t mod-el (In-box, Fold-er,Email, and
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 of the most im-por-tan-t draw-back-s for client-side
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 for un-sight-ed user-s, de-vel-op-er-s can eas-i-ly ap-ply
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 www.w3.org/TR/WCAG10) and mo-bile (Mo-bile
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 We-b Best Prac-tices; www.w3.org/TR/mobile-bp)
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 192--218
+\C19/song/m/n/10/60 5 \C19/song/m/n/10/26 ß \C19/song/m/n/10/47 m \C19/song/m/n
+/10/41 u \C19/song/m/n/10/63 ˆ \C19/song/m/n/10/47 å \C19/song/m/n/10/61 ± \C19
+/song/m/n/10/43 È \C19/song/m/n/10/54 N \C19/song/m/n/10/61 ¥ \C19/song/m/n/10/
+37 Ê \C19/song/m/n/10/62 ^ \C19/song/m/n/10/57 ” \C19/song/m/n/10/61  \C19/son
+g/m/n/10/40  \C19/song/m/n/10/41 ê { \C19/song/m/n/10/48 5 \C19/song/m/n/10/39
+ M
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 192--218
+\C19/song/m/n/10/56 ¶ \C19/song/m/n/10/58 	 \C19/song/m/n/10/37 ‹ \C19/song/m/n
+/10/52 ¨ \C19/song/m/n/10/64 ü \C19/song/m/n/10/44 Ω \C19/song/m/n/10/39 M \C19
+/song/m/n/10/45 Ô \C19/song/m/n/10/64 √ \C19/song/m/n/10/54 X \C19/song/m/n/10/
+55 √ \C19/song/m/n/10/44 ≈ \C19/song/m/n/10/36 á \C19/song/m/n/10/37  \C19/son
+g/m/n/10/64 É \C19/song/m/n/10/48 a \C19/song/m/n/10/40  \C19/song/m/n/10/25 "
+ \C19/song/m/n/10/65 5
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 192--218
+\C19/song/m/n/10/61 ø\OT1/cmr/m/n/10 W3C\C19/song/m/n/10/64 ç \C19/song/m/n/10/
+51 H \C19/song/m/n/10/63 3 \C19/song/m/n/10/47 å \C19/song/m/n/10/41 ñ \C19/son
+g/m/n/10/58 Ø \C19/song/m/n/10/60 5 \C19/song/m/n/10/26 £\OT1/cmr/m/n/10 Web\C1
+9/song/m/n/10/51 S \C19/song/m/n/10/54 N \C19/song/m/n/10/47 å \C19/song/m/n/10
+/41 ñ \C19/song/m/n/10/58 Ø \C19/song/m/n/10/60 5 \C19/song/m/n/10/64 ç
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 ver-sion-s with-out any knowl-edge of the in-ter-nal
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 pro-pose host-ing crowd-sourced C-SWRs to spread
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 192--218
+\OT1/cmr/m/n/10 of d-if-fer-en-t ver-sion-s of refac-tor-ings in re-sponse
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--218
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <G:/goodbye/translation/ÁøªËØë‰ªªÂä°ÁªìÊûú/figures/figure3.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 233.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 233.
+
+Underfull \hbox (badness 2326) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 Con-tent Ac-ces-si-bil-i-ty Guide-lines (WCAG). Such
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 new transcod-ing meth-od-s. Most such sys-tem-s
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 fu-ture vis-i-tors.Our Client-Side We-b Refac-tor-ing
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 im-pact for al-l user-s re-gard-less of their spe-cial
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 ca-pac-i-ties. Be-cause transcod-ings are con-sid-ered
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 trans-par-en-t from the user-s\C19/song/m/n/10/25 .\OT1/cmr/m/n
+/10 viewpoint, it is-n\C19/song/m/n/10/25 .\OT1/cmr/m/n/10 t
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 a pop-u-lar tool for client-side script-ing that al-
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 lows any kind of change over a web-page\C19/song/m/n/10/25 .\OT
+1/cmr/m/n/10 s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 DOM.Specific tool-s such as We-bAdap-t2Me
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 ($\OT1/cmtt/m/n/10 http : / / www-[]03 . ibm . com / able / acc
+essibility _$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 ( $\OT1/cmtt/m/n/10 http : / / www-[]03 . ibm . com / able / ac
+cessibility _$
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 Grease-Mon-key let-s user-s adap-t a spe-cif-ic page,
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 it does-n\C19/song/m/n/10/25 .\OT1/cmr/m/n/10 t let them gen-er
+-al-ize \C19/song/m/n/10/29 ı\OT1/cmr/m/n/10 that is, they
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 3. J. Van-der-don-ck-t, A. Beirek-dar, and M.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 Noirhomme-Fraiture, \C19/song/m/n/10/25 /\OT1/cmr/m/n/10 Automa
+ted E-val-u-a-tion
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 of We-b Us-abil-i-ty and Ac-ces-si-bil-i-ty by Guide-line
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 220--252
+\OT1/cmr/m/n/10 8. A. Gar-ri-do, G. Rossi, and D. Dis-tante,
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 220--252
+\C19/song/m/n/10/25 /\OT1/cmr/m/n/10 Refactoring for Us-abil-i-ty in We-b Ap-pl
+i-ca-tion-
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 220--252
+\C19/song/m/n/10/25 /\OT1/cmr/m/n/10 Layman Tun-ing of Web-sites: Fac-ing Chang
+e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--252
+
+ []
+
+
+Underfull \vbox (badness 2103) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \hbox (badness 2980) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 2. A. Gar-ri-do, G. Rossi, and D. Dis-tante,
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 253--278
+\C19/song/m/n/10/25 /\OT1/cmr/m/n/10 Refactoring for Us-abil-i-ty in We-b Ap-pl
+i-ca-tion-
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 Ac-ces-si-bil-i-ty in We-b Ap-pli-ca-tion-s,\C19/song/m/n/10/25
+ 0\OT1/cmr/m/n/10 Proc. 11th
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 4. B. Foote and J. Y-o-der, \C19/song/m/n/10/25 /\OT1/cmr/m/n/1
+0 Big Ball-s of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 Mud,\C19/song/m/n/10/25 0\OT1/cmr/m/n/10 Pattern Lan-guages of 
+Pro-gram De-sign
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 for Concern-Sensitive In-te-gra-tion of In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 4403) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 7. O. Di-az, C. Arel-lano, and J. I-tur-rioz,
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 253--278
+\C19/song/m/n/10/25 /\OT1/cmr/m/n/10 Layman Tun-ing of Web-sites: Fac-ing Chang
+e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 tor-ing and We-b en-gi-neer-ing, fo-cus-ing on de-sign
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 In-for-m\C19/song/bx/n/10/30 S\OT1/cmr/m/n/10 tica, U-ni-ver-si
+-dad Na-cional de La Pla-ta,
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 er-a has a Li-cen-ti-ate de-gree in in-for-mat-ic-s from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 and re-searcher in the De-part-men-t of Com-put-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 er Lan-guages and Sys-tem-s at the U-ni-ver-si-ty of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 re-search in-ter-est-s in-clude hu-man\C19/song/m/n/10/29 ı\OT1
+/cmr/m/n/10 computer in-
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 soft-ware (FOS-S) tool-s for dis-abled peo-ple, and
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 from the U-ni-ver-si-ty of La Pla-ta.Contact her at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+\OT1/cmr/bx/n/17.28 c-n \OT1/cmr/m/n/10 S-e-lect-ed C-S ar-ti-cles and column-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+\OT1/cmr/m/n/10 s are al-so avail-able for free at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--278
+$\OT1/cmtt/m/n/10 http : / / ComputingNow . computer . org$\OT1/cmr/m/n/10 .
+ []
+
+
+Overfull \hbox (241.01563pt too wide) in paragraph at lines 253--278
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<figures/figure4.png, id=80, 524.71031pt x 380.17032pt>
+File: figures/figure4.png Graphic file (type png)
+
+<use figures/figure4.png>
+Package pdftex.def Info: figures/figure4.png used on input line 282.
+(pdftex.def)             Requested size: 472.03123pt x 342.0109pt.
+ [12] [13 <G:/goodbye/translation/ÁøªËØë‰ªªÂä°ÁªìÊûú/figures/figure4.png>]
+(G:\goodbye\translation\ÁøªËØë‰ªªÂä°ÁªìÊûú\‰ΩøÁî®ÂÆ¢Êà∑Á´ØÈáçÊûÑÁöÑ‰∏™ÊÄßÂåñWeb
+ÂèØËÆøÈóÆÊÄß.aux) ) 
 Here is how much of TeX's memory you used:
- 3692 strings out of 495354
- 50953 string characters out of 3183860
- 150948 words of memory out of 3000000
- 6814 multiletter control sequences out of 15000+200000
- 44445 words of font info for 151 fonts, out of 3000000 for 9000
+ 3921 strings out of 495354
+ 55070 string characters out of 3183860
+ 169454 words of memory out of 3000000
+ 7034 multiletter control sequences out of 15000+200000
+ 46692 words of font info for 159 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  27i,10n,43p,1235b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTe
+X/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun
+.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truety
+pe/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/
+CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/sim
+sun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/tru
+etype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CT
+EX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/
+simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/
+truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:
+/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chine
+se/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fon
+ts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf>
+<F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/ch
+inese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/
+fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.t
+tf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype
+/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CT
+eX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsu
+n.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truet
+ype/chinese/simsun.ttf><F:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX
+/CTeX/fonts/truetype/chinese/simsun.ttf><F:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><F
+:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/CTEX/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on ‰ΩøÁî®ÂÆ¢Êà∑Á´ØÈáçÊûÑÁöÑ‰∏™ÊÄßÂåñWebÂèØËÆøÈóÆÊÄß.pdf (13 page
+s, 990116 bytes).
+PDF statistics:
+ 213 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
