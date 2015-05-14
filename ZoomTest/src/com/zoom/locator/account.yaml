@@ -1,0 +1,90 @@
+type:
+  type: classname
+  value: title
+dashboard:
+  type: xpath
+  value: ".//*[@id='payment']/div/div/div[2]/div/h3/span"
+role:
+  type: xpath
+  value: ".//*[@id='account_edit_form']/div[1]/div/span/strong"
+changeowner:
+  type: id
+  value: change_owner_button
+name:
+  type: id
+  value: account_name
+alias:
+  type: id
+  value: account_alias
+domains:
+  type: id
+  value: account_apply_domain_btn
+vanityurl:
+  type: id
+  value: account_apply_vanity_url
+update:
+  type: id
+  value: account_update_btn
+E2E:
+  type: id
+  value: enableE2E
+onhold:
+  type: id
+  value: enableAttendeeOnHold
+chat:
+  type: id
+  value: disableChat
+autosavechat:
+  type: id
+  value: enableAutoSaveChat
+feedback:
+  type: id
+  value: disableFeedback
+jbhreminder:
+  type: id
+  value: disableJBHRemider
+teleconf:
+  type: id
+  value: enableOtherTeleConf
+teleconfinfo:
+  type: id
+  value: other_teleconf_info
+pac: 
+  type: id
+  value: enablePAC
+recording:
+  type: id
+  value: disableRecording
+cmr:
+  type: id
+  value: enableCMR
+cmrdownload:
+  type: id
+  value: disableCMRDownload
+hidebilling:
+  type: id
+  value: hideBillingtoAdmin
+autoanswer:
+  type: id
+  value: autoResponse
+upcomingalert:
+  type: id
+  value: disableMeetAlertForZP
+googlecalendar:
+  type: id
+  value: disableGoogleCalendar
+googledriver:
+  type: id
+  value: disableGoogleDrive
+dropbox:
+  type: id
+  value: disableDropbox
+box:
+  type: id
+  value: disableBox
+onedrive:
+  type: id
+  value: disableOneDrive
+saveoptions:
+  type: id
+  value: account_options_edit_btn

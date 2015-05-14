@@ -1,0 +1,54 @@
+upload1:
+  type: id
+  value: logo_file
+delete1:
+  type: id
+  value: del_webinar_logo
+upload2:
+  type: id
+  value: img_image
+delete2:
+  type: id
+  value: del_webinar_image
+edit1:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[3]/td[2]/a"
+edit2:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[4]/td[2]/a"
+edit3:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[5]/td[2]/a"
+edit4:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[6]/td[2]/a"
+edit5:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[7]/td[2]/a"
+edit6:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[8]/td[2]/a"
+edit7:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[9]/td[2]/a"
+edit8:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[10]/td[2]/a"
+edit9:
+  type: xpath
+  value: ".//*[@id='webiner_setting']/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[11]/td[2]/a"
+emailsettingedit1:
+  type: id
+  value: email_invite_edit_button
+emailsettingedit2:
+  type: id
+  value: email_confirmation_edit_button
+emailsettingedit3:
+  type: id
+  value: email_reminder_edit_button
+emailsettingedit4:
+  type: id
+  value: email_followup_attendee_edit_button
+emailsettingedit5:
+  type: id
+  value: email_followup_absentee_edit_button

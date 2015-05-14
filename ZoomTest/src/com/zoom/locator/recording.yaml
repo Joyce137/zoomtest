@@ -1,0 +1,36 @@
+dateFrom:
+  type: id
+  value: dateFrom
+dateTo:
+  type: id
+  value: dateTo
+go: 
+  type: id
+  value: filter-recording-by-date
+topic:
+  type: classname
+  value: list-col mtg-topic
+id:
+  type: classname
+  value: list-col mtg-id
+starttime:
+  type: classname
+  value: list-col mtg-start
+size:
+  type: classname
+  value: list-col rec-filesize
+limit:
+  type: classname
+  value: list-col rec-month-limit
+detail:
+  type: classname
+  value: btn btn-default detail
+delete:
+  type: classname
+  value: delete_meeting
+page:
+  type: classname
+  value: pagination
+total:
+  type: xpath
+  value: ".//*[@id='recordings']/div/div/div[2]/div/div[3]/span"

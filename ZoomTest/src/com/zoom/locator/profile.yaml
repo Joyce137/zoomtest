@@ -170,3 +170,6 @@ ltisecert:
 ltiregenerate:
   type: id
   value: lti_regenerate
+meetings:
+  type: linkText
+  value: My Meetings

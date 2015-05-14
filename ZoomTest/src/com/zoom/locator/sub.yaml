@@ -1,0 +1,34 @@
+dashboard:
+  type: xpath
+  value: ".//*[@id='tab_menu_container']/ul/li[1]"
+accountlist:
+  type: xpath
+  value: ".//*[@id='tab_menu_container']/ul/li[2]"
+
+#https://dev.zoom.us/account/sub
+totalinfo:
+  type: classname
+  value: form-group
+  
+#https://dev.zoom.us/account/sub/list
+searchkey:
+  type: id
+  value: search_key
+searchbtn:
+  type: classname
+  value: btn btn-default submit
+addnew:
+  type: classname
+  value: btn btn-default add-new
+export:
+  type: classname
+  value: btn btn-default export
+accountname:
+  type: classname
+  value: link_account_detail
+accounttype:
+  type: xpath
+  value: ".//*[@id='tab_menule']/tbody/tr[1]/td[4]"
+disassociate:
+  type: classname
+  value: delete btn btn-default btn-sm

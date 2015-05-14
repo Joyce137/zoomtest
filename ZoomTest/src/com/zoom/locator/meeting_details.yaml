@@ -1,0 +1,48 @@
+topic:
+  type: classname
+  value: control static col-md-10
+time:
+  type: classname
+  value: controls static col-md-10
+calendar:
+  type: id
+  value: add_to_calendar_container
+id: 
+  type: xpath
+  value: ".//*[@id='info_form']/div[3]/div"
+hostradio:
+  type: xpath
+  value: ".//*[@id='info_form']/div[4]/div"
+hoston:
+  type: id
+  value: option_video_host_on
+hostoff:
+  type: id
+  value: option_video_host_off
+videoradio:
+  type: xpath
+  value: ".//*[@id='info_form']/div[5]/div"
+videoon:
+  type: id
+  value: option_video_participant_on
+videooff:
+  type: id
+  value: option_video_participant_off
+audioradio:
+  type: xpath
+  value: ".//*[@id='info_form']/div[6]/div"
+jbh:
+  type: id
+  value: option_jbh
+hostcn:
+  type: id
+  value: option_cnmeeting
+copy:
+  type: id
+  value: copyInvitation
+edit:
+  type: classname
+  value: btn btn-primary btn-lg
+start:
+  type: classname
+  value: btn btn-primary start
