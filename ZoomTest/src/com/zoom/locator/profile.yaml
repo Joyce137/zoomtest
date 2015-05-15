@@ -155,7 +155,7 @@ assistant1:
 remove1: 
   type: xpath
   value: ".//*[@id='assistant_list']/div/div[1]/button"
-assistant1:
+assistant2:
   type: xpath
   value: ".//*[@id='assistant_list']/div/div[2]/span"
 remove2:
@@ -164,7 +164,7 @@ remove2:
 ltikey:
   type: id
   value: lti_key
-ltisecert:
+ltisecret:
   type: id
   value: lti_secret
 ltiregenerate:

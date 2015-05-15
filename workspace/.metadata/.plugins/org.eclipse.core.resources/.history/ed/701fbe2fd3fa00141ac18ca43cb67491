@@ -1,0 +1,52 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.*;
+
+public class Account {
+	//account info組件
+	private WebElement type, dashboard, role, changeowner, name, alias, domains, vanityurl, update;
+	//meeting option組件
+	private WebElement e2e, onhold, chat, autosavechat, feedback, jbhreminder, teleconf, teleconfinfo, pac;
+	//recording option組件
+	private WebElement recording, cmr, cmrdownload;	
+	//other option組件
+	private WebElement hidebilling, autoanswer, upcomingalert, googlecalendar, googledriver, dropbox, box, onedrive, saveoptions;
+	//獲取Yaml文件
+	private YamlReader yaml;
+		
+	//構造函數，初始化所有組件
+	public Account(){
+		type = yaml.getElement("type");
+		dashboard = yaml.getElement("dashboard");
+		role = yaml.getElement("role");
+		changeowner = yaml.getElement("changeowner");
+		name = yaml.getElement("name");
+		alias = yaml.getElement("alias");
+		domains = yaml.getElement("domains");
+		vanityurl = yaml.getElement("vanityurl");
+		update = yaml.getElement("update");
+		e2e = yaml.getElement("E2E");
+		onhold = yaml.getElement("onhold");
+		chat = yaml.getElement("chat");
+		autosavechat = yaml.getElement("autosavechat");
+		feedback = yaml.getElement("feedback");
+		jbhreminder = yaml.getElement("jbhreminder");
+		teleconf = yaml.getElement("teleconf");
+		teleconfinfo = yaml.getElement("teleconfinfo");
+		pac = yaml.getElement("type");
+		recording = yaml.getElement("type");
+		cmr = yaml.getElement("type");
+		cmrdownload = yaml.getElement("type");
+		hidebilling = yaml.getElement("type");
+		autoanswer = yaml.getElement("type");
+		upcomingalert = yaml.getElement("type");
+		googlecalendar = yaml.getElement("type");
+		googledriver = yaml.getElement("type");
+		dropbox = yaml.getElement("type");
+		box = yaml.getElement("type");
+		onedrive = yaml.getElement("type");
+		saveoptions = yaml.getElement("type");
+	}
+}

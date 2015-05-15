@@ -1,4 +1,4 @@
-pagehader:
+pageheader:
   type: classname
   value: page-header
 check_msg:
@@ -10,7 +10,7 @@ email:
 send: 
   type: classname
   value: btn btn-primary submit user
-pagehader2:
+pageheader2:
   type: classname
   value: page-header
 check_email:

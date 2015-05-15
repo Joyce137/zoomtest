@@ -1,6 +1,0 @@
-@author Joyce
-Project: ZoomTest
-Package: com.zoom.locator
-	所有頁面的元素定位yaml文件
-	
-	

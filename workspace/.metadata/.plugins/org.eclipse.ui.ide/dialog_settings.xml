@@ -5,6 +5,9 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="G:\goodbye\others\Testng"/>
+			<item value="G:\goodbye\others\Test"/>
+			<item value="G:\goodbye\others\Aomation"/>
 			<item value="G:\goodbye\others\Demo"/>
 			<item value="G:\goodbye\ZoomTest"/>
 		</list>

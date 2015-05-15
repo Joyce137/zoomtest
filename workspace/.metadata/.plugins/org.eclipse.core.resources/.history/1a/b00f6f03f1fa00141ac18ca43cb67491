@@ -1,0 +1,68 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class Recording {
+	//創建YamlReader實例
+	private YamlReader yaml; 
+	//搜索組件
+	private WebElement dateFrom, dateTo, go;
+	//recording info
+	private WebElement topic, id, starttime, size, limit, detail, delete;
+	//page
+	private WebElement page, total;
+	
+	//構造函數初始化組件
+	public Recording(){
+		dateFrom = yaml.getElement("dateFrom");
+		dateTo = yaml.getElement("dateTo");
+		go = yaml.getElement("go");
+		topic = yaml.getElement("topic");
+		id = yaml.getElement("id");
+		starttime = yaml.getElement("starttime");
+		size = yaml.getElement("size");
+		limit = yaml.getElement("limit");
+		detail = yaml.getElement("detail");
+		delete = yaml.getElement("delete");
+		page = yaml.getElement("page");
+		total = yaml.getElement("total");
+	}
+
+	//組件get函數
+	public YamlReader getYaml() {
+		return yaml;
+	}
+
+	public WebElement getPageheader() {
+		return pageheader;
+	}
+
+	public WebElement getCheck_msg() {
+		return check_msg;
+	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getSend() {
+		return send;
+	}
+
+	public WebElement getPageheader2() {
+		return pageheader2;
+	}
+
+	public WebElement getCheck_email() {
+		return check_email;
+	}
+
+	public WebElement getResend() {
+		return resend;
+	}
+	
+	//組件基本測試函數
+	
+}

@@ -1,0 +1,40 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class MeetingDetails {
+	//創建YamlReader實例
+	private YamlReader yaml;
+	//meeting info
+	private WebElement topic, time, calendar, id;
+	//meeting setting
+	private WebElement hostradio, hoston, hostoff, videoradio, videoon, videooff, audioradio;
+	//meeting option
+	private WebElement jbh, hostcn;
+	//meeting action
+	private WebElement copy, edit, start;
+	
+	public MeetingDetails(){
+		topic = yaml.getElement("");
+		time = yaml.getElement("");
+		calendar = yaml.getElement("");
+		id = yaml.getElement("");
+		hostradio = yaml.getElement("");
+		hoston = yaml.getElement("");
+		hostoff = yaml.getElement("");
+		videoradio = yaml.getElement("");
+		videoon = yaml.getElement("");
+		videooff = yaml.getElement("");
+		audioradio = yaml.getElement("");
+		jbh = yaml.getElement("");
+		hostcn = yaml.getElement("");
+		copy = yaml.getElement("");
+		edit = yaml.getElement("");
+		start = yaml.getElement("");
+	}
+	
+	//組件的基本測試函數
+
+}

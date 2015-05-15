@@ -1,4 +1,4 @@
-pagehader:
+pageheader:
   type: classname
   value: page-header
 email:

@@ -28,6 +28,9 @@ upload2:
 panelist_edit:
   type: id
   value: panelists_edit_button
+attendee_view:
+  type: id
+  value: manage_attendees_edit_button
 invite_edit:
   type: id
   value: registration_edit_button

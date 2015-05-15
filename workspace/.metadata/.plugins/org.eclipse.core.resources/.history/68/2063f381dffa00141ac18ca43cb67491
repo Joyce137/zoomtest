@@ -1,0 +1,13 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class ForgetPwd {
+	//„“½¨YamlReaderŒÀı
+	private YamlReader yaml; 
+	//½M¼ş
+	private WebElement pageheader, check_msg, email, send, pageheader2, check_email, resend;
+	
+}

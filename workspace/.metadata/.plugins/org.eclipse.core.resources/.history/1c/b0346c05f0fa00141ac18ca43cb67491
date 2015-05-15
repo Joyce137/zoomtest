@@ -1,0 +1,113 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class Profile {
+	//創建YamlReader實例
+	private YamlReader yaml; 
+	
+	//userinfo
+	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, changehostkey;
+	//profileinfo
+	private WebElement headphoto, changephoto, firstname, lastname, phonecode, phonenumber, companyname, timezone, defaultcall;
+	//meeting options
+	private WebElement e2e, onhold, chat, autosavechat, privatechat, feedback, jbhreminder, cameracontrol, group, chime, chimeall, chimehost, teleconf, teleconfinfo, pac;
+	//recording options
+	private WebElement recording, cmr, autorecording, savechanged;
+	//change password
+	private WebElement changepassword, oldpassword, newpassword, confirmpassword;
+	//password strength
+	private WebElement meter1, meter2, meter3, meter4;
+	private WebElement meters[] = {meter1, meter2, meter3, meter4};
+	//schedule priviledge
+	private WebElement assistant, assistantlist, remove, edit, assistant1, remove1, assistant2, remove2;
+	//lti credential
+	private WebElement ltikey, ltisecret, ltiregenerate; 
+	//meeting
+	private WebElement meetings;
+	
+	//構造函數初始化組件
+	public Profile(){
+		username = yaml.getElement("");
+		email = yaml.getElement("");
+		user_type = yaml.getElement("");
+		pmi = yaml.getElement("");
+		changePMI = yaml.getElement("");
+		pmiurl = yaml.getElement("");
+		vanityURL = yaml.getElement("");
+		changeurl = yaml.getElement("");
+		hostkey = yaml.getElement("");
+		changehostkey = yaml.getElement("");
+		headphoto = yaml.getElement("");
+		changephoto = yaml.getElement("");
+		firstname = yaml.getElement("");
+		lastname = yaml.getElement("");
+		phonecode = yaml.getElement("");
+		phonenumber = yaml.getElement("");
+		companyname = yaml.getElement("");
+		timezone = yaml.getElement("");
+		defaultcall = yaml.getElement("");
+		e2e = yaml.getElement("");
+		onhold = yaml.getElement("");
+		chat = yaml.getElement("");
+		autosavechat = yaml.getElement("");
+		privatechat = yaml.getElement("");
+		feedback = yaml.getElement("");
+		jbhreminder = yaml.getElement("");
+		cameracontrol = yaml.getElement("");
+		group = yaml.getElement("");
+		chime = yaml.getElement("");
+		chimeall = yaml.getElement("");
+		chimehost = yaml.getElement("");
+		teleconf = yaml.getElement("");
+		teleconfinfo = yaml.getElement("");
+		pac = yaml.getElement("");
+		recording = yaml.getElement("");
+		cmr = yaml.getElement("");
+		autorecording = yaml.getElement("");
+		savechanged = yaml.getElement("");
+		changepassword = yaml.getElement("");
+		oldpassword = yaml.getElement("");
+		newpassword = yaml.getElement("");
+		confirmpassword = yaml.getElement("");
+		meter1, meter2, meter3, meter4
+	}
+
+	//組件get函數
+	public YamlReader getYaml() {
+		return yaml;
+	}
+
+	public WebElement getPageheader() {
+		return pageheader;
+	}
+
+	public WebElement getCheck_msg() {
+		return check_msg;
+	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getSend() {
+		return send;
+	}
+
+	public WebElement getPageheader2() {
+		return pageheader2;
+	}
+
+	public WebElement getCheck_email() {
+		return check_email;
+	}
+
+	public WebElement getResend() {
+		return resend;
+	}
+	
+	//組件基本測試函數
+	
+}

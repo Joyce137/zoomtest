@@ -4,16 +4,16 @@ upcoming:
 previous:
   type: xpath
   value: ".//*[@id='webinar_tab_container']/ul/li[2]"
-meetingdate:
+webinardate:
   type: classname
   value: list-col mtg-date
-meetingtime:
+webinartime:
   type: classname
   value: list-col mtg-time
-meetingtopic:
+webinartopic:
   type: classname
   value: list-col mtg-topic
-meetingid:
+webinarid:
   type: classname
   value: list-col mtg-id
 start:

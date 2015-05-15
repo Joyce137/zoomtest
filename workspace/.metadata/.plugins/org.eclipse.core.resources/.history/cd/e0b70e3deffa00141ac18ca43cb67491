@@ -1,0 +1,76 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class Profile {
+	//創建YamlReader實例
+	private YamlReader yaml; 
+	
+	//userinfo
+	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, changehostkey;
+	//profileinfo
+	private WebElement headphoto, changephoto, firstname, lastname, phonecode, phonenumber, companyname, timezone, defaultcall;
+	//meeting options
+	private WebElement e2e, onhold, chat, autosavechat, privatechat, feedback, jbhreminder, cameracontrol, group, chime, chimeall, chimehost, teleconf, teleconfinfo, pac;
+	//recording options
+	private WebElement recording, cmr, autorecording, savechanged;
+	//change password
+	private WebElement changepassword, oldpassword, newpassword, confirmpassword;
+	//password strength
+	private WebElement meter1, meter2, meter3, meter4;
+	//schedule priviledge
+	private WebElement assistant, assistantlist, remove, edit, assistant1, remove1, assistant2, remove2;
+	//lti credential
+	private WebElement ltikey, ltisecret, ltiregenerate; 
+	//meeting
+	private WebElement meetings;
+	
+	//構造函數初始化組件
+	public Profile(){
+		pageheader = yaml.getElement("pageheader");
+		check_msg = yaml.getElement("check_msg");
+		email = yaml.getElement("email");
+		send = yaml.getElement("send");
+		pageheader2 = yaml.getElement("pageheader2");
+		check_email = yaml.getElement("check_email");
+		resend = yaml.getElement("resend");
+	}
+
+	//組件get函數
+	public YamlReader getYaml() {
+		return yaml;
+	}
+
+	public WebElement getPageheader() {
+		return pageheader;
+	}
+
+	public WebElement getCheck_msg() {
+		return check_msg;
+	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getSend() {
+		return send;
+	}
+
+	public WebElement getPageheader2() {
+		return pageheader2;
+	}
+
+	public WebElement getCheck_email() {
+		return check_email;
+	}
+
+	public WebElement getResend() {
+		return resend;
+	}
+	
+	//組件基本測試函數
+	
+}

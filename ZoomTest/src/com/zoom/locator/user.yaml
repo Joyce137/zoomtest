@@ -46,10 +46,10 @@ pagesize:
 addnew:
   type: classname
   value: btn btn-default add-new
-import:
+importuser:
   type: classname
   value: btn btn-default import
-export:
+exportuser:
   type: classname
   value: btn btn-default export
 setadmin:

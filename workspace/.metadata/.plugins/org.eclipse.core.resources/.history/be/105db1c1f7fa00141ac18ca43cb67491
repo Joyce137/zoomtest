@@ -1,0 +1,63 @@
+package com.zoom.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.zoom.cons.YamlReader;
+
+public class Webinar {
+	//創建YamlReader實例
+	private YamlReader yaml; 
+	//目錄菜單組件
+	private WebElement upcoming, previous;
+	//meeting info
+	private WebElement webinardate, webinartime, webinartopic, webinarid, start, end, schedule;
+	
+	//構造函數初始化組件
+	public Webinar(){
+		upcoming = yaml.getElement("upcoming");
+		previous = yaml.getElement("previous");
+		webinardate = yaml.getElement("webinardate");
+		webinartime = yaml.getElement("webinartime");
+		webinartopic = yaml.getElement("webinartopic");
+		webinarid = yaml.getElement("webinarid");
+		start = yaml.getElement("start");
+		end = yaml.getElement("end");
+		schedule = yaml.getElement("schedule");
+	}
+
+	//組件get函數
+	public YamlReader getYaml() {
+		return yaml;
+	}
+
+	public WebElement getPageheader() {
+		return pageheader;
+	}
+
+	public WebElement getCheck_msg() {
+		return check_msg;
+	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getSend() {
+		return send;
+	}
+
+	public WebElement getPageheader2() {
+		return pageheader2;
+	}
+
+	public WebElement getCheck_email() {
+		return check_email;
+	}
+
+	public WebElement getResend() {
+		return resend;
+	}
+	
+	//組件基本測試函數
+	
+}

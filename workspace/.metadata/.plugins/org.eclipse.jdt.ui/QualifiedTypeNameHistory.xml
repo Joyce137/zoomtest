@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.zoom.cons.YamlReader"/>
+<fullyQualifiedTypeName name="com.zoom.pages.Webinar"/>
+<fullyQualifiedTypeName name="com.zoom.pages.MeetingDetails"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+</qualifiedTypeNameHistroy>

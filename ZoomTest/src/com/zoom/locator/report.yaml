@@ -18,7 +18,7 @@ webinar:
 selectmonth:
   type: id
   value: selectMonth
-export: 
+export1: 
   type: classname
   value: btn btn-primary
 backtotop1:
@@ -38,7 +38,7 @@ dateto:
 go:
   type: xpath
   value: ".//*[@id='report_toolbar']/form/input[3]"
-export:
+export2:
   type: xpath
   value: ".//*[@id='report_toolbar']/form/a"
 
@@ -51,7 +51,7 @@ page:
 date:  
   type: id
   value: selectMonth
-export:
+export3:
   type: classname
   value: btn btn-primary
 detailrate:
