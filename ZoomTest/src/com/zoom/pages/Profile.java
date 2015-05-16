@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Profile {
-	//„“½¨YamlReaderŒÀı
-	private YamlReader yaml; 
+	//„“½¨LocatorManagerŒÀı
+	private LocatorManager yaml; 
 	
 	//userinfo
 	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, changehostkey;
@@ -90,9 +90,6 @@ public class Profile {
 	}
 	
 	//½M¼şgetº¯”µ
-	public YamlReader getYaml() {
-		return yaml;
-	}
 
 	public WebElement getUsername() {
 		return username;

@@ -19,21 +19,7 @@ import com.zoom.utils.Log;
 public class LocatorManager {
 	private WebDriver driver;		
 	// yaml文件
-	private String yamlPath;
 	private String yamlFile;
-
-	//get&set files
-	public String getYamlPath() {
-		return yamlPath;
-	}
-
-	public void setYamlPath() {
-		this.yamlPath = "src/com/zoom/locator/";
-	}
-
-	public void setYamlFile(String yamlFile) {
-		this.yamlFile = yamlFile;
-	}	
 
 	// 用HashMap存儲yaml文件
 	private HashMap<String, HashMap<String, String>> ml;
@@ -42,39 +28,15 @@ public class LocatorManager {
 	//構造函數
 	public LocatorManager(){
 		this.driver = DriverManager.getDriver();
-		this.yamlPath = "src/com/zoom/locator/";
 		this.yamlFile = null;
+		ml = YamlReader.getml(yamlFile);
 	}	
 
 	public LocatorManager(String yamlFile) {		
 		this.driver = DriverManager.getDriver();
 		// yaml
 		this.yamlFile = yamlFile;
-		this.getLocator();
-	}
-
-	private void getLocator() {
-		File f = new File(yamlPath + yamlFile + ".yaml");
-		// 存到HashMap ml中
-		try {
-			FileInputStream fi = new FileInputStream(f.getAbsolutePath());
-			ml = Yaml.loadType(fi, HashMap.class);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@SuppressWarnings("unchecked")
-	public void loadExtendLocator(String fileName) {
-		File f = new File(yamlPath + fileName + ".yaml");
-		try {
-			extendLocator = Yaml.loadType(
-					new FileInputStream(f.getAbsolutePath()), HashMap.class);
-			ml.putAll(extendLocator);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		ml = YamlReader.getml(yamlFile);
 	}
 
 	public void setLocatorVariableValue(String variable, String value) {
@@ -167,13 +129,11 @@ public class LocatorManager {
 		return wait;
 	}
 
-	private void loadLocator() {
-		if (ml == null)
-			this.getLocator();
-	}
 
 	private WebElement getLocator(String key, String[] replace, boolean wait) {		
-		this.loadLocator();
+		if (ml == null){
+			ml = YamlReader.getml(yamlFile);
+		}
 		WebElement element = null;
 		if (ml.containsKey(key)) {
 			HashMap<String, String> m = ml.get(key);

@@ -14,7 +14,7 @@ public class Account {
 	//other option組件
 	private WebElement hidebilling, autoanswer, upcomingalert, googlecalendar, googledriver, dropbox, box, onedrive, saveoptions;
 	//獲取Yaml文件
-	private YamlReader yaml;
+	private LocatorManager yaml;
 		
 	//構造函數，初始化所有組件
 	public Account(){
@@ -141,10 +141,7 @@ public class Account {
 	public WebElement getSaveoptions() {
 		return saveoptions;
 	}
-	public YamlReader getYaml() {
-		return yaml;
-	}
-	
+
 	//組件基本測試函數
 	
 }

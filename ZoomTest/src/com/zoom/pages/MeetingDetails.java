@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class MeetingDetails {
-	//ÑìΩ®YamlReaderåç¿˝
-	private YamlReader yaml;
+	//ÑìΩ®LocatorManageråç¿˝
+	private LocatorManager yaml;
 	//meeting info
 	private WebElement topic, time, calendar, id;
 	//meeting setting
@@ -33,10 +33,6 @@ public class MeetingDetails {
 		copy = yaml.getElement("copy");
 		edit = yaml.getElement("edit");
 		start = yaml.getElement("start");
-	}
-
-	public YamlReader getYaml() {
-		return yaml;
 	}
 
 	public WebElement getTopic() {

@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Join {
-	//ÑìΩ®YamlReaderåç¿˝
-	private YamlReader yaml;
+	//ÑìΩ®LocatorManageråç¿˝
+	private LocatorManager yaml;
 	
 	private WebElement pageheader, meetingid, joinbtn, h323, error_meeting, check_msg;
 	
@@ -18,11 +18,7 @@ public class Join {
 		error_meeting = yaml.getElement("error_meeting");
 		check_msg = yaml.getElement("check_msg");
 	}
-
-	public YamlReader getYaml() {
-		return yaml;
-	}
-
+	
 	public WebElement getPageheader() {
 		return pageheader;
 	}

@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Report {
-	//創建YamlReader實例
-	private YamlReader yaml; 
+	//創建LocatorManager實例
+	private LocatorManager yaml; 
 	//目錄菜單組件
 	private WebElement daily, usage, inactive, telephony, webinar;
 	//daily report

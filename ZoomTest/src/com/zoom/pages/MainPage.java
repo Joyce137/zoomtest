@@ -2,7 +2,7 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class MainPage {
 	//top組件
@@ -21,7 +21,7 @@ public class MainPage {
 	//join&host
 	private WebElement join, host;
 	//獲取Yaml文件
-	private YamlReader yaml;
+	private LocatorManager yaml;
 	
 	public MainPage(){
 		//初始化各組件

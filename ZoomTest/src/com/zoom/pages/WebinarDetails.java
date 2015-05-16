@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class WebinarDetails {
-	//„“½¨YamlReaderŒÀı
-	private YamlReader yaml; 
+	//„“½¨LocatorManagerŒÀı
+	private LocatorManager yaml; 
 	//webinar info½M¼ş
 	private WebElement topic, time, calendar, id, audio, disbleqa, edit;
 	//branding

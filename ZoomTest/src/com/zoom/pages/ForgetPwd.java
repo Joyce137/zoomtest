@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class ForgetPwd {
-	//創建YamlReader實例
-	private YamlReader yaml; 
+	//創建LocatorManager實例
+	private LocatorManager yaml; 
 	//組件
 	private WebElement pageheader, check_msg, email, send, pageheader2, check_email, resend;
 	
@@ -22,10 +22,6 @@ public class ForgetPwd {
 	}
 
 	//組件get函數
-	public YamlReader getYaml() {
-		return yaml;
-	}
-
 	public WebElement getPageheader() {
 		return pageheader;
 	}

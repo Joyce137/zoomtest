@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Group {
-	//創建YamlReader實例
-	private YamlReader yaml;
+	//創建LocatorManager實例
+	private LocatorManager yaml;
 	
 	//基本組件
 	private WebElement searchgroup, searchbtn, addnew, linkdetial, edit, delete;
@@ -26,10 +26,6 @@ public class Group {
 		detailmove = yaml.getElement("detailmove");
 	}
 	//組件get函數
-	public YamlReader getYaml() {
-		return yaml;
-	}
-
 	public WebElement getSearchgroup() {
 		return searchgroup;
 	}

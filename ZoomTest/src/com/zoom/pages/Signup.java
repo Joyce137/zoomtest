@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Signup {
-	//„“½¨YamlReaderŒÀı
-	private YamlReader yaml; 
+	//„“½¨LocatorManagerŒÀı
+	private LocatorManager yaml; 
 	//½M¼ş
 	private WebElement pageheader, email, signup, google, facebook, signin;
 	

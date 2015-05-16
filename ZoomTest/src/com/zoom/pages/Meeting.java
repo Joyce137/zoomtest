@@ -2,11 +2,11 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Meeting {
-	//創建YamlReader實例
-	private YamlReader yaml;
+	//創建LocatorManager實例
+	private LocatorManager yaml;
 	//目錄菜單組件
 	private WebElement upcoming, previous;
 	//pmi
@@ -30,10 +30,6 @@ public class Meeting {
 		end = yaml.getElement("end");
 		h323 = yaml.getElement("h323");
 		schedule = yaml.getElement("schedule");
-	}
-
-	public YamlReader getYaml() {
-		return yaml;
 	}
 
 	public WebElement getUpcoming() {

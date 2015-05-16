@@ -2,7 +2,7 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebElement;
 
-import com.zoom.cons.YamlReader;
+import com.zoom.cons.LocatorManager;
 
 public class Billing {
 	//目錄菜單組件
@@ -27,8 +27,8 @@ public class Billing {
 	//pro user
 	private WebElement baseoption, addional, planupdate, plan_cancel, reactive;
 	
-	//創建YamlReader實例
-	private YamlReader yaml; 
+	//創建LocatorManager實例
+	private LocatorManager yaml; 
 	
 	//構造函數初始化所有組件
 	public Billing(){
@@ -254,10 +254,6 @@ public class Billing {
 
 	public WebElement getReactive() {
 		return reactive;
-	}
-
-	public YamlReader getYaml() {
-		return yaml;
 	}
 	
 	//各組件的基本測試
