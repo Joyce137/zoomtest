@@ -10,11 +10,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.zoom.utils.Log;
+import com.zoom.utils.TimeString;
+
 public class BrowserAction {
 	private static WebDriver driver;
 
 	//打開瀏覽器
-	public static void OpenBrowser(String name){
+	public static void openBrowser(String name){
 		//Firefox瀏覽器
 		if(name == "firefox"){
 			driver = DriverManager.getDriver();
@@ -36,7 +39,7 @@ public class BrowserAction {
 	}
 	
 	//打開特定的Url
-	public static void OpenUrl(String url){
+	public static void openUrl(String url){
 		//方法一：get
 		driver.get(url);
 		//方法二： navigate to
@@ -46,17 +49,17 @@ public class BrowserAction {
 	}
 	
 	//向前一頁
-	public static void Farward(){
+	public static void farward(){
 		driver.navigate().forward();
 	}
 	
 	//返回上一頁
-	public static void Back(){
+	public static void back(){
 		driver.navigate().back();
 	}
 	
 	//Windows 和 Frames之间的切换
-	public static void Windows_Frames(String name){
+	public static void windows_frames(String name){
 		//根據name情況處理:
 		//一般来说，登录后建议
 		if(name == null){
@@ -75,20 +78,29 @@ public class BrowserAction {
 	}
 	
 	//返回Url的title
-	public static String GetTitle(String url){
+	public static String getTitle(String url){
 		driver.get(url);
 		return driver.getTitle();
 	}
 	
 	//保存网面截图 (默認在ZoomTest的screenshot文件夾中)
-	public static void Screenshot(String photoname){
-		String path = "screenshot/";
+	public static void screenshot(){ 
+		//以時間為截圖圖片名
+		String screenName = new TimeString().getTimeString() + ".jpg";
+		//創建截圖文件路徑
+		File dir = new File("test-output/screenshot");
+		if (!dir.exists())
+			dir.mkdirs();
+		String screenPath = dir.getAbsolutePath() + "/" + screenName;
+		//截圖
 		try {
-            File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);  
-            FileUtils.copyFile(srcFile,new File(path + photoname+".png"));  
-        } catch (IOException e) {  
-            e.printStackTrace();  
-        }  
+			File scrFile = ((TakesScreenshot) driver)
+					.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File(screenPath));
+		} catch (IOException e) {
+			Log.comment("Screen shot error: " + screenPath);
+		}
+		Log.comment(screenName, true, true);
 	} 
     
 	//頁面等待
@@ -100,7 +112,7 @@ public class BrowserAction {
         }
     }
 	//關閉瀏覽器
-	public static void CloseUrl(){
+	public static void closeUrl(){
 		//quit方法，有缺陷
 		//driver.quit();
 		//採用close方法
