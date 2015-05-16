@@ -10,10 +10,9 @@ import org.ho.yaml.Yaml;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class YamlReader {
-	private WebDriver driver;
+	private WebDriver driver = DriverManager.getDriver();
 	// yaml文件
 	private String yamlPath;
 	private String yamlFile;
@@ -22,19 +21,7 @@ public class YamlReader {
 	public String getYamlPath() {
 		return yamlPath;
 	}
-
-	public void setYamlPath() {
-		this.yamlPath = "src/com/zoom/locator/";
-	}
-
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
-
+	
 	public void setYamlFile(String yamlFile) {
 		this.yamlFile = yamlFile;
 	}
@@ -48,11 +35,6 @@ public class YamlReader {
 		// yaml
 		this.yamlFile = yamlFile;
 		this.getYamlFile();
-
-		// driver
-		// System.setProperty("webdriver.ie.driver","D:\\安装包\\测试Test\\Selenium\\IEDriverServer.exe");
-		// driver = new InternetExplorerDriver();
-		driver = new FirefoxDriver();
 	}
 
 	// get yaml file
@@ -71,7 +53,7 @@ public class YamlReader {
 
 	@SuppressWarnings("unchecked")
 	public void loadExtendLocator(String fileName) {
-		File f = new File("src/com/zoom/locator/" + fileName + ".yaml");
+		File f = new File(yamlPath + fileName + ".yaml");
 		try {
 			extendLocator = Yaml.loadType(
 					new FileInputStream(f.getAbsolutePath()), HashMap.class);

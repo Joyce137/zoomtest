@@ -1,0 +1,18 @@
+pageheader:
+  type: classname
+  value: page-header
+meetingid:
+  type: id
+  value: join-confno
+joinbtn:
+  type: id
+  value: btnSubmit
+h323:
+  type: id
+  value: btnRoomSystemJoin
+error_meeting:
+  type: id
+  value: join-errormsg
+check_msg:
+  type: classname
+  value: desc

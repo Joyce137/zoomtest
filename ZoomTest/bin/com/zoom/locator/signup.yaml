@@ -1,0 +1,18 @@
+pageheader:
+  type: classname
+  value: page-header
+email:
+  type: id
+  value: email
+signup:
+  type: classname
+  value: btn btn-primary submit user
+google:
+  type: classname
+  value: g
+facebook:
+  type: classname
+  value: fb
+signin:
+  type: linkText
+  value: Sign in.

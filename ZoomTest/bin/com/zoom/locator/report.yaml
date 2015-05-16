@@ -1,0 +1,82 @@
+daily:
+  type: xpath
+  value: ".//*[@id='report_tab_container']/ul/li[1]/a"
+usage:
+  type: xpath
+  value: ".//*[@id='report_tab_container']/ul/li[2]/a"
+inactive:
+  type: xpath
+  value: ".//*[@id='report_tab_container']/ul/li[3]/a"
+telephony:
+  type: xpath
+  value: ".//*[@id='report_tab_container']/ul/li[4]/a"
+webinar:
+  type: xpath
+  value: ".//*[@id='report_tab_container']/ul/li[5]/a"
+
+#daily report
+selectmonth:
+  type: id
+  value: selectMonth
+export1: 
+  type: classname
+  value: btn btn-primary
+backtotop1:
+  type: xpath
+  value: ".//*[@id='daily_report']/div/div/div[2]/div[2]/div[4]/a"
+backtotop2:
+  type: xpath
+  value: ".//*[@id='daily_report']/div/div/div[2]/div[2]/div[9]/a"
+
+#usage report
+datefrom:
+  type: id
+  value: dateFrom
+dateto:
+  type: id
+  value: dateto
+go:
+  type: xpath
+  value: ".//*[@id='report_toolbar']/form/input[3]"
+export2:
+  type: xpath
+  value: ".//*[@id='report_toolbar']/form/a"
+
+#inactive users:
+page:  
+  type: classname
+  value: pagination
+
+#telephony report
+date:  
+  type: id
+  value: selectMonth
+export3:
+  type: classname
+  value: btn btn-primary
+detailrate:
+  type: xpath
+  value: ".//*[@id='tollfree_report']/div/div/div[2]/div[2]/p/a"
+
+#webinar report
+select:
+  type: id
+  value: reprot-type-select
+weninardatefrom:
+  type: id
+  value: dateFrom
+weninardateto:
+  type: id
+  value: dateTo
+filter:
+  type: id
+  value: filter-webinar-by-date
+webinarid:
+  type: id
+  value: given-webinar-id
+search:
+  type: id
+  value: filter-webinar-by-id
+generatereport:
+  type: id
+  value: GenerateReport

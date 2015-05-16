@@ -1,0 +1,27 @@
+upcoming:
+  type: xpath
+  value: ".//*[@id='webinar_tab_container']/ul/li[1]"
+previous:
+  type: xpath
+  value: ".//*[@id='webinar_tab_container']/ul/li[2]"
+webinardate:
+  type: classname
+  value: list-col mtg-date
+webinartime:
+  type: classname
+  value: list-col mtg-time
+webinartopic:
+  type: classname
+  value: list-col mtg-topic
+webinarid:
+  type: classname
+  value: list-col mtg-id
+start:
+  type: classname
+  value: btn btn-default btn-sm
+end: 
+  type: classname
+  value: btn btn-default btn-sm delete
+schedule:
+  type: classname
+  value: btn btn-primary schedule

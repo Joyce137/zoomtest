@@ -1,0 +1,68 @@
+dev:
+  url: https://dev.zoom.us
+www:
+  url: https://www.zoom.us
+signup:
+  url: https://dev.zoom.us/signup
+signin:
+  url: https://dev.zoom.us/signin
+join:
+  url: https://dev.zoom.us/join
+profile:
+  url: https://dev.zoom.us/profile
+forget_pwd:
+  url: https://dev.zoom.us/forgot_password
+meeting:
+  url: https://dev.zoom.us/meeting
+upcoming_meeting:
+  url: https://dev.zoom.us/meeting?type=upcoming
+previous_meeting:
+  url: https://dev.zoom.us/meeting?type=previous
+webinar:
+  url: https://dev.zoom.us/webinar/list
+recording:
+  url: https://dev.zoom.us/recording
+account:
+  url: https://dev.zoom.us/account
+billing:
+  url: https://dev.zoom.us/billing
+user:
+  url: https://dev.zoom.us/account/user
+group:
+  url: https://dev.zoom.us/account/group
+report:
+  url: https://dev.zoom.us/account/report
+webinar_setting:
+  url: https://dev.zoom.us/account/webinar/setting
+sub:
+  url: https://dev.zoom.us/account/sub
+sales:
+  url: https://dev.zoom.us/contactsales
+plans:
+  url: https://dev.zoom.us/pricing
+about:
+  url: https://dev.zoom.us/about
+customers:
+  url: https://dev.zoom.us/customer
+download:
+  url: https://dev.zoom.us/download
+support:
+  url: http://support.zoom.us/
+feedback:
+  url: https://dev.zoom.us/feed
+blog:
+  url: http://blog.zoom.us/
+privacy_policy:
+  url: https://dev.zoom.us/privacy
+terms:
+  url: https://dev.zoom.us/terms
+linkedin:
+  url: http://www.linkedin.com/company/zoom-video-communications-inc-
+twitter:
+  url: http://www.twitter.com/zoom_us
+youtube:
+  url: http://www.youtube.com/zoommeetings
+facebook:
+  url: http://www.facebook.com/zoomwithus
+whyzoom:
+  url: https://dev.zoom.us/zoomisbetter

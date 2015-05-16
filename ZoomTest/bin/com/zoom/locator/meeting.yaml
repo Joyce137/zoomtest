@@ -1,0 +1,39 @@
+upcoming:
+  type: xpath
+  value: ".//*[@id='meeting_tab_container']/ul/li[1]"
+previous:
+  type: xpath
+  value: ".//*[@id='meeting_tab_container']/ul/li[2]"
+pmroom:
+  type: xpath
+  value: ".//*[@id='meetings']/div/div/div[2]/div[2]/div[3]/div/div[2]/b"
+pmidetail:
+  type: xpath
+  value: ".//*[@id='meetings']/div/div/div[2]/div[2]/div[3]/div/div[3]/a"
+meetingdate:
+  type: classname
+  value: list-col mtg-date
+meetingtime:
+  type: classname
+  value: list-col mtg-time
+meetingtopic:
+  type: classname
+  value: list-col mtg-topic
+meetingid:
+  type: classname
+  value: list-col mtg-id
+start:
+  type: classname
+  value: btn btn-default btn-sm
+paring:
+  type: classname
+  value: btn btn-default btn-sm room
+end: 
+  type: classname
+  value: btn btn-default btn-sm delete
+h323:
+  type: id
+  value: btnRoomSystemJoin
+schedule:
+  type: classname
+  value: btn btn-primary schedule

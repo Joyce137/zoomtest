@@ -1,0 +1,175 @@
+username:
+  type: xpath
+  value: ".//*[@id='profile-form']/div[1]/div/div[2]/h3"
+email:
+  type: xpath
+  value: ".//*[@id='profile-form']/div[1]/div/div[2]/p[1]/strong"
+user_type:
+  type: xpath
+  value: ".//*[@id='profile-form']/div[1]/div/div[2]/div[1]/strong"
+pmi:
+  type: xpath
+  value: ".//*[@id='profile-form']/div[1]/div/div[2]/div[3]/strong"
+changePMI:
+  type: id
+  value: changePMI
+pmiurl:
+  type: xpath
+  value: ".//*[@id='profile-form']/div[1]/div/div[2]/div[5]/strong"
+vanityURL:
+  type: xpath
+  value: ".//*[@id='showVanityDiv']/strong"
+changeurl:
+  type: id
+  value: editPersonalVanity
+hostkey:
+  type: xpath
+  value: ".//*[@id='showHostKeyDiv']/strong"
+changehostkey:
+  type: id
+  value: updateHostKey
+headphoto:
+  type: classname
+  value: profile-pic
+changephoto:
+  type: classname
+  value: change-picture
+firstname:
+  type: id
+  value: firstName
+lastname:
+  type: id
+  value: lastName
+phonecode:
+  type: id
+  value: s2id_phoneNumberCountryCode
+phonenumber:
+  type: id
+  value: phoneNumber
+companyname:
+  type: id
+  value: companyName
+timezone:
+  type: id
+  value: s2id_timezone
+defaultcall:
+  type: id
+  value: s2id_callinCountry
+E2E:
+  type: id
+  value: enableE2E
+onhold:
+  type: id
+  value: enableSilentMode
+chat:
+  type: id
+  value: disableChat
+autosavechat:
+  type: id
+  value: enableAutoSaveChat
+privatechat:
+  type: id
+  value: disablePrivateChat
+feedback:
+  type: id
+  value: disableFeedback
+jbhreminder:
+  type: id
+  value: disableJBHRemider
+camerecontrol:
+  type: id
+  value: enableCameraControl
+group:
+  type: id
+  value: disableGroupHD
+chime:
+  type: id
+  value: enableEntryExitChime
+chimeall:
+  type: id
+  value: entry_chime_all
+chimehost:
+  type: id
+  value: entry_chime_host
+teleconf:
+  type: id
+  value: enableOtherTeleConf
+teleconfinfo:
+  type: id
+  value: other_teleconf_info
+pac: 
+  type: id
+  value: enablePAC
+recording:
+  type: id
+  value: disableRecording
+cmr:
+  type: id
+  value: enableCMR
+autorecording:
+  type: id
+  value: enableAutoRecording
+savechanged:
+  type: classname
+  value: btn btn-primary submit
+changepassword:
+  type: id
+  value: changePassword
+oldpassword:
+  type: id
+  value: oldPassword
+newpassword:
+  type: id
+  value: newPassword
+#passwordstength
+meter1:
+  type: id
+  value: meter1
+meter2:
+  type: id
+  value: meter2
+meter3:
+  type: id
+  value: meter3
+meter4:
+  type: id
+  value: meter4
+confirmpassword:
+  type: id
+  value: confirmPassword
+assistant:
+  type: classname
+  value: assistant
+remove:
+  type: id
+  value: remove_assistant
+edit:
+  type: id
+  value: add_new_assistant
+assistantlist:
+  type: id
+  value: assistant_list
+assistant1:
+  type: xpath
+  value: ".//*[@id='assistant_list']/div/div[1]/span"
+remove1: 
+  type: xpath
+  value: ".//*[@id='assistant_list']/div/div[1]/button"
+assistant2:
+  type: xpath
+  value: ".//*[@id='assistant_list']/div/div[2]/span"
+remove2:
+  type: xpath
+  value: ".//*[@id='assistant_list']/div/div[2]/button"
+ltikey:
+  type: id
+  value: lti_key
+ltisecret:
+  type: id
+  value: lti_secret
+ltiregenerate:
+  type: id
+  value: lti_regenerate
+meetings:
+  type: linkText
+  value: My Meetings

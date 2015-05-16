@@ -1,0 +1,156 @@
+plan:
+  type: xpath
+  value: ".//*[@id='billing_tab_container']/ul/li[1]"
+billing:
+  type: xpath
+  value: ".//*[@id='billing_tab_container']/ul/li[2]"
+invoice:
+  type: xpath
+  value: ".//*[@id='billing_tab_container']/ul/li[3]"
+baseplan:
+  type: id
+  value: mainplan_titlebar_container
+expandbutton1: 
+  type: xpath
+  value: ".//*[@id='mainplan_titlebar_container']/table/tbody/tr/td[2]/a"
+sales:
+  type: linkText
+  value: sales
+h323:
+  type: id
+  value: roomconnector_titlebar_container 
+expandbutton2: 
+  type: xpath
+  value: ".//*[@id='roomconnector_titlebar_container']/table/tbody/tr/td[2]/a"
+largemtg:
+  type: id
+  value: large100_titlebar_container
+expandbutton3: 
+  type: xpath
+  value: ".//*[@id='large100_titlebar_container']/table/tbody/tr/td[2]/a"
+audio:
+  type: id
+  value: tollfree_new_titlebar_container
+expandbutton4: 
+  type: xpath
+  value: ".//*[@id='tollfree_new_titlebar_container']/table/tbody/tr/td[2]/a"
+webinar:
+  type: id
+  value: webinar_titlebar_container
+expandbutton5: 
+  type: xpath
+  value: ".//*[@id='webinar_titlebar_container']/table/tbody/tr/td[2]/a"
+cmr:
+  type: id
+  value: cmr_titlebar_container
+expandbutton6: 
+  type: xpath
+  value: ".//*[@id='cmr_titlebar_container']/table/tbody/tr/td[2]/a"
+#billing/payment
+firstname:
+  type: xpath
+  value: ".//*[@id='recurly_payment']/form/div[2]/div[2]/div[1]/input"
+lastname:
+  type: xpath
+  value: ".//*[@id='recurly_payment']/form/div[2]/div[2]/div[2]/input"
+email: 
+  type: classname
+  value: field email
+phone:
+  type: classname
+  value: field phone
+company:
+  type: classname
+  value: field company_name
+paymenttype:
+  type: classname
+  value: payment_method multiple
+cardfirstname:
+  type: xpath
+  value: ".//*[@id='recurly_payment']/form/div[3]/div[3]/div[1]/input"
+cardlastname:
+  type: xpath
+  value: ".//*[@id='recurly_payment']/form/div[3]/div[3]/div[2]/input"
+cardnumber:
+  type: classname
+  value: field card_number
+cvv:
+  type: classname
+  value: field cvv
+month:
+  type: classname
+  value: month
+year:
+  type: classname
+  value: year
+address1:
+  type: classname
+  value: field address1
+address2:
+  type: classname
+  value: field address2
+city:
+  type: classname
+  value: field city
+state:
+  type: classname
+  value: field state
+zip: 
+  type: classname
+  value: field zip
+country:
+  type: classname
+  value: field country
+submit:
+  type: classname
+  value: submit btn btn-primary btn-lg
+#invoice history
+print: 
+  type: classname
+  value: print btn btn-default btn-sm
+document:
+  type: classname
+  value: billing_doc_container
+# no invoice
+
+#plans
+#free user
+freeplanoption:
+  type: classname
+  value: row plan
+usercount:
+  type: id
+  value: users
+total:
+  type: id
+  value: summary_result
+freeplanupdate:
+  type: id
+  value: plan_submit
+#coupon code
+couponcode: 
+  type: classname
+  value: coupon_code form-control
+checkcode:
+  type: classname
+  value: check
+
+baseoption:
+  type: classname
+  value: row plan
+addtional:
+  type: id
+  value: plan_addon_count
+planupdate:
+  type: id
+  value: plan_submit
+plan_cancel:
+  type: id
+  value: plan_cancel
+
+#largemtg
+reactive:
+  type: id
+  value: large100_plan_reactivate
+
+

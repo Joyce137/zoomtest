@@ -1,0 +1,29 @@
+searchgroup:
+  type: id
+  value: search_key
+searchbtn:
+  type: classname
+  value: btn btn-default submit
+addnew:
+  type: classname
+  value: btn btn-default add-new
+linkdetail:
+  type: classname
+  value: linkdetail
+edit:
+  type: classname
+  value: edit btn btn-default btn-sm
+delete:
+  type: classname
+  value: delete btn btn-default btn-sm
+
+#detail group info
+email:
+  type: classname
+  value: email
+detaildelete:
+  type: classname
+  value: delete btn btn-default btn-sm
+detailmove:
+  type: classname
+  value: move btn btn-default btn-sm

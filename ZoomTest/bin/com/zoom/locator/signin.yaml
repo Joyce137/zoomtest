@@ -1,0 +1,24 @@
+pageheader:
+  type: classname
+  value: page-header
+email:
+  type: id
+  value: email
+password:
+  type: id
+  value: password
+signin:
+  type: classname
+  value: btn btn-primary submit signin user
+google:
+  type: classname
+  value: g
+facebook:
+  type: classname
+  value: fb
+signup:
+  type: linkText
+  value: Sign Up Free
+forgot:
+  type: linkText
+  value: Forgot password?
