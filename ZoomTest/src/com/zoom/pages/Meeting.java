@@ -6,7 +6,7 @@ import com.zoom.cons.LocatorManager;
 
 public class Meeting {
 	//„“½¨LocatorManagerŒÀı
-	private LocatorManager yaml;
+	private LocatorManager yaml = new LocatorManager("meeting");
 	//Ä¿ä›²Ë†Î½M¼ş
 	private WebElement upcoming, previous;
 	//pmi

@@ -1,16 +1,23 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.cons.DriverManager;
+import com.zoom.utils.Checkid;
 
 public class MainPage {
+	private WebDriver driver = DriverManager.getDriver();
 	//top組件
 	public WebElement logo, phone,SALES, PLANS;
 	//middle圖片組件
-	private WebElement why_zoom, photo1, photo2, photo3, number65000;
+	private WebElement why_zoom, photo1, photo2, photo3, costomercount;
 	//bottom菜單組件
-	private WebElement about, costomers, download, plan, sales, support, feedback, blog,
+	private WebElement about, costomers, download, plans, sales, support, feedback, blog,
 		privacy, terms;
 	//bottom圖標組件
 	private WebElement blogicon, linkedin, twitter, youtube, facebook, supporticon;
@@ -21,7 +28,7 @@ public class MainPage {
 	//join&host
 	private WebElement join, host;
 	//獲取Yaml文件
-	private LocatorManager yaml;
+	private LocatorManager yaml = new LocatorManager("main");
 	
 	public MainPage(){
 		//初始化各組件
@@ -33,11 +40,11 @@ public class MainPage {
 		photo1 = yaml.getElement("photo1");
 		photo2 = yaml.getElement("photo2");
 		photo3 = yaml.getElement("photo3");
-		number65000 = yaml.getElement("65000");
+		costomercount = yaml.getElement("costomercount");
 		about = yaml.getElement("About");
 		costomers = yaml.getElement("Costomers");
 		download = yaml.getElement("Download");
-		plan = yaml.getElement("Plans");
+		plans = yaml.getElement("Plans");
 		sales = yaml.getElement("Sales");
 		support = yaml.getElement("Support");
 		feedback = yaml.getElement("Feedback");
@@ -86,8 +93,8 @@ public class MainPage {
 	public WebElement getPhoto3() {
 		return photo3;
 	}
-	public WebElement getNumber65000() {
-		return number65000;
+	public WebElement getCostomercount() {
+		return costomercount;
 	}
 	public WebElement getAbout() {
 		return about;
@@ -98,8 +105,8 @@ public class MainPage {
 	public WebElement getDownload() {
 		return download;
 	}
-	public WebElement getPlan() {
-		return plan;
+	public WebElement getPlans() {
+		return plans;
 	}
 	public WebElement getSales() {
 		return sales;
@@ -166,5 +173,65 @@ public class MainPage {
 	}
 	
 	//各組件的基本測試函數
+	//總結組件
+	//asserts: logo, phone
+	public void testLogo(){
+		Assert.assertEquals(logo.isDisplayed(), true);
+	}
+	public void testPhone(){
+		ElementOperation eo = new ElementOperation(driver, phone);
+		eo.assertText("1.888.799.9666");
+	}
+	//links(23): SALES, PLANS, why_zoom, photo1, photo2, photo3, number65000
+		//about, costomers, download, plan, sales, support, feedback, blog,privacy, terms
+		//blogicon, linkedin, twitter, youtube, facebook, supporticon
+	WebElement links[] = {SALES, PLANS, why_zoom, photo1, photo2, photo3, costomercount,
+		about, costomers, download, plans, sales, support, feedback, blog,privacy, terms,
+		blogicon, linkedin, twitter, youtube, facebook, supporticon};
+	String linkstr[] = {"sales", "plans", "why_zoom", "why_zoom", "feature", "plans", "customers",
+			"about", "costomers", "download", "plans", "sales", "support", "feedback", "blog", "privacy", 
+			"terms", "blog", "linkedin", "twitter", "youtube", "facebook", "support"};
+	public void testLinks(int i){
+		Assert.assertEquals(links[i].isDisplayed(), true);
+		ElementOperation eo = new ElementOperation(driver, links[i]);
+		eo.linkOperation(linkstr[i]);
+	}
+	//菜單切換組件： vc, rc, zp, ms, im
+	WebElement menus[] = {vc, rc, zp, ms, im};
+	WebElement vc_title, rc_title, zp_title, ms_title, im_title;
+	WebElement menustitle[] = {vc_title, rc_title, zp_title, ms_title, im_title};
+	String menustr[] = {"vc", "rc", "zp", "ms", "im"};
+	public void testMenus(int i){
+		menus[i].click();
+		Assert.assertEquals(menustitle[i].isDisplayed(), true);
+	}
+	//功能組件：signin, signup, join, host
+	//signin, signup, join
+	WebElement actions[] = {signin, signup, join};
+	String actionstr[] = {"signin", "signup", "join"};
+	public void testSignin(int i){
+		ElementOperation eo = new ElementOperation(driver, actions[i]);
+		eo.linkOperation(actionstr[i]);
+	}
 	
+	//host
+	public void testHost(int i){
+		ElementOperation eo = new ElementOperation(driver, host);
+		//video meeting
+		if(i == 1){
+			BrowserAction.openUrl("https://dev.zoom.us/start/webmeeting");
+		}
+		else{
+			BrowserAction.openUrl("https://dev.zoom.us/start/videomeeting");
+		}
+		if(signin.isDisplayed()){
+			eo.linkOperation("signin");
+		}
+		else{
+			host.click();
+			String currenturl = driver.getCurrentUrl();
+			String hostid = currenturl.substring(currenturl.length()-9, currenturl.length());
+			Assert.assertEquals(Checkid.isOK(hostid), true);
+		}
+	}
 }

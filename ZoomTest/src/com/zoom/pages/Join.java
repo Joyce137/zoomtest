@@ -2,7 +2,6 @@ package com.zoom.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import com.zoom.cons.DriverManager;
 import com.zoom.cons.ElementOperation;
@@ -12,7 +11,7 @@ import com.zoom.utils.Checkid;
 public class Join {
 	private WebDriver driver = DriverManager.getDriver();
 	//ÑìΩ®LocatorManageråç¿˝
-	private LocatorManager yaml;
+	private LocatorManager yaml = new LocatorManager("join");
 	
 	private WebElement pageheader, meetingid, joinbtn, h323, error_meeting, check_msg;
 	
@@ -64,17 +63,21 @@ public class Join {
 	}
 	//joinbtn
 	public void testJoinbtn(){
-		
+		ElementOperation eo = new ElementOperation(driver,joinbtn);
+		String url = "https://dev.zoom.us/j/"+currentmid;
+		eo.linkUrl(url);
 	}
 	//h323
 	public void testH323(){
-		
+		ElementOperation eo = new ElementOperation(driver,h323);
+		eo.buttonOperation();
 	}
 	//error_meeting
 	public void testErrormsg(){
 		if(Checkid.isExisted(currentmid)){
 			ElementOperation eo = new ElementOperation(driver,pageheader);
 			eo.assertText("This meeting has ended or ID is not valid. Please check and re-enter again.");
+			System.out.println("This meeting has ended or ID is not valid. Please check and re-enter again.");
 		}
 	}
 	//check_msg

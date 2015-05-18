@@ -52,7 +52,7 @@ feedback:
   url: https://dev.zoom.us/feed
 blog:
   url: http://blog.zoom.us/
-privacy_policy:
+privacy:
   url: https://dev.zoom.us/privacy
 terms:
   url: https://dev.zoom.us/terms
@@ -64,7 +64,9 @@ youtube:
   url: http://www.youtube.com/zoommeetings
 facebook:
   url: http://www.facebook.com/zoomwithus
-whyzoom:
+why_zoom:
   url: https://dev.zoom.us/zoomisbetter
+feature:
+  url: https://dev.zoom.us/feature
 dashboard:
   url: https://dev.zoom.us/account/metrics/dashboard

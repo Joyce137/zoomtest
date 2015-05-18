@@ -47,7 +47,7 @@ public class ElementOperation {
 		System.out.println("input " + text);
 	}
 
-	// link處理(判斷是否是link-url)
+	// link處理(判斷是否是link-url @paras urlname in urls.yaml )
 	public void linkOperation(String urlname) {
 		// 獲取對應的url
 		String url = UrlManager.getUrl(urlname);
@@ -70,7 +70,29 @@ public class ElementOperation {
 		String current = driver.getCurrentUrl();
 		Assert.assertEquals(current, url);
 	}
-
+	// link處理(判斷是否是link-url @paras url)
+		//用于处理动态url
+	public void linkUrl(String url) {
+		// 獲取href&text
+		String href = element.getAttribute("href");
+		System.out.println("href = " + href);
+		String text = element.getText();
+		System.out.println("text = " + text);
+		// 點擊link
+		element.click();
+		synchronized (driver) {
+			try {
+				driver.wait(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//獲取link頁面的url,判斷是否正確
+		String current = driver.getCurrentUrl();
+		Assert.assertEquals(current, url);
+	}
+	
 	// button处理
 	public void buttonOperation() {
 		boolean enable = element.isEnabled();

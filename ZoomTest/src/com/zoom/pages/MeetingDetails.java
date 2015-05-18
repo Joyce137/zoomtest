@@ -6,7 +6,7 @@ import com.zoom.cons.LocatorManager;
 
 public class MeetingDetails {
 	//創建LocatorManager實例
-	private LocatorManager yaml;
+	private LocatorManager yaml = new LocatorManager("meeting_datails");;
 	//meeting info
 	private WebElement topic, time, calendar, id;
 	//meeting setting
@@ -100,5 +100,5 @@ public class MeetingDetails {
 	}
 	
 	//組件的基本測試函數
-
+	
 }

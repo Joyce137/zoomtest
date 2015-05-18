@@ -22,7 +22,7 @@ photo2:
 photo3:
   type: xpath
   value: ".//*[@id='screen2_container']/div/div[2]/div[3]/div/a/img"
-65000:
+costomercount:
   type: xpath
   value: ".//*[@id='screen4_container']/div/div/div/h2/a"
 About:
@@ -103,3 +103,19 @@ ms:
 im:
   type: xpath
   value: ".//*[@id='mainbg_container']/div[2]/ul/li[5]/a"
+vc_title:
+  type: id
+  value: vc_title
+rc_title:
+  type: id
+  value: rc_title
+zp_title:
+  type: id
+  value: zp_title
+ms_title:
+  type: id
+  value: ms_title
+im_title:
+  type: id
+  value: im_title
+  

@@ -46,7 +46,7 @@ public class Checkid {
 		return false;
 	}
 	//是否是正在開的會
-	public static boolean isOpened(String id){
+	public static boolean isOpening(String id){
 		try {
 			String sql = "select * from meeting where id = "+id+" and isopen = 0";
 			System.out.println(sql.toString());

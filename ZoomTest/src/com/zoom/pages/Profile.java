@@ -6,7 +6,7 @@ import com.zoom.cons.LocatorManager;
 
 public class Profile {
 	//ÑìΩ®LocatorManageråç¿˝
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("profile");; 
 	
 	//userinfo
 	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, changehostkey;
