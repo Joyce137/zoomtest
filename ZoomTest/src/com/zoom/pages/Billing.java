@@ -1,12 +1,22 @@
 package com.zoom.pages;
 
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DatabaseManager;
 
 public class Billing {
+	private Statement stmt = DatabaseManager.getMySqlstate();
+	private WebDriver driver = DriverManager.getDriver();
 	//目錄菜單組件
-	private WebElement plan, billing, invoice;
+	private WebElement plan, billing, invoice, sales;
 	//plans相關組件(all users)
 	private WebElement baseplan, h323, largemtg, audio, webinar, cmr;
 	private WebElement expandbutton1, expandbutton2, expandbutton3, expandbutton4, expandbutton5;
@@ -28,13 +38,14 @@ public class Billing {
 	private WebElement baseoption, addional, planupdate, plan_cancel, reactive;
 	
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("billing"); 
 	
 	//構造函數初始化所有組件
 	public Billing(){
 		plan = yaml.getElement("plan");
 		billing = yaml.getElement("billing");
 		invoice = yaml.getElement("invoice");
+		sales = yaml.getElement("sales");
 		baseplan = yaml.getElement("baseplan");
 		h323 = yaml.getElement("h323");
 		largemtg = yaml.getElement("largemtg");
@@ -84,6 +95,10 @@ public class Billing {
 		return baseplan;
 	}
 
+	public WebElement getSales(){
+		return sales;
+	}
+	
 	public WebElement getH323() {
 		return h323;
 	}
@@ -257,5 +272,63 @@ public class Billing {
 	}
 	
 	//各組件的基本測試
+	//總結個組件
+	//links(5)
+	WebElement links[] = {plan, billing, invoice, sales, document};
+	String linkstr[] = {"plan", "billing", "invoice", "sales", "document"};
+	public void testLink(int i){
+		ElementOperation eo = new ElementOperation(driver, links[i]);
+		eo.linkOperation(linkstr[i]);
+	}
 	
+	//inputs(14)
+	WebElement inputs[] = {firstname, lastname, email, phone, company, 
+			cardfirstname, cardlastname, cardnumber, cvv, address1, address2, city, state, zip};
+	String inputstr[] = {"firstname", "lastname", "email", "phone", "company", 
+			"cardfirstname", "cardlastname", "cardnumber", "cvv", 
+			"address1", "address2", "city", "state", "zip"};
+	String inputvalues[];
+	public void testInput(int i, String value){
+		ElementOperation eo = new ElementOperation(driver, inputs[i]);
+		eo.inputOperation(value);
+		inputvalues[i] = value;
+	}
+	
+	//paymenttype
+	int paymentindex;
+	public void testPaymenttype(int index){
+		ElementOperation eo = new ElementOperation(driver, paymenttype);
+		eo.radioOperation(index);
+		paymentindex = index;
+	}
+	
+	//selectors(3)month, year, country
+	WebElement selectors[] = {month, year, country};
+	String selectorstr[] = {"month", "year", "country"};
+	String selectorvalues[];
+	public void testMonth(int i, String value){
+		ElementOperation eo = new ElementOperation(driver, selectors[i]);
+		eo.selectorOperation(value);
+	}
+	
+	//submit
+	public void testSubmit(int accountid){
+		submit.click();
+		//向數據庫提交數據
+		try {
+			for(int i = 0;i<inputs.length;i++){
+				stmt.execute("update accountoption set "+inputstr[i]+" = "+inputvalues[i]+" where accountid = "+accountid);
+				stmt.execute("update accountoption set paymenttype = "+paymentindex+" where accountid = "+accountid);
+				stmt.execute("update accountoption set "+selectorstr[i]+" = "+selectorvalues[i]+" where accountid = "+accountid);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//print
+	public void testPrint(){
+		print.click();
+		BrowserAction.screenshot();
+	}
 }

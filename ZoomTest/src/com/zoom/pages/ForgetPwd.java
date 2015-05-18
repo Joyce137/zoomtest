@@ -1,12 +1,17 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
 
 public class ForgetPwd {
+	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("forgot-pwd"); 
 	//組件
 	private WebElement pageheader, check_msg, email, send, pageheader2, check_email, resend;
 	
@@ -51,5 +56,45 @@ public class ForgetPwd {
 	}
 	
 	//組件基本測試函數
+	//pageheader
+	public void testPageheader(){		
+		ElementOperation eo = new ElementOperation(driver,pageheader);
+		eo.assertText("Forgot your password?");
+	}
 	
+	//check_msg
+	public void testCheckmsg(){		
+		ElementOperation eo = new ElementOperation(driver,check_msg);
+		eo.assertText("Don't worry. Resetting your password is easy, just tell us the email address you registered with Zoom.");
+	}
+	
+	String currentemail = email.getText();
+	//email
+	public void testEmail(String value){
+		ElementOperation eo = new ElementOperation(driver,email);
+		eo.inputOperation(value);
+		currentemail = value;
+	}
+	
+	//send
+	public void testSend(){
+		send.click();
+	}
+	
+	//pageheader2
+	public void testPageheader2(){		
+		ElementOperation eo = new ElementOperation(driver,pageheader2);
+		eo.assertText("Reset your password");
+	}
+	//check_email
+	public void testCheckemail(){		
+		String emailstr = check_email.getText();
+		boolean is = emailstr.indexOf(currentemail)>0?true:false;
+		Assert.assertEquals(is, true);
+	}
+	
+	//resend
+	public void testResend(){
+		resend.click();
+	}
 }

@@ -4,12 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
-import java.util.List;
 
 import org.ho.yaml.Yaml;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class YamlReader {
 	// ÓÃHashMap´æƒ¦yamlÎÄ¼þ

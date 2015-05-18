@@ -66,3 +66,5 @@ facebook:
   url: http://www.facebook.com/zoomwithus
 whyzoom:
   url: https://dev.zoom.us/zoomisbetter
+dashboard:
+  url: https://dev.zoom.us/account/metrics/dashboard

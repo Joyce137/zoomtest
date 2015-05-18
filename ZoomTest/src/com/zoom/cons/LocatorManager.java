@@ -1,13 +1,9 @@
 package com.zoom.cons;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import org.ho.yaml.Yaml;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +19,6 @@ public class LocatorManager {
 
 	// 用HashMap存儲yaml文件
 	private HashMap<String, HashMap<String, String>> ml;
-	private HashMap<String, HashMap<String, String>> extendLocator;
 	
 	//構造函數
 	public LocatorManager(){
@@ -71,6 +66,9 @@ public class LocatorManager {
 		}
 		if (type.equals("linkText")) {
 			by = By.linkText(value);
+		}
+		if(type.equals("css")){
+			by = By.cssSelector(value);
 		}
 		return by;
 	}
@@ -130,6 +128,7 @@ public class LocatorManager {
 	}
 
 
+	@SuppressWarnings("unused")
 	private WebElement getLocator(String key, String[] replace, boolean wait) {		
 		if (ml == null){
 			ml = YamlReader.getml(yamlFile);
