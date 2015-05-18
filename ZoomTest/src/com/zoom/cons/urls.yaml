@@ -70,3 +70,5 @@ feature:
   url: https://dev.zoom.us/feature
 dashboard:
   url: https://dev.zoom.us/account/metrics/dashboard
+schedule:
+  url: https://dev.zoom.us/meeting/schedule

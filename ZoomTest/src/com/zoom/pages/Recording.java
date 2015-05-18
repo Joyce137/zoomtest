@@ -80,5 +80,21 @@ public class Recording {
 	}
 
 	//½M¼þ»ù±¾œyÔ‡º¯”µ
-	
+	//dateFrom, dateTo, go;
+	public void testDatefrom(){
+		dateFrom.click();
+	}
+	public void testDateto(){
+		dateTo.click();
+	}
+	public void testGo(){
+		go.click();
+	}
+	//detail, delete
+	public void testDetail(){
+		detail.click();
+	}
+	public void testDelete(){
+		delete.click();
+	}
 }

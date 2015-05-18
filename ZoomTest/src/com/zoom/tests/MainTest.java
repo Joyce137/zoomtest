@@ -8,6 +8,6 @@ public class MainTest {
 		System.out.println(a+" = "+Checkid.isOK(a));
 		System.out.println(a+" = "+Checkid.isPMIOK(a));
 		System.out.println(a+" = "+Checkid.isExisted(a));
-		System.out.println(a+" = "+Checkid.isOpened(a));
+		System.out.println(a+" = "+Checkid.isOpening(a));
 	}
 }

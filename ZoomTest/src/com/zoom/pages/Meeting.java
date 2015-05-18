@@ -1,10 +1,18 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.cons.UrlManager;
+import com.zoom.database.DataManager;
+import com.zoom.utils.Checkid;
 
 public class Meeting {
+	private WebDriver driver= DriverManager.getDriver();
 	//創建LocatorManager實例
 	private LocatorManager yaml = new LocatorManager("meeting");
 	//目錄菜單組件
@@ -85,5 +93,70 @@ public class Meeting {
 	}
 	
 	//組件的基本測試函數
+	//upcoming, previous
+	public void testUpcoming(){
+		String currenturl = driver.getCurrentUrl();
+		if(currenturl.equals(UrlManager.getUrl("meeting"))){
+			return;
+		}
+		else{
+			ElementOperation eo = new ElementOperation(driver, upcoming);
+			eo.linkOperation("upcoming_meeting");
+		}
+	}
+	public void testPrevious(){
+		ElementOperation eo = new ElementOperation(driver, previous);
+		eo.linkOperation("previous_meeting");
+	}
+	//pmroom, pmidetail
+	public void testPmroom(){
+		ElementOperation eo = new ElementOperation(driver, pmroom);
+		eo.assertText("Personal Meeting Room");
+	}
+	//get current pmi
+	public String getCurrentpmi(int userid){
+		return DataManager.getpmi(userid);
+	}
+	//pmidetail
+	public void testPmidetail(int userid){
+		ElementOperation eo = new ElementOperation(driver, pmidetail);
+		String url = "https://dev.zoom.us/meeting/"+getCurrentpmi(userid);
+		eo.linkUrl(url);
+	}
+	//通過當前url分解出curmeetingid
+	public String getCurmeetingid(){
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('g');
+		return cururl.substring(index+2, cururl.length());
+	}
+	String curmeetingid = getCurmeetingid();
 	
+	//start, paring, end, h323, schedule
+	public void testStart(){
+		start.click();
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('s');
+		String starturl = cururl.substring(index+2, cururl.length());
+		Assert.assertEquals(starturl, curmeetingid);
+	}
+	public void testParing(){
+		paring.click();
+	}
+	public void testEnd(){
+		if(Checkid.isOpening(curmeetingid)){
+			Assert.assertTrue(end.isDisplayed());
+			end.click();
+			Assert.assertTrue(!end.isDisplayed());
+		}
+		else{
+			Assert.assertTrue(!end.isDisplayed());
+		}
+	}
+	public void testH323(){
+		h323.click();
+	}
+	public void testSchedule(){
+		ElementOperation eo = new ElementOperation(driver, schedule);
+		eo.linkOperation("schedule");
+	}
 }
