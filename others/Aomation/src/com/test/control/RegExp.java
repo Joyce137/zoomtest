@@ -318,7 +318,7 @@ public class RegExp {
 
 	public static void main(String[] args) {
 		RegExp re = new RegExp();
-		String str = "[getScriptString]得到返回时间, \"返回值\"{返回时间}";
+		String str = "xxx";
 		String s1 = "$('input[name=toDate]').val('2014-05-29')";
 		System.out.println(re.replaceReturn(str,s1));
 	}

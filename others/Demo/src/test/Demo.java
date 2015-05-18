@@ -67,38 +67,38 @@ public class Demo {
 	 }
 	 
 	 //統一處理各種type
-	    private By getBy(String type, String value) {
-	        By by = null;
-	        if (type.equals("id")) {
-	            by = By.id(value);
-	        }
-	        if (type.equals("name")) {
-	            by = By.name(value);
-	        }
-	        if (type.equals("xpath")) {
-	            by = By.xpath(value);
-	        }
-	        if (type.equals("classname")) {
-	            by = By.className(value);
-	        }
-	        if (type.equals("linkText")) {
-	            by = By.linkText(value);
-	        }
-	        return by; 
-	    }
+	 private By getBy(String type, String value) {
+        By by = null;
+        if (type.equals("id")) {
+            by = By.id(value);
+        }
+        if (type.equals("name")) {
+            by = By.name(value);
+        }
+        if (type.equals("xpath")) {
+            by = By.xpath(value);
+        }
+        if (type.equals("classname")) {
+           by = By.className(value);
+        }
+        if (type.equals("linkText")) {
+            by = By.linkText(value);
+        }
+        return by; 
+    }
 	 
-	    //得到各種WebElement
-	    public WebElement getElement(String key) {
-	        String type = ml.get(key).get("type");
-	        String value = ml.get(key).get("value");
-	        return driver.findElement(this.getBy(type, value));
-	    }
-	    //处理RadioBox等控件,得到WebElements(List<Element>)
-	    public List<WebElement> getElements(String key){
-	    	String type = ml.get(key).get("type");
-	        String value = ml.get(key).get("value");
-	    	return driver.findElements(this.getBy(type, value));
-	    }
+    //得到各種WebElement
+    public WebElement getElement(String key) {
+        String type = ml.get(key).get("type");
+        String value = ml.get(key).get("value");
+        return driver.findElement(this.getBy(type, value));
+    }
+    //处理RadioBox等控件,得到WebElements(List<Element>)
+    public List<WebElement> getElements(String key){
+    	String type = ml.get(key).get("type");
+        String value = ml.get(key).get("value");
+    	return driver.findElements(this.getBy(type, value));
+    }
 	    
 	//test goto
 	public void testGoto(String url){

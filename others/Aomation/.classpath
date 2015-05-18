@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="G:/goodbye/others/Aomation/lib/poi-3.8.jar"/>
 	<classpathentry kind="lib" path="G:/goodbye/app/selenium-java-2.45.0/selenium-2.45.0/selenium-java-2.45.0.jar"/>
 	<classpathentry kind="lib" path="G:/goodbye/app/selenium-java-2.45.0/selenium-2.45.0/selenium-java-2.45.0-srcs.jar"/>
+	<classpathentry kind="lib" path="G:/goodbye/others/Aomation/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="G:/goodbye/others/Aomation/lib/org.apache.commons.io.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

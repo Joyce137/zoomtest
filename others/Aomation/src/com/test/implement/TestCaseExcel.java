@@ -116,15 +116,15 @@ public class TestCaseExcel implements TestCases {
 		for (int i = 0; i < allData.size(); i++) {
 			Map<String, String> map = allData.get(i);
 			String step = "";
-			String object = map.get("页面|对象");
-			String preOp = map.get("预置操作");
-			String element = map.get("元素对象");
-			String elementParam = map.get("元素对象参数");
-			String action = map.get("操作");
-			String param = map.get("参数");
-			String returnValue = map.get("返回值");
+			String object = map.get("椤甸潰|瀵硅薄");
+			String preOp = map.get("棰勭疆鎿嶄綔");
+			String element = map.get("鍏冪礌瀵硅薄");
+			String elementParam = map.get("鍏冪礌瀵硅薄鍙傛暟");
+			String action = map.get("鎿嶄綔");
+			String param = map.get("鍙傛暟");
+			String returnValue = map.get("杩斿洖鍊�");
 			if (object != null && !object.equals(""))
-				step += "\"对象\"" + "{" + object + "}";
+				step += "\"瀵硅薄\"" + "{" + object + "}";
 			if (preOp != null && !preOp.equals(""))
 				step += "\"" + preOp + "\"";
 			if (element != null && !element.equals("")) {
@@ -137,7 +137,7 @@ public class TestCaseExcel implements TestCases {
 			if (param != null && !param.equals(""))
 				step += "{" + param + "}";
 			if (returnValue != null && !returnValue.equals(""))
-				step += "\"返回值\"" + "{" + returnValue + "}";
+				step += "xxx";
 			if (allTestCase == null)
 				allTestCase = new ArrayList<String>();
 			else

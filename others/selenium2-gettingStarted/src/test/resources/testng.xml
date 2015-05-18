@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests" verbose="5" data-provider-thread-count="1">
+	<test name="Test1">
+		<classes>
+		    <class name="selenium2.examples.Selenium2Example1Test"/>
+		    <class name="selenium2.examples.Selenium2Example2Test"/>
+		    <class name="selenium2.examples.Selenium2Example4Test"/>
+		    <class name="selenium2.examples.Selenium2Example5Test"/>
+		    <class name="selenium2.examples.Selenium2Example6Test"/>
+		    <class name="selenium2.examples.Selenium2Example7Test"/>
+		</classes>
+	</test>  
+</suite>
