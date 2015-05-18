@@ -1,5 +1,5 @@
 MAX_RECENT_WORKSPACES=5
-RECENT_WORKSPACES=G\:\\goodbye\\workspace\nG\:\\goodbye\\ZoomTest\nG\:\\
+RECENT_WORKSPACES=G\:\\\nG\:\\goodbye\\workspace\nG\:\\goodbye\\ZoomTest
 RECENT_WORKSPACES_PROTOCOL=3
 SHOW_WORKSPACE_SELECTION_DIALOG=false
 eclipse.preferences.version=1
