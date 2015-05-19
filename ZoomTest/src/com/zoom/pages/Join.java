@@ -85,5 +85,4 @@ public class Join {
 		ElementOperation eo = new ElementOperation(driver,check_msg);
 		eo.assertText("Your meeting ID is a 9, 10, or 11-digit number");
 	}
-	
 }

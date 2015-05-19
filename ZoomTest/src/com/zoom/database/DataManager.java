@@ -18,6 +18,14 @@ public class DataManager {
 		}
 		return result;
 	}
+	//執行sql
+	public static void executesql(String sql){
+		try {
+			stmt.executeQuery(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 	//在user中通過userid得到pmi
 	public static String getpmi(int userid){
@@ -28,5 +36,15 @@ public class DataManager {
 	public static String getinfo(String meetingid, String item){
 		String sql = "select "+item +" from meeting when meetingid = "+meetingid;
 		return query(sql);
+	}
+	//從user中獲取某個user信息
+	public static String getuserinfo(int userid, String item){
+		String sql = "select "+item +" from user when id = "+userid;
+		return query(sql);
+	}
+	//執行update user
+	public static void updateuser(int userid, String item, String value){
+		String sql = "update user set "+item+" = "+value+" where id = "+userid;
+		executesql(sql);
 	}
 }

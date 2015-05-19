@@ -1,12 +1,19 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.cons.UrlManager;
+import com.zoom.utils.Checkid;
 
 public class Webinar {
+	private WebDriver driver= DriverManager.getDriver();
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("webinar"); 
 	//目錄菜單組件
 	private WebElement upcoming, previous;
 	//meeting info
@@ -64,5 +71,51 @@ public class Webinar {
 
 	
 	//組件基本測試函數
+	//upcoming, previous
+	public void testUpcoming(){
+		String currenturl = driver.getCurrentUrl();
+		if(currenturl.equals(UrlManager.getUrl("webinar"))){
+			return;
+		}
+		else{
+			ElementOperation eo = new ElementOperation(driver, upcoming);
+			eo.linkOperation("upcoming_webinar");
+		}
+	}
+	public void testPrevious(){
+		ElementOperation eo = new ElementOperation(driver, previous);
+		eo.linkOperation("previous_webinar");
+	}
+	//通過當前url分解出curmeetingid
+	public String getCurmeetingid(){
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('r');
+		return cururl.substring(index+2, cururl.length());
+	}
+	String curmeetingid = getCurmeetingid();
 	
+	//start, paring, end, h323, schedule
+	public void testStart(){
+		start.click();
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('s');
+		String starturl = cururl.substring(index+2, cururl.length());
+		Assert.assertEquals(starturl, curmeetingid);
+	}
+	
+	public void testEnd(){
+		if(Checkid.isOpening(curmeetingid)){
+			Assert.assertTrue(end.isDisplayed());
+			end.click();
+			Assert.assertTrue(!end.isDisplayed());
+		}
+		else{
+			Assert.assertTrue(!end.isDisplayed());
+		}
+	}
+	
+	public void testSchedule(){
+		ElementOperation eo = new ElementOperation(driver, schedule);
+		eo.linkOperation("schedule_webinar");
+	}
 }

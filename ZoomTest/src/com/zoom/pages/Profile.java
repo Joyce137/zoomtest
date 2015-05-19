@@ -1,15 +1,24 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DataManager;
+import com.zoom.utils.Checkid;
 
 public class Profile {
-	//創建LocatorManager實例
-	private LocatorManager yaml = new LocatorManager("profile");; 
+	private WebDriver driver = DriverManager.getDriver();
 	
+	//創建LocatorManager實例
+	private LocatorManager yaml = new LocatorManager("profile");
+	private int userid;
 	//userinfo
-	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, changehostkey;
+	private WebElement username, email, user_type, pmi, changePMI, pmiurl, vanityURL, changeurl, hostkey, 
+		showkey, changehostkey, newHostKey, hostkey_submit, hostkey_cancel, pmitext, pmi_submit, pmi_cancel, newpv, pv_submit, pv_cancel;
 	//profileinfo
 	private WebElement headphoto, changephoto, firstname, lastname, phonecode, phonenumber, companyname, timezone, defaultcall;
 	//meeting options
@@ -29,7 +38,8 @@ public class Profile {
 	private WebElement meetings;
 	
 	//構造函數初始化組件
-	public Profile(){
+	public Profile(int userid){
+		this.userid = userid;
 		username = yaml.getElement("username");
 		email = yaml.getElement("email");
 		user_type = yaml.getElement("user_type");
@@ -86,11 +96,21 @@ public class Profile {
 		ltikey = yaml.getElement("ltikey");
 		ltisecret = yaml.getElement("ltisecret");
 		ltiregenerate = yaml.getElement("ltiregenerate");
-		meetings = yaml.getElement("");
+		meetings = yaml.getElement("meetings");
+		showkey = yaml.getElement("showkey"); 
+		changehostkey = yaml.getElement("changehostkey");
+		newHostKey = yaml.getElement("newHostKey");
+		hostkey_submit = yaml.getElement("hostkey_submit");
+		hostkey_cancel = yaml.getElement("hostkey_cancel");
+		pmitext = yaml.getElement("pmitext");
+		pmi_submit = yaml.getElement("pmi_submit");
+		pmi_cancel = yaml.getElement("pmi_cancel");
+		newpv = yaml.getElement("newpv");
+		pv_submit = yaml.getElement("pv_submit");
+		pv_cancel = yaml.getElement("pv_cancel");
 	}
 	
 	//組件get函數
-
 	public WebElement getUsername() {
 		return username;
 	}
@@ -327,5 +347,190 @@ public class Profile {
 		return meetings;
 	}
 	//組件基本測試函數
+	//userinfo assert組件(5)
+	WebElement asserts[] = {username, email, user_type, pmi, pmiurl};
+	String assertstr[] = {"username", "email", "user_type", "pmi", "pmiurl"};
+	public void testAsserts(int userid, int i){
+		ElementOperation eo = new ElementOperation(driver, asserts[i]);
+		eo.assertText(DataManager.getuserinfo(userid, assertstr[i]));
+	}
+	//change
+	public void testChangeURL(){
+		changePMI.click();
+	}
+	//pmitext
+	public void testPMIText(String value){
+		ElementOperation eo = new ElementOperation(driver, pmitext);
+		eo.assertText(value);
+	}
+	//pmi_submit
+	public void testPMIsubmit(){
+		pmi_submit.click();
+		String newpmi = pmitext.getText();
+		if(Checkid.isPMIOK(newpmi)){
+			DataManager.updateuser(userid, "pmi", newpmi);
+		}
+	}
+	//pmi_cancel
+	public void testPMIcancel(){
+		pmi_cancel.click();
+		Assert.assertTrue(!pmi_submit.isDisplayed());
+		Assert.assertTrue(!pmi_cancel.isDisplayed());
+		Assert.assertTrue(changePMI.isDisplayed());
+	}
+	//changeurl
+	public void testChangeurl(){
+		changeurl.click();
+		Assert.assertTrue(pv_submit.isDisplayed());
+		Assert.assertTrue(pv_cancel.isDisplayed());
+		Assert.assertTrue(!changeurl.isDisplayed());
+	}
+	//newpv, oldpv, pv_submit, pv_cancel
+	public void testnewpv(String value){
+		ElementOperation eo = new ElementOperation(driver, newpv);
+		eo.assertText(value);
+	}
+	public void testpvsubmit(){
+		pv_submit.click();
+		String newpvstr = newpv.getText();
+		DataManager.updateuser(userid, "pv", newpvstr);
+	}
+	public void testpvcancel(){
+		pv_cancel.click();
+		Assert.assertTrue(!pv_submit.isDisplayed());
+		Assert.assertTrue(!pv_cancel.isDisplayed());
+		Assert.assertTrue(changeurl.isDisplayed());
+	}	
+	//hostkey;
+	public void testHostkey(boolean first){
+		//first -- 不直接顯示，用*
+		if(first)
+			Assert.assertEquals(hostkey.getText(), "********");
+		//點擊show之後，便一直顯示
+		else
+			Assert.assertEquals(hostkey.getText(), DataManager.getuserinfo(userid, "hostkey"));
+	}
+	public void testChangekey(){
+		changehostkey.click();
+		Assert.assertTrue(hostkey_submit.isDisplayed());
+		Assert.assertTrue(hostkey_cancel.isDisplayed());
+		Assert.assertTrue(!changehostkey.isDisplayed());
+	}
+	public void testShowkey(boolean first){
+		//first -- 不顯示
+		if(first)
+			Assert.assertTrue(!hostkey.isDisplayed());
+		//點擊show之後，便一直顯示
+		else{
+			showkey.click();
+			Assert.assertEquals(hostkey.getText(), DataManager.getuserinfo(userid, "hostkey"));
+		}					
+	}
+	public void testnewHostkey(String value){
+		ElementOperation eo = new ElementOperation(driver, newHostKey);
+		eo.assertText(value);
+	}
+	public void testhostkeysubmit(){
+		hostkey_submit.click();
+		String newhostkeystr = newHostKey.getText();
+		DataManager.updateuser(userid, "hostkey", newhostkeystr);
+	}
+	public void testhostkeycancel(){
+		hostkey_cancel.click();
+		Assert.assertTrue(!hostkey_submit.isDisplayed());
+		Assert.assertTrue(!hostkey_cancel.isDisplayed());
+		Assert.assertTrue(changehostkey.isDisplayed());
+	}	
+	//headphoto, changephoto, firstname, lastname, phonecode, phonenumber, companyname, timezone, defaultcall;
+	WebElement useroptions[]={e2e, onhold, chat, autosavechat, feedback, jbhreminder, teleconf, pac,
+			recording, cmr, privatechat, cameracontrol, group, chime, chimeall, chimehost};
+	String useroptionstr[]={"e2e", "onhold", "chat", "autosavechat", "feedback", "jbhreminder",
+			"teleconf", "pac","recording", "cmr", "cameracontrol", "group", "chime", "chimeall", "chimehost"};
+	//options as above, i-第幾個，accountid-accountid
+	public void testOptions(int i,int accountid, int userid){
+		WebElement el = useroptions[i];
+		String sql = null;
+		//測試組件是否顯示、是否可選
+		sql = "select "+useroptionstr[i] +" from accountoption where accountid = "+accountid;
+		String is = DataManager.query(sql).toString();
+		if(is == "1"){
+			Assert.assertTrue(useroptions[i].isDisplayed()||useroptions[i].isEnabled());
+		}
+		else{
+			Assert.assertTrue(!useroptions[i].isDisplayed());
+		}
+		//修改setting選項
+		el.click();
+		if(el.isSelected()){
+			sql = "update useroption set "+useroptionstr[i]+" = 1 where userid = "+accountid;
+		}
+		else{
+			sql = "update useroption set "+useroptionstr[i]+" = 1 where userid = "+accountid;
+		}
+		DataManager.executesql(sql);
+	}
+	//autorecording
 	
+	//teleconfinfo
+	public void testTeleconfinfo(String value){
+		ElementOperation eo = new ElementOperation(driver, teleconfinfo);
+		eo.assertText(value);
+	}
+	
+	//changepassword, oldpassword, newpassword, confirmpassword;meters[];
+	public void testChangepassword(){
+		changehostkey.click();
+		Assert.assertTrue(oldpassword.isDisplayed());
+		Assert.assertTrue(newpassword.isDisplayed());
+		Assert.assertTrue(confirmpassword.isDisplayed());
+		Assert.assertTrue(!changepassword.isDisplayed());
+	}
+	public void testoldpassword(String value){
+		ElementOperation eo = new ElementOperation(driver, oldpassword);
+		eo.assertText(value);
+	}
+	public void testnewpassword(String value){
+		ElementOperation eo = new ElementOperation(driver, newpassword);
+		eo.assertText(value);
+	}
+	public void testConfirmpassword(String value){
+		ElementOperation eo = new ElementOperation(driver, newpassword);
+		eo.assertText(value);
+	}
+	//savechanged;
+	public void testSaveChanged(){
+		savechanged.click();
+		//oldpassword要正確
+		String pwdstr = DataManager.getuserinfo(userid, "pwd").toString();
+		if(oldpassword.getText() != pwdstr)	
+			return;
+		//newpassword不能太簡單
+		if(!meters[0].isSelected())
+			return;
+		//confirmpassword要與newpassword相同
+		if(newpassword.getText() != confirmpassword.getText())
+			return;
+		Assert.assertTrue(!oldpassword.isDisplayed());
+		Assert.assertTrue(!newpassword.isDisplayed());
+		Assert.assertTrue(!confirmpassword.isDisplayed());
+		Assert.assertTrue(changepassword.isDisplayed());
+		String newpwd = confirmpassword.getText();
+		DataManager.updateuser(userid, "pwd", newpwd);
+	}
+	
+	//assistant, assistantlist, remove, edit, assistant1, remove1, assistant2, remove2;
+	
+	//ltikey, ltisecret, ltiregenerate; 
+	String ltikeystr = ltikey.getText();
+	String ltisecretstr = ltisecret.getText();
+	public void testltiregenerate(){
+		ltiregenerate.click();
+		String newltisecretstr = ltisecret.getText();
+		Assert.assertFalse(ltisecretstr == newltisecretstr);
+	}
+	//meeting
+	public void testmeetings(){
+		ElementOperation eo = new ElementOperation(driver, meetings);
+		eo.linkOperation("meeting");
+	}
 }

@@ -118,4 +118,6 @@ ms_title:
 im_title:
   type: id
   value: im_title
-  
+signout:
+  type: id
+  value: btnLogout

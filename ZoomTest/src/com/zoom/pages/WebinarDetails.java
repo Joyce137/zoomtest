@@ -1,12 +1,20 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DataManager;
+import com.zoom.utils.StringManager;
 
 public class WebinarDetails {
+	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("webinar_details"); 
 	//webinar info組件
 	private WebElement topic, time, calendar, id, audio, disbleqa, edit;
 	//branding
@@ -144,5 +152,44 @@ public class WebinarDetails {
 	}
 
 	//組件基本測試函數
+	//webinar info
+	String webinarid = StringManager.getCurmeetingid();
+	WebElement webinarinfo[] = {topic, time, calendar, id, audio, disbleqa};
+	String webinarinfostr[] = {"topic", "time", "calendar", "id", "audio", "disbleqa"};
+	public void testWebinarinfo(){
+		for(int i = 0;i < webinarinfo.length; i++){
+			String sql = "select "+webinarinfostr[i]+" from webinar where id = "+webinarid;
+			String value = DataManager.query(sql);
+			Assert.assertEquals(webinarinfo[i].getText(), value);
+		}
+	}
+
+	//upload1, upload2
+	public void testUpload1(String filepath){
+		ElementOperation eo = new ElementOperation(driver, upload1);
+		eo.uploadOperation(filepath);
+	}
+	public void testUpload2(String filepath){
+		ElementOperation eo = new ElementOperation(driver, upload2);
+		eo.uploadOperation(filepath);
+	}
 	
+	//edits
+	WebElement edits[] = {panelist_edit, attendee_view, invite_edit, copy_invitation, copy_email, attendees,
+			emailsettingedit1, emailsettingedit2, emailsettingedit3, emailsettingedit4, emailsettingedit5, 
+			emailsettingedit6, polledit};
+	public void testEdit(){
+		for(int i = 0;i<edits.length;i++){
+			edits[i].click();
+			BrowserAction.refresh();
+		}
+	}
+	
+	public void testStart(){
+		start.click();
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('s');
+		String starturl = cururl.substring(index+2, cururl.length());
+		Assert.assertEquals(starturl, webinarid);
+	}
 }

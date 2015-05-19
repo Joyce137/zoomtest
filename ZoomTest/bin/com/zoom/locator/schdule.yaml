@@ -1,0 +1,57 @@
+topic:
+  type: name
+  value: topic
+start_date:
+  type: name
+  value: start_date
+start_time:
+  type: name
+  value: start_time
+am_pm:
+  type: id
+  value: s2id_start_time_2
+durationhour:
+  type: id
+  value: s2id_duration_hr
+durationmin:
+  type: id
+  value: s2id_duration_min
+timezone:
+  type: id
+  value: s2id_timezone
+rm:
+  type: id
+  value: option_rm
+schdulefor:
+  type: id
+  value: s2id_schedule_for
+video:
+  type: xpath
+  value: "//*[@id='meetingVideo']/div[1]/div"
+p_video:
+  type: xpath
+  value: "//*[@id='meetingVideo']/div[2]/div"
+audio:
+  type: xpath
+  value: "//*[@id='schedule_form']/div[6]/div"
+requre_pwd:
+  type: id
+  value: option_password
+password:
+  type: id
+  value: password
+jbh:
+  type: id
+  value: option_jbh
+withpmi:
+  type: id
+  value: option_withpmi
+cn:
+  type: id
+  value: option_cnmeeting
+schedule:
+  type: classname
+  value: btn btn-primary btn-lg submit
+cancel:
+  type: classname
+  value: btn btn-default btn-lg

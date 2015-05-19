@@ -20,6 +20,10 @@ previous_meeting:
   url: https://dev.zoom.us/meeting?type=previous
 webinar:
   url: https://dev.zoom.us/webinar/list
+upcoming_webinar:
+  url: https://dev.zoom.us/webinar/list?type=upcoming
+previous_webinar:
+  url: https://dev.zoom.us/webinar/list?type=previous
 recording:
   url: https://dev.zoom.us/recording
 account:
@@ -27,7 +31,11 @@ account:
 billing:
   url: https://dev.zoom.us/billing
 user:
-  url: https://dev.zoom.us/account/user
+  url: https://dev.zoom.us/account/
+pending:
+  url: https://dev.zoom.us/account/user/pending
+advanced:
+  url: https://dev.zoom.us/account/user/advanced
 group:
   url: https://dev.zoom.us/account/group
 report:
@@ -36,6 +44,8 @@ webinar_setting:
   url: https://dev.zoom.us/account/webinar/setting
 sub:
   url: https://dev.zoom.us/account/sub
+sublist:
+  url: https://dev.zoom.us/account/sub/list
 sales:
   url: https://dev.zoom.us/contactsales
 plans:
@@ -72,3 +82,17 @@ dashboard:
   url: https://dev.zoom.us/account/metrics/dashboard
 schedule:
   url: https://dev.zoom.us/meeting/schedule
+usage_report:
+  url: https://dev.zoom.us/account/report/user
+inactive_report:
+  url: https://dev.zoom.us/account/report/inactive
+telephony_report:
+  url: https://dev.zoom.us/account/report/audio
+webinar_report:
+  url: https://dev.zoom.us/account/report/webinar
+detailrate:
+  url: https://dev.zoom.us/zoomconference/rates
+addnewsub:
+  url: https://dev.zoom.us/account/sub/add
+schedule_webinar:
+  url: https://dev.zoom.us/webinar/schedule

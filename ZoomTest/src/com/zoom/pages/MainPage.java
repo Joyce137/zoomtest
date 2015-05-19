@@ -24,7 +24,7 @@ public class MainPage {
 	//菜單切換組件
 	private WebElement vc, rc, zp, ms, im;
 	//sign in&sign up
-	private WebElement signin, signup;
+	private WebElement signin, signup, signout;
 	//join&host
 	private WebElement join, host;
 	//獲取Yaml文件
@@ -64,6 +64,7 @@ public class MainPage {
 		im = yaml.getElement("im");
 		signin = yaml.getElement("signin");
 		signup = yaml.getElement("signup");
+		signout = yaml.getElement("signout");
 		join = yaml.getElement("join");
 		host = yaml.getElement("host");
 	}	
@@ -165,6 +166,9 @@ public class MainPage {
 	public WebElement getSignup() {
 		return signup;
 	}
+	public WebElement getSignout() {
+		return signout;
+	}
 	public WebElement getJoin() {
 		return join;
 	}
@@ -205,10 +209,10 @@ public class MainPage {
 		menus[i].click();
 		Assert.assertEquals(menustitle[i].isDisplayed(), true);
 	}
-	//功能組件：signin, signup, join, host
-	//signin, signup, join
-	WebElement actions[] = {signin, signup, join};
-	String actionstr[] = {"signin", "signup", "join"};
+	//功能組件：signin, signup, signout, join, host
+	//signin, signup, signout, join
+	WebElement actions[] = {signin, signup, signout, join};
+	String actionstr[] = {"signin", "signup", "main", "join"};
 	public void testSignin(int i){
 		ElementOperation eo = new ElementOperation(driver, actions[i]);
 		eo.linkOperation(actionstr[i]);

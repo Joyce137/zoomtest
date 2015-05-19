@@ -10,6 +10,7 @@ import com.zoom.cons.LocatorManager;
 import com.zoom.cons.UrlManager;
 import com.zoom.database.DataManager;
 import com.zoom.utils.Checkid;
+import com.zoom.utils.StringManager;
 
 public class Meeting {
 	private WebDriver driver= DriverManager.getDriver();
@@ -123,13 +124,8 @@ public class Meeting {
 		String url = "https://dev.zoom.us/meeting/"+getCurrentpmi(userid);
 		eo.linkUrl(url);
 	}
-	//通過當前url分解出curmeetingid
-	public String getCurmeetingid(){
-		String cururl = driver.getCurrentUrl();
-		int index = cururl.indexOf('g');
-		return cururl.substring(index+2, cururl.length());
-	}
-	String curmeetingid = getCurmeetingid();
+	
+	String curmeetingid = StringManager.getCurmeetingid();
 	
 	//start, paring, end, h323, schedule
 	public void testStart(){

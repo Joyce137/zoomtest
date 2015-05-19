@@ -173,3 +173,36 @@ ltiregenerate:
 meetings:
   type: linkText
   value: My Meetings
+showkey:
+  type: id
+  value: showHostKey
+pmitext:
+  type: id
+  value: pmi
+pmi_submit:
+  type: id
+  value: pmi_submit
+pmi_cancel:
+  type: id
+  value: pmi_cancel
+newpv:
+  type: id
+  value: newpv
+oldpv:
+  type: id
+  value: oldpv
+pv_submit:
+  type: id
+  value: pv_submit
+pv_cancel:
+  type: id
+  value: pv_cancel
+newHostkey:
+  type: id
+  value: newHostkey
+hostkey_submit:
+  type: id
+  value: hostkey_submit
+hostkey_cancel:
+  type: id
+  value: hostkey_cancel

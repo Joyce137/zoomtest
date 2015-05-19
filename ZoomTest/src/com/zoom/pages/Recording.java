@@ -6,7 +6,7 @@ import com.zoom.cons.LocatorManager;
 
 public class Recording {
 	//„“½¨LocatorManagerŒÀı
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("recording");; 
 	//ËÑË÷½M¼ş
 	private WebElement dateFrom, dateTo, go;
 	//recording info

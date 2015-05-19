@@ -1,16 +1,23 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DataManager;
+import com.zoom.utils.StringManager;
 
 public class MeetingDetails {
+	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
 	private LocatorManager yaml = new LocatorManager("meeting_datails");;
 	//meeting info
 	private WebElement topic, time, calendar, id;
 	//meeting setting
-	private WebElement hostradio, hoston, hostoff, videoradio, videoon, videooff, audioradio;
+	private WebElement video, p_video, audio;
 	//meeting option
 	private WebElement jbh, hostcn;
 	//meeting action
@@ -21,13 +28,9 @@ public class MeetingDetails {
 		time = yaml.getElement("time");
 		calendar = yaml.getElement("calendar");
 		id = yaml.getElement("id");
-		hostradio = yaml.getElement("hostradio");
-		hoston = yaml.getElement("hoston");
-		hostoff = yaml.getElement("hostoff");
-		videoradio = yaml.getElement("videoradio");
-		videoon = yaml.getElement("videoon");
-		videooff = yaml.getElement("videooff");
-		audioradio = yaml.getElement("audioradio");
+		video = yaml.getElement("video");
+		p_video = yaml.getElement("p_video");
+		audio = yaml.getElement("audio");
 		jbh = yaml.getElement("jbh");
 		hostcn = yaml.getElement("hostcn");
 		copy = yaml.getElement("copy");
@@ -51,34 +54,6 @@ public class MeetingDetails {
 		return id;
 	}
 
-	public WebElement getHostradio() {
-		return hostradio;
-	}
-
-	public WebElement getHoston() {
-		return hoston;
-	}
-
-	public WebElement getHostoff() {
-		return hostoff;
-	}
-
-	public WebElement getVideoradio() {
-		return videoradio;
-	}
-
-	public WebElement getVideoon() {
-		return videoon;
-	}
-
-	public WebElement getVideooff() {
-		return videooff;
-	}
-
-	public WebElement getAudioradio() {
-		return audioradio;
-	}
-
 	public WebElement getJbh() {
 		return jbh;
 	}
@@ -100,5 +75,35 @@ public class MeetingDetails {
 	}
 	
 	//組件的基本測試函數
+	String meetingid = StringManager.getCurmeetingid();
+	WebElement meetinginfo[] = {topic, time, calendar, id, video, p_video, audio, jbh, hostcn};
+	String meetinginfostr[] = {"topic", "time", "calendar", "id", "video", "p_video", "audio", "jbh", "hostcn"};
+	//String meetinginfovalues[] = new String[meetinginfo.length];
+	public void testMeetinginfo(){
+		for(int i = 0;i < meetinginfo.length; i++){
+			String sql = "select "+meetinginfostr[i]+" from meetinginfo where id = "+meetingid;
+			String value = DataManager.query(sql);
+			Assert.assertEquals(meetinginfo[i].getText(), value);
+		}
+	}
 	
+	public void testCopy(){
+		copy.click();
+		BrowserAction.refresh();
+	}
+	
+	public void testEdit(){
+		edit.click();
+		String cururl = driver.getCurrentUrl();
+		String starturl = "https://dev.zoom.us/meeting/"+meetingid+"/edit";
+		Assert.assertEquals(starturl, cururl);
+	}
+	
+	public void testStart(){
+		start.click();
+		String cururl = driver.getCurrentUrl();
+		int index = cururl.indexOf('s');
+		String starturl = cururl.substring(index+2, cururl.length());
+		Assert.assertEquals(starturl, meetingid);
+	}
 }

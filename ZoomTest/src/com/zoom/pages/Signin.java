@@ -1,12 +1,17 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DataManager;
 
 public class Signin {
+	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("signin"); 
 	//組件
 	private WebElement pageheader, email, password, signin, google, facebook, signup, forgot;
 	
@@ -56,5 +61,35 @@ public class Signin {
 	}
 
 	//組件基本測試函數
-	
+	String currentmid = null;
+	//pageheader, email, password, signin, google, facebook, signup, forgot;
+	public void testPageheader(){
+		ElementOperation eo = new ElementOperation(driver,pageheader);
+		eo.assertText("Sign In");
+	}
+	public void testEmail(String value){
+		ElementOperation eo = new ElementOperation(driver, email);
+		eo.assertText(value);
+	}
+	public void testPassword(String value){
+		ElementOperation eo = new ElementOperation(driver, password);
+		eo.assertText(value);
+	}
+	public void testSignin(){
+		String sql = "select * from user where email = "+email.getText();
+		String result = DataManager.query(sql);
+		if(result == null){
+			return;
+		}
+		else{
+			ElementOperation eo = new ElementOperation(driver, signin);
+			eo.linkOperation("meeting");
+		}
+	}
+	WebElement links[] = {google, facebook, signup, forgot};
+	String linkstr[] = {"google", "facebook", "signup", "forgot"};
+	public void testLinks(int i){
+		ElementOperation eo = new ElementOperation(driver, links[i]);
+		eo.linkOperation(linkstr[i]);
+	}
 }

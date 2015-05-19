@@ -111,6 +111,12 @@ public class BrowserAction {
         	e.printStackTrace();
         }
     }
+	
+	//页面刷新
+	public static void refresh(){
+		driver.navigate().refresh();
+	}
+	
 	//關閉瀏覽器
 	public static void closeUrl(){
 		//quit方法，有缺陷

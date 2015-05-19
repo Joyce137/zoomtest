@@ -1,12 +1,17 @@
 package com.zoom.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
 
 public class WebinarSetting {
+	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
-	private LocatorManager yaml; 
+	private LocatorManager yaml = new LocatorManager("webinar_setting"); ; 
 	//branding
 	private WebElement upload1, delete1, upload2, delete2;
 	//info setting edits
@@ -112,5 +117,37 @@ public class WebinarSetting {
 	}
 	
 	//組件基本測試函數
+	//upload1, upload2
+	public void testUpload1(String filepath){
+		ElementOperation eo = new ElementOperation(driver, upload1);
+		eo.uploadOperation(filepath);
+	}
+	public void testUpload2(String filepath){
+		ElementOperation eo = new ElementOperation(driver, upload2);
+		eo.uploadOperation(filepath);
+	}
+	//delete1, delete2
+	public void testDelete1(){
+		ElementOperation eo = new ElementOperation(driver, delete1);
+		eo.alertOperation(1);
+	}
+	public void testDelete2(){
+		ElementOperation eo = new ElementOperation(driver, delete2);
+		eo.alertOperation(1);
+	}
 	
+	//edits
+	public void testEdits(){
+		for(int i = 0;i<edits.length;i++){
+			edits[i].click();
+			BrowserAction.refresh();
+		}
+	}
+	//emailsettingedits
+	public void testEmailsettingedits(){
+		for(int i = 0;i<emailsettingedits.length;i++){
+			emailsettingedits[i].click();
+			BrowserAction.refresh();
+		}
+	}
 }
