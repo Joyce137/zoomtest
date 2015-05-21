@@ -1,0 +1,87 @@
+>> Patents 
+   
+The OMONDO product and technology are protected by INPI. 
+
+EclipseUML Europa Free Edition is available for commercial use.
+Only one EclipseUML Free Edition license (one user) per project is allowed.
+Exchanging of java projects created while using EclipseUML Europa Free Edition among developers is prohibited.
+EclipseUML Europa Free Edition should be downloaded from our omondo's website to ensure the quality of the software.
+   
+ >> Trademarks
+  
+The OMONDO logo and name are protected by French patent numbers 02 31 79 496. 
+
+OMONDO is registered trademarks of OMONDO company. UML is registered trademarks 
+of OMG.
+
+All other company, product, or brand names mentioned herein, indicated or otherwise, 
+may be trademarks of their respective owners. 
+
+Specifications subject to change without notice. Not responsible for errors 
+or omissions. 
+
+Copyright 2002-2005 OMONDO. All rights reserved.
+  
+ >> Software
+ 
+Any software and documentation ("Software") is the
+copyrighted work of OMONDO. Omondo is composed of two kinds of programs. Free
+and non-free programs. Any non obfuscated source is considered to be a free
+program. Any obfuscated source is considered to be a non-free program.
+
+The free program (from Novosoft) used inside OMONDO software solution
+should be used in accordance with the GNU Library General Public Licence
+(http://nsuml.sourceforge.net/copyleft.txt).
+
+The non-free program may not be resold, duplicated or used inside (as
+part of) other software for commercial purposes. The software may be used for
+any purposes and also for developing other commercial software except an UML
+modelling solution. Unauthorized use may subject you and your company to severe
+civil and criminal penalties.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND. OMONDO HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE
+SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE AND NON INFRINGEMENT. IN NO EVENT SHALL B BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFIT ARISING OUT OF OR IN CONNECTION WITH THE USE
+OR PERFORMANCE OF THE SOFTWARE.
+   
+ >> Restricted Rights Legend
+ 
+Any software which is downloaded from this web site for or on behalf of the European 
+Community and U.S. Government. Use, duplication, or disclosure is subject to restrictions as 
+set forth in subparagraph (c)(1) of the Rights in Technical Data and Computer Software clause 
+at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) of the Commercial Computer 
+Software-Restricted Rights at 48 CFR 52.227-19, as applicable (("U.S. Government" and 
+European community). Manufacturer is OMONDO, 19, Villa Duthy, 75014 Paris France. 
+  
+ >> Documents, Software, and Services
+ 
+OMONDO AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE
+SUITABILITY OF THE INFORMATION CONTAINED IN THE DOCUMENTS FOR ANY PURPOSE. ALL
+SUCH DOCUMENTS AND RELATED GRAPHICS ARE PROVIDED "AS IS", WITHOUT
+WARRANTY OF ANY KIND. OMONDO AND/OR ITS SUPPLIERS HEREBY DISCLAIM ALL
+WARRANTIES AND CONDITIONS OF WITH REGARD TO THIS INFORMATION, INCLUDING ALL
+IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE AND NON INFRINGEMENT. IN NO EVENT SHALL OMONDO BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFIT ARISING OUT OF OR IN CONNECTION WITH THE USE
+OR PERFORMANCE OF INFORMATION AVAILABLE ON THIS.
+
+The documents and related graphics published could include technical
+inaccuracies or typographical errors. Changes are periodically added to the
+information herein. OMONDO and/or its suppliers may make improvements and/or
+changes in the products and/or the programs described herein at any time.
+
+Permission to use the documents contained herein, such as press
+releases, data sheets, white papers, is granted provided that (i) the below
+copyright notice appears on any and all copies, (ii) that use of such documents
+is for informational and commercial or personal purposes only, and no changes
+to any such document are made. You are not allowed to use or copy the design or
+layout of this OMONDO, logos, graphics, sounds or images, except as expressly 
+authorized by OMONDO.
+
+Please contact OMONDO legal department with questions or problems with this service.
+
+Copyright 2002-2007 OMONDO All Rights reserved.
