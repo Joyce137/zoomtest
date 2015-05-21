@@ -10,6 +10,7 @@ import com.zoom.cons.BrowserAction;
 import com.zoom.cons.DriverManager;
 import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
+import com.zoom.database.DataManager;
 import com.zoom.database.DatabaseManager;
 
 public class Billing {
@@ -39,6 +40,9 @@ public class Billing {
 	
 	//創建LocatorManager實例
 	private LocatorManager yaml = new LocatorManager("billing"); 
+	
+	//當前的accountid
+	private int accountid = DataManager.getaccountid(email.getText());
 	
 	//構造函數初始化所有組件
 	public Billing(){
@@ -306,13 +310,13 @@ public class Billing {
 	WebElement selectors[] = {month, year, country};
 	String selectorstr[] = {"month", "year", "country"};
 	String selectorvalues[];
-	public void testMonth(int i, String value){
+	public void testTimes(int i, String value){
 		ElementOperation eo = new ElementOperation(driver, selectors[i]);
 		eo.selectorOperation(value);
 	}
 	
 	//submit
-	public void testSubmit(int accountid){
+	public void testSubmit(){
 		submit.click();
 		//向數據庫提交數據
 		try {

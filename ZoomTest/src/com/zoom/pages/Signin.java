@@ -3,6 +3,7 @@ package com.zoom.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.zoom.cons.BrowserAction;
 import com.zoom.cons.DriverManager;
 import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
@@ -86,10 +87,20 @@ public class Signin {
 			eo.linkOperation("meeting");
 		}
 	}
-	WebElement links[] = {google, facebook, signup, forgot};
-	String linkstr[] = {"google", "facebook", "signup", "forgot"};
-	public void testLinks(int i){
-		ElementOperation eo = new ElementOperation(driver, links[i]);
-		eo.linkOperation(linkstr[i]);
+	WebElement links[] = {google, facebook, signup};
+	String linkstr[] = {"google", "facebook", "signup"};
+	public void testLinks(){
+		for(int i = 0;i<links.length;i++){
+			ElementOperation eo = new ElementOperation(driver, links[i]);
+			eo.linkOperation(linkstr[i]);
+			BrowserAction.back();
+		}
 	}
+	
+	//forgot password
+	public void testForget(){
+		ElementOperation eo = new ElementOperation(driver, forgot);
+		eo.linkOperation("forget_pwd");
+	}
+	
 }

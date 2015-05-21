@@ -117,6 +117,9 @@ public class BrowserAction {
 		driver.navigate().refresh();
 	}
 	
+	public static String getCurrenturl(){
+		return driver.getCurrentUrl();
+	}
 	//êPé]gÓ[Æ÷
 	public static void closeUrl(){
 		//quit·½·¨£¬ÓĞÈ±Ïİ

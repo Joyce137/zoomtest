@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="com.zoom.accessibility" x="134" y="89">
+        <DependencyLink destination="com.zoom.utils"/>
+    </Package>
+    <Package name="com.zoom.cons" x="470" y="176">
+        <DependencyLink destination="com.zoom.utils"/>
+    </Package>
+    <Package name="com.zoom.database" x="469" y="361"/>
+    <Package name="com.zoom.utils" x="256" y="237">
+        <DependencyLink destination="com.zoom.cons"/>
+        <DependencyLink destination="com.zoom.database"/>
+    </Package>
+    <Package name="com.zoom.locator" x="845" y="26"/>
+    <Package name="com.zoom.pages" x="777" y="234">
+        <DependencyLink destination="com.zoom.cons"/>
+        <DependencyLink destination="com.zoom.database"/>
+        <DependencyLink destination="com.zoom.utils"/>
+    </Package>
+    <Package name="com.zoom.tasks" x="685" y="109"/>
+    <Package name="com.zoom.tests" x="493" y="26">
+        <DependencyLink destination="com.zoom.accessibility"/>
+        <DependencyLink destination="com.zoom.utils"/>
+    </Package>
+</PackageAnalysis>

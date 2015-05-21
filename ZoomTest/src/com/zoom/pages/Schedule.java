@@ -7,12 +7,13 @@ import com.zoom.cons.DriverManager;
 import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
 import com.zoom.database.DataManager;
+import com.zoom.utils.StringManager;
 
 public class Schedule {
 	private WebDriver driver = DriverManager.getDriver();
 	//創建LocatorManager實例
 	private LocatorManager yaml = new LocatorManager("schedule");
-	private int meetingid;
+	private String meetingid = StringManager.getRandom()+"\n";
 	//meeting info
 	private WebElement topic, startdate, starttime, am_pm, durationhour, durationmin, timezone, rm, schedulefor;
 	//meeting option
@@ -96,27 +97,6 @@ public class Schedule {
 	public WebElement getCancel() {
 		return cancel;
 	}
-	public Schedule(int meetingid){
-		topic = yaml.getElement("topic");
-		startdate = yaml.getElement("startdate");
-		starttime = yaml.getElement("starttime");
-		am_pm = yaml.getElement("am_pm");
-		durationhour = yaml.getElement("durationhour");
-		durationmin = yaml.getElement("durationmin");
-		timezone = yaml.getElement("timezone");
-		rm = yaml.getElement("rm");
-		schedulefor = yaml.getElement("schedulefor");
-		video = yaml.getElement("video");
-		p_video = yaml.getElement("p_video");
-		audio = yaml.getElement("audio");
-		require_pwd = yaml.getElement("require_pwd");
-		password = yaml.getElement("password");
-		jbh = yaml.getElement("jbh");
-		withpmi = yaml.getElement("withpmi");
-		cn = yaml.getElement("cn");
-		schedule = yaml.getElement("schedule");
-		cancel = yaml.getElement("cancel");
-	}
 	
 	//各組件的基本測試函數
 	//meeting info: topic, startdate, starttime, am_pm, durationhour, durationmin, timezone, rm, schdulefor;
@@ -151,8 +131,8 @@ public class Schedule {
 	WebElement meetinginfo[] = {topic, starttime, durationhour, timezone, rm, schedulefor, 
 			video, p_video, audio, require_pwd, password, jbh, withpmi, cn};
 	String meetinginfostr[] = {"topic", "time", "duration", "zone", "isrecurring", "schedulefor", 
-			"video", "p_video", "audio", "require_pwd", "password", "jbh", "withpmi", "cn"};
-	String mtgvalue[] = new String [14];
+			"video", "p_video", "audio", "require_pwd", "password", "jbh", "withpmi", "cn", "id"};
+	String mtgvalue[] = new String [meetinginfostr.length];
 	public void testSchedule(){
 		schedule.click();
 		//topic, startdate, starttime, am_pm, durationhour, durationmin, timezone, rm, schdulefor;
@@ -164,6 +144,14 @@ public class Schedule {
 		mtgvalue[2] = duration;
 		for(int i = 3;i<meetinginfo.length;i++){
 			mtgvalue[i] = meetinginfo[i].getText();
+		}
+		mtgvalue[meetinginfostr.length] = StringManager.getCurmeetingid();
+		String sqlquery = "select * from meetinginfo where id  = "+meetingid;
+		if(DataManager.query(sqlquery) == null){
+			for(int i = 0;i<meetinginfo.length;i++){
+				String sql = "insert meetinginfo("+meetinginfostr[i]+") values("+mtgvalue[i]+")";
+				DataManager.executesql(sql);
+			}
 		}
 		for(int i = 0;i<meetinginfo.length;i++){
 			String sql = "update meetinginfo set "+meetinginfostr[i]+"= "+mtgvalue[i]+" where id = "+meetingid;

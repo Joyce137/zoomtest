@@ -1,13 +1,51 @@
 package com.zoom.tests;
 
-import com.zoom.utils.Checkid;
+import java.awt.event.KeyAdapter;
 
-public class MainTest {
+import javax.swing.JFrame;
+
+import org.openqa.selenium.WebDriver;
+
+import java.awt.event.KeyEvent;
+
+import com.zoom.accessibility.MainAction;
+import com.zoom.accessibility.PlayText;
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.UrlManager;
+
+public class MainTest extends JFrame{
+	private char ch;
+	private String s;
+	//依託一個frame監聽鍵盤行為
+	public MainTest(){
+		 this.setSize(500,100); 
+	     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+	     this.setTitle("my jframe"); 
+	     this.setVisible(true); 
+	     this.addKeyListener(new KeyAdapter(){ 
+	    	 public void keyPressed(KeyEvent e){
+	    		 	ch=e.getKeyChar(); 
+	    		 	if(ch == 's'){
+	    		 		new PlayText().play("如果你想登录，请按L键.");
+	    		 	}
+	    		 	if(ch == 'l'){
+	    		 		new PlayText().play("如果你想注册，请按S键.");
+	    		 	}
+	    		 	if(ch == '0'){
+	    		 		new PlayText().play("请输入.");
+	    		 	}
+	    		 	//new PlayText().play(ch+"\n");
+	            } 
+	     }); 
+	}
+	public void Signup(){
+		
+		
+	}
 	public static void main(String[] args){
-		String a = "345678900";
-		System.out.println(a+" = "+Checkid.isOK(a));
-		System.out.println(a+" = "+Checkid.isPMIOK(a));
-		System.out.println(a+" = "+Checkid.isExisted(a));
-		System.out.println(a+" = "+Checkid.isOpening(a));
+		new MainTest();
+		//new PlayText().play("按1键开始"); 
+		new PlayText().play("start"); 
 	}
 }

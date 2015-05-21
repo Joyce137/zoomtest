@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.zoom.pages.Schedule" x="693" y="848">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+    </Class>
+    <Class name="com.zoom.pages.Signup" x="49" y="1034">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.cons.KeyActions"/>
+    </Class>
+    <Class name="com.zoom.utils.StringManager" x="426" y="121">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+    </Class>
+    <Class name="com.zoom.cons.BrowserAction" x="176" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.utils.TimeString"/>
+        <Communication destinationClassName="com.zoom.utils.Log"/>
+    </Class>
+    <Class name="com.zoom.pages.User" x="4" y="1235">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.cons.KeyActions"/>
+    </Class>
+    <Class name="com.zoom.utils.Log4j" x="468" y="62">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.pages.Report" x="213" y="842">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.cons.KeyActions"/>
+    </Class>
+    <Class name="com.zoom.pages.MainPage" x="9" y="383">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+    </Class>
+    <Class name="com.zoom.database.DataManager" x="668" y="15">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.database.DatabaseManager"/>
+    </Class>
+    <Class name="com.zoom.utils.ResultListener" x="206" y="118">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+    </Class>
+    <Class name="com.zoom.cons.Config" x="407" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.utils.Log"/>
+        <Communication destinationClassName="com.zoom.utils.ParserXml"/>
+    </Class>
+    <Class name="com.zoom.cons.UrlManager" x="787" y="22">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.YamlReader"/>
+    </Class>
+    <Class name="com.zoom.pages.Signin" x="893" y="807">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+    </Class>
+    <Class name="com.zoom.utils.Utils" x="1019" y="65">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.pages.Group" x="3" y="72">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.database.DatabaseManager"/>
+    </Class>
+    <Class name="com.zoom.pages.Profile" x="447" y="621">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.utils.Checkid"/>
+    </Class>
+    <Class name="com.zoom.cons.LocatorManager" x="234" y="218">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.utils.Log"/>
+        <Communication destinationClassName="com.zoom.cons.YamlReader"/>
+    </Class>
+    <Class name="com.zoom.pages.MeetingDetails" x="674" y="535">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.utils.StringManager"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+    </Class>
+    <Class name="com.zoom.cons.YamlReader" x="15" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.pages.Meeting" x="877" y="483">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.utils.StringManager"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.utils.Checkid"/>
+    </Class>
+    <Class name="com.zoom.pages.Webinar" x="687" y="1228">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.utils.Checkid"/>
+    </Class>
+    <Class name="com.zoom.pages.Join" x="450" y="392">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.utils.Checkid"/>
+    </Class>
+    <Class name="com.zoom.pages.Recording" x="53" y="832">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+    </Class>
+    <Class name="com.zoom.utils.DebugLog" x="298" y="69">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.utils.TimeString" x="1021" y="20">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.utils.Version" x="552" y="139">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.pages.Billing" x="215" y="359">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.database.DatabaseManager"/>
+    </Class>
+    <Class name="com.zoom.pages.WebinarDetails" x="221" y="1363">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.utils.StringManager"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+        <Communication destinationClassName="com.zoom.database.DataManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+    </Class>
+    <Class name="com.zoom.pages.WebinarSetting" x="459" y="1369">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.BrowserAction"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+    </Class>
+    <Class name="com.zoom.cons.Userinfo" x="470" y="10">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.database.DatabaseManager" x="888" y="20">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.utils.Checkid" x="205" y="68">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.database.DatabaseManager"/>
+    </Class>
+    <Class name="com.zoom.cons.DriverManager" x="287" y="13">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.zoom.utils.Log" x="404" y="66">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.utils.TimeString"/>
+        <Communication destinationClassName="com.zoom.utils.Log4j"/>
+    </Class>
+    <Class name="com.zoom.pages.Sub" x="885" y="1061">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.cons.KeyActions"/>
+    </Class>
+    <Class name="com.zoom.accessibility.PlayText" x="102" y="8">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.utils.DebugLog"/>
+    </Class>
+    <Class name="com.zoom.pages.Account" x="642" y="147">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.zoom.cons.LocatorManager"
+            endpointName="yaml" kind="Simple"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.LocatorManager"/>
+        <Communication destinationClassName="com.zoom.cons.ElementOperation"/>
+        <Communication destinationClassName="com.zoom.database.DatabaseManager"/>
+    </Class>
+    <Class name="com.zoom.utils.ParserXml" x="529" y="57">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.utils.Log"/>
+    </Class>
+    <Class name="com.zoom.cons.ElementOperation" x="869" y="135">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+        <Communication destinationClassName="com.zoom.cons.UrlManager"/>
+    </Class>
+    <Class name="com.zoom.cons.KeyActions" x="561" y="15">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.zoom.cons.DriverManager"/>
+    </Class>
+</ClassDiagram>

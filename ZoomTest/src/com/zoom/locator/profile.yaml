@@ -206,3 +206,6 @@ hostkey_submit:
 hostkey_cancel:
   type: id
   value: hostkey_cancel
+pwd_error:
+  type: classname
+  value: has-error help-block

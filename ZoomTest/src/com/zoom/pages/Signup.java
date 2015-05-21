@@ -78,8 +78,10 @@ public class Signup {
 	}
 	WebElement links[] = {google, facebook, signin};
 	String linkstr[] = {"google", "facebook", "signin"};
-	public void testLinks(int i){
-		ElementOperation eo = new ElementOperation(driver, links[i]);
-		eo.linkOperation(linkstr[i]);
+	public void testLinks(){
+		for(int i = 0;i<links.length;i++){
+			ElementOperation eo = new ElementOperation(driver, links[i]);
+			eo.linkOperation(linkstr[i]);
+		}
 	}
 }

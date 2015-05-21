@@ -46,3 +46,12 @@ edit:
 start:
   type: classname
   value: btn btn-primary start
+video:
+  type: xpath
+  value: "//*[@id='meetingVideo']/div[1]/div"
+p_video:
+  type: xpath
+  value: "//*[@id='meetingVideo']/div[2]/div"
+audio:
+  type: xpath
+  value: "//*[@id='schedule_form']/div[6]/div"

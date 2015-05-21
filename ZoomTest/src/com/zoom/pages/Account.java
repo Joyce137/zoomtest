@@ -193,11 +193,12 @@ public class Account {
 	public void testChangeowner(){
 		//如果是owner，有此選項，否則沒有
 		if(role.getText() == "Owner"){
-			//ElementOperation eo = new ElementOperation(driver, changeowner);
+			ElementOperation eo = new ElementOperation(driver, changeowner);
 			//按鈕可見
 			Assert.assertTrue(role.isDisplayed());
 			//對話框處理
 			//？？？？？？
+			eo.alertOperation(0);
 		}
 		else{
 			Assert.assertFalse(role.isDisplayed());

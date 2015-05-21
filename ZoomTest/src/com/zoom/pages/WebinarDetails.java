@@ -174,13 +174,14 @@ public class WebinarDetails {
 		eo.uploadOperation(filepath);
 	}
 	
-	//edits
+	//edits(13)
 	WebElement edits[] = {panelist_edit, attendee_view, invite_edit, copy_invitation, copy_email, attendees,
 			emailsettingedit1, emailsettingedit2, emailsettingedit3, emailsettingedit4, emailsettingedit5, 
 			emailsettingedit6, polledit};
 	public void testEdit(){
 		for(int i = 0;i<edits.length;i++){
-			edits[i].click();
+			ElementOperation eo = new ElementOperation(driver, edits[i]);
+			eo.alertOperation(0);
 			BrowserAction.refresh();
 		}
 	}

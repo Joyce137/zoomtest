@@ -198,16 +198,21 @@ public class User {
 		exportuser.click();
 		KeyActions.onekey("enter");
 	}
-	//totaluser, changefrom, changeto, change, removetype, remove, defaultuser, save, 
-	public void testTotaluser(String value){
+	//totaluser, 
+	public void testTotaluser(){
 		ElementOperation eo = new ElementOperation(driver, totaluser);
 		eo.assertText("Total users: 17");
 	}
-	//usergroupfrom, usergroupto, changegroup, document;
+	// changefrom, changeto, change, removetype, remove, defaultuser, save,
+	// usergroupfrom, usergroupto, changegroup
 	WebElement selects[] = {changefrom, changeto, removetype, defaultuser, usergroupfrom, usergroupto};
 	String selectstr[] = {"changefrom", "changeto", "removetype", "defaultuser", "usergroupfrom", "usergroupto"};
+	WebElement advancedbtns[] = {change, remove, save, changegroup};
 	public void testSelcts(int i, String value){
 		ElementOperation eo = new ElementOperation(driver, selects[i]);
 		eo.selectorOperation(value);
+	}
+	public void testAdvancedbtns(int i){
+		advancedbtns[i].click();
 	}
 }

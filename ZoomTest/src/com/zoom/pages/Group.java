@@ -105,11 +105,13 @@ public class Group {
 	}
 	//edit
 	public void testEdit(){
-		edit.click();
+		ElementOperation eo = new ElementOperation(driver, edit);
+		eo.alertOperation(0);
 	}
 	//delete;
 	public void testDelete(){
-		delete.click();
+		ElementOperation eo = new ElementOperation(driver, delete);
+		eo.alertOperation(1);
 		//獲取要刪除的組名
 		String delgroup = currentgroup;
 		//在數據庫中刪除組
@@ -125,7 +127,8 @@ public class Group {
 	}
 	//detaildelete
 	public void testDetaildelete(){
-		delete.click();
+		ElementOperation eo = new ElementOperation(driver, detaildelete);
+		eo.alertOperation(1);
 		//在數據庫中刪除組
 		try {
 			stmt.execute("delete from group where name = "+email.getText());
@@ -135,6 +138,7 @@ public class Group {
 	}
 	//detailmove;
 	public void testDetailmove(){
-		detailmove.click();
+		ElementOperation eo = new ElementOperation(driver, detailmove);
+		eo.alertOperation(0);
 	}
 }

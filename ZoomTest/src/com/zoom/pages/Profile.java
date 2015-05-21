@@ -9,6 +9,7 @@ import com.zoom.cons.ElementOperation;
 import com.zoom.cons.LocatorManager;
 import com.zoom.database.DataManager;
 import com.zoom.utils.Checkid;
+import com.zoom.utils.StringManager;
 
 public class Profile {
 	private WebDriver driver = DriverManager.getDriver();
@@ -26,7 +27,7 @@ public class Profile {
 	//recording options
 	private WebElement recording, cmr, autorecording, savechanged;
 	//change password
-	private WebElement changepassword, oldpassword, newpassword, confirmpassword;
+	private WebElement changepassword, oldpassword, newpassword, confirmpassword, pwd_error;
 	//password strength
 	private WebElement meter1, meter2, meter3, meter4;
 	private WebElement meters[] = {meter1, meter2, meter3, meter4};
@@ -108,6 +109,7 @@ public class Profile {
 		newpv = yaml.getElement("newpv");
 		pv_submit = yaml.getElement("pv_submit");
 		pv_cancel = yaml.getElement("pv_cancel");
+		pwd_error = yaml.getElement("pwd_error");
 	}
 	
 	//組件get函數
@@ -355,7 +357,7 @@ public class Profile {
 		eo.assertText(DataManager.getuserinfo(userid, assertstr[i]));
 	}
 	//change
-	public void testChangeURL(){
+	public void testChangePMI(){
 		changePMI.click();
 	}
 	//pmitext
@@ -433,7 +435,13 @@ public class Profile {
 	public void testhostkeysubmit(){
 		hostkey_submit.click();
 		String newhostkeystr = newHostKey.getText();
-		DataManager.updateuser(userid, "hostkey", newhostkeystr);
+		if(StringManager.test6digital(newhostkeystr)){
+			String sql = "select * from user where hostkey = "+newhostkeystr;
+			String result = DataManager.query(sql);
+			if(result == null){
+				DataManager.updateuser(userid, "hostkey", newhostkeystr);
+			}
+		}
 	}
 	public void testhostkeycancel(){
 		hostkey_cancel.click();
@@ -441,7 +449,7 @@ public class Profile {
 		Assert.assertTrue(!hostkey_cancel.isDisplayed());
 		Assert.assertTrue(changehostkey.isDisplayed());
 	}	
-	//headphoto, changephoto, firstname, lastname, phonecode, phonenumber, companyname, timezone, defaultcall;
+	//test options(16);
 	WebElement useroptions[]={e2e, onhold, chat, autosavechat, feedback, jbhreminder, teleconf, pac,
 			recording, cmr, privatechat, cameracontrol, group, chime, chimeall, chimehost};
 	String useroptionstr[]={"e2e", "onhold", "chat", "autosavechat", "feedback", "jbhreminder",
@@ -480,10 +488,18 @@ public class Profile {
 	//changepassword, oldpassword, newpassword, confirmpassword;meters[];
 	public void testChangepassword(){
 		changehostkey.click();
-		Assert.assertTrue(oldpassword.isDisplayed());
-		Assert.assertTrue(newpassword.isDisplayed());
-		Assert.assertTrue(confirmpassword.isDisplayed());
-		Assert.assertTrue(!changepassword.isDisplayed());
+		if(oldpassword.isDisplayed()){
+			Assert.assertTrue(oldpassword.isDisplayed());
+			Assert.assertTrue(newpassword.isDisplayed());
+			Assert.assertTrue(confirmpassword.isDisplayed());
+			Assert.assertFalse(changepassword.isDisplayed());
+		}
+		else{
+			Assert.assertFalse(oldpassword.isDisplayed());
+			Assert.assertFalse(newpassword.isDisplayed());
+			Assert.assertFalse(confirmpassword.isDisplayed());
+			Assert.assertTrue(changepassword.isDisplayed());
+		}
 	}
 	public void testoldpassword(String value){
 		ElementOperation eo = new ElementOperation(driver, oldpassword);
@@ -504,8 +520,8 @@ public class Profile {
 		String pwdstr = DataManager.getuserinfo(userid, "pwd").toString();
 		if(oldpassword.getText() != pwdstr)	
 			return;
-		//newpassword不能太簡單
-		if(!meters[0].isSelected())
+		//newpassword不能太簡單(密碼錯誤提示顯示)
+		if(!meters[0].isSelected()||pwd_error.isDisplayed())
 			return;
 		//confirmpassword要與newpassword相同
 		if(newpassword.getText() != confirmpassword.getText())

@@ -24,7 +24,7 @@ public class MainPage {
 	//菜單切換組件
 	private WebElement vc, rc, zp, ms, im;
 	//sign in&sign up
-	private WebElement signin, signup, signout;
+	private WebElement signin, signup, email, signout;
 	//join&host
 	private WebElement join, host;
 	//獲取Yaml文件
@@ -67,6 +67,7 @@ public class MainPage {
 		signout = yaml.getElement("signout");
 		join = yaml.getElement("join");
 		host = yaml.getElement("host");
+		email = yaml.getElement("email");
 	}	
 	
 	//各組件的get函數
@@ -200,7 +201,7 @@ public class MainPage {
 		ElementOperation eo = new ElementOperation(driver, links[i]);
 		eo.linkOperation(linkstr[i]);
 	}
-	//菜單切換組件： vc, rc, zp, ms, im
+	//菜單切換組件(5)： vc, rc, zp, ms, im
 	WebElement menus[] = {vc, rc, zp, ms, im};
 	WebElement vc_title, rc_title, zp_title, ms_title, im_title;
 	WebElement menustitle[] = {vc_title, rc_title, zp_title, ms_title, im_title};
@@ -213,11 +214,18 @@ public class MainPage {
 	//signin, signup, signout, join
 	WebElement actions[] = {signin, signup, signout, join};
 	String actionstr[] = {"signin", "signup", "main", "join"};
-	public void testSignin(int i){
+	public void testSign(int i){
 		ElementOperation eo = new ElementOperation(driver, actions[i]);
 		eo.linkOperation(actionstr[i]);
 	}
-	
+	public void testEmail(String value){
+		ElementOperation eo = new ElementOperation(driver, email);
+		eo.inputOperation(value);
+	}
+	public void testSignup(){
+		ElementOperation eo = new ElementOperation(driver, signup);
+		eo.alertOperation(1);
+	}
 	//host
 	public void testHost(int i){
 		ElementOperation eo = new ElementOperation(driver, host);

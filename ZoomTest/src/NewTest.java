@@ -72,5 +72,4 @@ public class NewTest {
 		 System.out.println("It is ignored.");
 	 }
 	 
-
 }

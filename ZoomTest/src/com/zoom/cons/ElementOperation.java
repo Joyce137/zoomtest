@@ -106,6 +106,8 @@ public class ElementOperation {
 	//select dropdownÌŽÀí
 		//…¢”µžéßx“ñµÄƒÈÈÝ
 	public void selectorOperation(String value){
+		if(value == null)
+			return;
 		Select select = new Select(element);
 		select.selectByValue(value);
 		String s = select.getFirstSelectedOption().getText();

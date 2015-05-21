@@ -97,6 +97,7 @@ public class MeetingDetails {
 		String cururl = driver.getCurrentUrl();
 		String starturl = "https://dev.zoom.us/meeting/"+meetingid+"/edit";
 		Assert.assertEquals(starturl, cururl);
+		BrowserAction.back();
 	}
 	
 	public void testStart(){
