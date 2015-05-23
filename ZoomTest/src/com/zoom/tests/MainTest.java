@@ -39,10 +39,13 @@ public class MainTest extends JFrame{
 	            } 
 	     }); 
 	}
-	public void Signup(){
-		
-		
+
+	//整合Web自动化测试动作
+	public void mainautotest(){
+		new AddTestNG().testall();
 	}
+	
+	//工程入口
 	public static void main(String[] args){
 		new MainTest();
 		//new PlayText().play("按1键开始"); 
