@@ -121,3 +121,6 @@ im_title:
 signout:
   type: id
   value: btnLogout
+email:
+  type: id
+  value: email

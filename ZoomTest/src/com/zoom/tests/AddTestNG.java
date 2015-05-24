@@ -1,9 +1,5 @@
 package com.zoom.tests;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -12,38 +8,47 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.zoom.cons.BrowserAction;
+import com.zoom.cons.DriverManager;
+import com.zoom.cons.UrlManager;
+import com.zoom.tasks.AccountTask;
+import com.zoom.tasks.MeetingTask;
+import com.zoom.tasks.SignTask;
+import com.zoom.tasks.UITask;
+import com.zoom.tasks.UserTask;
+import com.zoom.tasks.WebinarTask;
+
 public class AddTestNG {
-	private Collection c;
+	private DriverManager dirver;
 	//基本测试
 	@BeforeSuite
-	public void t1(){
-		System.out.println("注解的方法将只运行一次，被注释的方法将在所有测试运行前运行。");
+	public void openDriver(){
+		dirver = new DriverManager();
 	}
 	
 	@AfterSuite
-	public void t2(){
-		System.out.println("注解的方法将只运行一次，被注释的方法将在所有测试运行后运行。");
+	public void quitDriver(){
+		dirver.quitdriver();
 	}
 	
 	@BeforeClass
-	public void t3(){
-		System.out.println("注解的方法将只运行一次，被注释的方法将在测试运行前运行。");
+	public void openBrowser(String type){
+		BrowserAction.openBrowser(type);;
 	}
 	
 	@AfterClass
-	public void t4(){
+	public void openBrowser(){
+		BrowserAction.closeBrowser();
 		System.out.println("注解的方法将只运行一次，被注释的方法将在测试运行后运行。");
 	}
 	
     @BeforeMethod  
-    public void setUp() {  
-        c = new ArrayList();  
+    public void setUp() {    
         System.out.println("@BeforeMethod - setUp");  
     }  
    
     @AfterMethod  
-    public void tearDown() {  
-        c.clear();  
+    public void tearDown() {   
         System.out.println("@AfterMethod - tearDown");  
     }  
    
@@ -53,23 +58,80 @@ public class AddTestNG {
   		 while(true);
   	 }
   	 
+  	//Browser unit
+  	@Test  
+  	public void testBrowser(){
+  		String browsers[] = {"firefox","ie","chrome"};
+  		for(int i = 0;i<browsers.length;i++){
+  			BrowserAction.openBrowser("firefox");
+  			BrowserAction.openUrl(UrlManager.getUrl("main"));
+  			BrowserAction.closeBrowser();
+  		}
+  	}
+  	
+  	//UI unit
     @Test  
-    public void testEmptyCollection() {  
-        Assert.assertEquals(c.isEmpty(),true);  
+    public void testUITask() {  
+    	new UITask().mainpage();
         System.out.println("@Test - testEmptyCollection");  
     }  
    
+    //Sign unit
     @Test  
-    public void testOneItemCollection() {  
-        c.add("itemA");  
-        Assert.assertEquals(c.size(),1);  
+    public void testSignTask() {  
+    	SignTask signtask = new SignTask();
+    	signtask.signup1();
+    	signtask.signup2();
+    	signtask.signin(0);
+    	signtask.signout();
         System.out.println("@Test - testOneItemCollection");  
     }
     
-    //期待异常测试
+    //account unit
+    @Test
+    public void testAccountTask(){
+    	AccountTask accounttask = new AccountTask();
+    	accounttask.accountpage();
+    	accounttask.billingpage();
+    	accounttask.subpage();
+    	accounttask.grouppage();
+    }
+    
+    //user unit
+    @Test
+    public void testUserTask(){
+    	UserTask usertask = new UserTask();
+    	usertask.profile();
+    	usertask.recording();
+    	usertask.report();
+    	usertask.userpage();
+    }
+    
+    //meeting unit
+    @Test
+    public void testMeetingTask(){
+    	MeetingTask meetingtask = new MeetingTask();
+    	meetingtask.join();
+    	meetingtask.host();
+    	meetingtask.meetingpage();
+    	meetingtask.meetingdetailpage();
+    	meetingtask.schedule();
+    }
+    
+    //webinar unit
+    @Test
+    public void testWebinarTask(){
+    	WebinarTask webinartask = new WebinarTask();
+    	webinartask.webinarpage();
+    	webinartask.webinardetail();
+    	webinartask.webianrsetting();
+    }
+    
+     //期待异常测试
 	 @Test(expectedExceptions = ArithmeticException.class)  
 	    public void divisionWithException() {  
-	        int i = 1 / 0;  
+	        @SuppressWarnings("unused")
+			int i = 1 / 0;  
 	 }
 	 
 	 //忽略测试
@@ -78,7 +140,14 @@ public class AddTestNG {
 		 System.out.println("It is ignored.");
 	 }
 	 
+	 @Test
 	 public void testall(){
-		 
+		 testBrowser();
+		 testUITask();
+		 testSignTask();
+		 testAccountTask();
+		 testUserTask();
+		 testMeetingTask();
+		 testWebinarTask();
 	 }
 }

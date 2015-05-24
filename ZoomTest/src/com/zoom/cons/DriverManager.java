@@ -14,4 +14,7 @@ public class DriverManager {
 		}
 		return driver;
 	}
+	public void quitdriver(){
+		threadDriver.remove();
+	}
 }

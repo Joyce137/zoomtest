@@ -2,45 +2,44 @@ package com.zoom.tests;
 
 import java.awt.event.KeyAdapter; 
 import java.awt.event.KeyEvent; 
-   
 
-import javax.swing.JFrame; 
-
+import com.zoom.accessibility.HostAccessibilty;
+import com.zoom.accessibility.JoinAccessibilty;
 import com.zoom.accessibility.PlayText;
+import com.zoom.accessibility.SigninAccessibility;
+import com.zoom.accessibility.SignoutAccessibilty;
+import com.zoom.accessibility.SignupAccessibility;
+import com.zoom.utils.AccessibilityFrame;
    
-   
-/**
- * 
- */ 
-   
-/**
- * @author Administrator
- *
- */ 
-//窗体类  
-public class Accessibility extends JFrame { 
-   
-    /**
-     * @param args
-     */ 
-    char charA; 
-    public Accessibility(){ 
-        this.setSize(500,100); 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        this.setTitle("my jframe"); 
-        this.setVisible(true); 
-        this.addKeyListener(new KeyAdapter(){ 
+//Accessiblity总结类
+public class Accessibility{ 
+	public static void go(){
+		AccessibilityFrame frame = new AccessibilityFrame();
+		frame.getJt().addKeyListener(new KeyAdapter(){ 
             public void keyPressed(KeyEvent e){ 
-                char charA=e.getKeyChar(); 
-                //PlayText.play("你按了《"+charA+"》键"); 
+                char ch=e.getKeyChar(); 
+                String text;
+                if(ch == 'h'){             	
+                	new HostAccessibilty().host();             	
+                }
+                if(ch == 's'){
+					SignupAccessibility.signup();
+                }
+                if(ch == 'l'){
+                	SigninAccessibility.signin();
+                }
+                if(ch == 'j'){
+                	JoinAccessibilty.join();
+                }
+                if(ch == 'o'){
+                	SignoutAccessibilty.siginout();
+                }
+                if(ch == 'x'){
+                	text = "你按了"+ch+",窗口已关闭。";
+                	PlayText.play(text);
+                	frame.setVisible(false);
+                }
             } 
         }); 
-           
-           
-    } 
-    public static void mains(String[] args) { 
-        // TODO Auto-generated method stub  
-        new Accessibility(); 
-    } 
-   
+	}
 }

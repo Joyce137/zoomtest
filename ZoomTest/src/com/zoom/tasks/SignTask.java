@@ -83,4 +83,10 @@ public class SignTask {
 			forget.testResend();
 		}
 	}
+	
+	@Test
+	public void signout(){
+		BrowserAction.openUrl(UrlManager.getUrl("meeting"));
+		main.testSign(2);
+	}
 }

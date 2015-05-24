@@ -121,7 +121,7 @@ public class BrowserAction {
 		return driver.getCurrentUrl();
 	}
 	//關閉瀏覽器
-	public static void closeUrl(){
+	public static void closeBrowser(){
 		//quit方法，有缺陷
 		//driver.quit();
 		//採用close方法

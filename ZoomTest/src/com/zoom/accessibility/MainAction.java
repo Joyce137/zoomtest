@@ -19,7 +19,8 @@ public class MainAction {
 	  }  
 	  public static void scannerTest(){  
 	      System.out.println("scannerTest,请输入数据...");  
-	      String name=new Scanner(System.in).nextLine();  
+	      @SuppressWarnings("resource")
+		  String name=new Scanner(System.in).nextLine();  
 	      System.out.println("scannerTest,输出："+name);  
 	  }  
 }

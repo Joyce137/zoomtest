@@ -9,7 +9,7 @@ import com.zoom.utils.DebugLog;
 import com.zoom.utils.Version;
 
 public class PlayText {
-	public void play(String text){
+	public static void play(String text){
 		//初始化（使用科大讯飞开发者id）
 		SpeechUtility.createUtility("appid=" + Version.getAppid());
 		

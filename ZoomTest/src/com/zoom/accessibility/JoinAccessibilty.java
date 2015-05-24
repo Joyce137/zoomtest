@@ -5,9 +5,9 @@ import java.awt.event.KeyEvent;
 
 import com.zoom.utils.AccessibilityFrame;
 
-public class SignupAccessibility {
-	private static String text = "现在您将要注册,请输入用户名";
-	public static void signup(){
+public class JoinAccessibilty {
+	private static String text = "现在您将要加会，请输入meeting id。";
+	public static void join(){
 		PlayText.play(text);
 		AccessibilityFrame frame = new AccessibilityFrame();
 		frame.getJt().addKeyListener(new KeyAdapter(){ 

@@ -53,6 +53,13 @@ public class MeetingTask {
 		Assert.assertEquals(BrowserAction.getCurrenturl(),
 				UrlManager.getUrl("main"));
 	}
+	
+	@Test
+	public void host(int i) {
+		BrowserAction.openUrl(UrlManager.getUrl("main"));
+		main.testHost(i);
+		//System.out.println("ÕıÔÚé_"+i+"µÄ•ş");
+	}
 
 	// schedule meeting
 	@Test
